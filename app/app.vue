@@ -20,7 +20,20 @@ useHead(() => {
         {
           rel: 'icon',
           type: 'image/x-icon',
+          sizes: '32x32',
           href: '/favicon-v2.ico'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-v2.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicon-v2.png'
         }
       ]
     }
@@ -51,7 +64,20 @@ useHead(() => {
       {
         rel: 'icon',
         type: 'image/x-icon',
+        sizes: '32x32',
         href: '/favicon-v2.ico'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-v2.png'
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-v2.png'
       }
     ]
   }
