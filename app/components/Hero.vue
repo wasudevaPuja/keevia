@@ -1384,6 +1384,7 @@ const isSubmitting = ref(false)
 const submitSuccess = ref<boolean | null>(null) // null = idle, true = sukses, false = error
 
 const submitRSVP = async () => {
+  if (!import.meta.client) return
   if (!firebase || !rsvpCollection) return
   if (!nama.value || !kehadiran.value) return
 
@@ -1424,7 +1425,7 @@ const submitRSVP = async () => {
 
 //  Fetch guest messages realtime
 const fetchGuestMessages = async () => {
-  if (!firebase || !rsvpCollection) return
+  if (!import.meta.client || !firebase || !rsvpCollection) return
 
   const { query, orderBy, onSnapshot } = await import('firebase/firestore')
 
@@ -1451,7 +1452,9 @@ const formatDate = (d: Date) => new Date(d).toLocaleString('id-ID', {
 })
 
 onMounted(() => {
-  fetchGuestMessages()
+  if (import.meta.client) {
+    fetchGuestMessages()
+  }
 })
 
 const copyText = (text: string) => {
