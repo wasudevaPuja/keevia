@@ -1344,7 +1344,7 @@ const startCountdown = () => {
   }, 1000)
 }
 
-//  Firebase
+// Firebase
 interface FirebasePlugin {
   db: ReturnType<typeof import('firebase/firestore').getFirestore>
   collection: typeof import('firebase/firestore').collection
@@ -1352,12 +1352,15 @@ interface FirebasePlugin {
   serverTimestamp: typeof import('firebase/firestore').serverTimestamp
 }
 
-const nuxtApp = useNuxtApp()
-const firebase = nuxtApp.$firebase as FirebasePlugin
-if (!firebase) throw new Error('Firebase plugin tidak tersedia')
+const { $firebase } = useNuxtApp()
+const firebase = $firebase as FirebasePlugin
+
+if (!firebase) {
+  throw new Error('Firebase plugin tidak tersedia')
+}
 
 // Collection reference
-const rsvpCollection = firebase?.collection(firebase.db, 'rsvp_messages')
+const rsvpCollection = firebase.collection(firebase.db, 'rsvp_messages')
 
 //  Form state
 const nama = ref('')
@@ -1388,11 +1391,11 @@ const submitRSVP = async () => {
   submitSuccess.value = null
 
   try {
-    await firebase?.addDoc(rsvpCollection, {
+    await firebase.addDoc(rsvpCollection, {
       nama: nama.value,
       kehadiran: kehadiran.value,
       ucapan: ucapan.value,
-      tanggal: firebase?.serverTimestamp()
+      tanggal: firebase.serverTimestamp()
     })
 
     // Google Sheet
@@ -1421,12 +1424,16 @@ const submitRSVP = async () => {
 
 //  Fetch guest messages realtime
 const fetchGuestMessages = async () => {
+  if (!firebase) return
+
   const { query, orderBy, onSnapshot } = await import('firebase/firestore')
 
   const q = query(rsvpCollection, orderBy('tanggal', 'desc'))
+
   onSnapshot(q, (snapshot) => {
     guestMessages.value = snapshot.docs.map((doc) => {
       const data = doc.data()
+
       return {
         nama: data.nama,
         kehadiran: data.kehadiran,

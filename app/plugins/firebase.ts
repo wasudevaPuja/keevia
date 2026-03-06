@@ -1,18 +1,20 @@
-// plugins/firebase.js
-import { defineNuxtPlugin } from '#app'
+// plugins/firebase.ts
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
 export default defineNuxtPlugin((nuxtApp) => {
+  const config = useRuntimeConfig()
+
   const firebaseConfig = {
-    apiKey:  process.env.NUXT_PUBLIC_FIREBASE_API_KEY,
-    authDomain:  process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-    databaseURL: process.env.NUXT_PUBLIC_FIREBASE_DATABASE_URL,
-    projectId: process.env.NUXT_PUBLIC_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.NUXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.NUXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID,
-    measurementId: process.env.NUXT_PUBLIC_FIREBASE_MEASURENT_ID
+    apiKey: config.public.firebaseApiKey as string,
+    authDomain: config.public.firebaseAuthDomain as string,
+    databaseURL: config.public.firebaseDatabaseUrl as string,
+    projectId: config.public.firebaseProjectId as string,
+    storageBucket: config.public.firebaseStorageBucket as string,
+    messagingSenderId: config.public.firebaseMessagingSenderId as string,
+    appId: config.public.firebaseAppId as string,
+    measurementId: config.public.firebaseMeasurementId as string
   }
 
   const app = initializeApp(firebaseConfig)
