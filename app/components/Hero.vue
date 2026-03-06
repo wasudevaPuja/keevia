@@ -422,7 +422,7 @@
                     <div
                       class="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                       <span class="text-3xl md:text-5xl font-light text-pink-300 font-serif">{{ countdown.seconds
-                        }}</span>
+                      }}</span>
                       <span
                         class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200/70 mt-2 font-medium">Detik</span>
                     </div>
@@ -857,9 +857,9 @@
               </div>
 
               <!-- Thumbnails / Pagination -->
-              <div
+              <div ref="thumbContainer"
                 class="mt-6 md:mt-8 flex justify-start md:justify-center gap-3 overflow-x-auto py-4 custom-scrollbar px-2 snap-x snap-mandatory">
-                <button v-for="(img, idx) in images" :key="'thumb-' + idx"
+                <button v-for="(img, idx) in images" :key="'thumb-' + idx" ref="thumbs"
                   class="relative w-16 h-16 md:w-24 md:h-24 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300"
                   :class="current === idx ? 'border-pink-400 scale-110 shadow-[0_0_15px_rgba(249,168,212,0.5)] z-10' : 'border-transparent opacity-50 hover:opacity-100 hover:scale-105'"
                   @click="current = idx">
@@ -873,7 +873,8 @@
         </section>
 
         <!-- FOOTER / THANK YOU -->
-        <section class="relative w-full py-16 md:py-24 overflow-hidden snap-start">
+        <!-- FOOTER / THANK YOU -->
+        <section class="relative w-full min-h-screen overflow-hidden snap-start flex flex-col">
 
           <!-- Background Gradient Vertikal -->
           <div class="absolute inset-0 -z-10">
@@ -882,8 +883,8 @@
               class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,168,212,0.05)_0%,transparent_100%)] z-10" />
           </div>
 
-          <!-- Content -->
-          <div class="relative z-20 max-w-4xl mx-auto text-center px-6 md:px-12">
+          <!-- Main Content (Centered) -->
+          <div class="relative z-20 max-w-4xl mx-auto text-center px-6 md:px-12 flex flex-col justify-center flex-1">
 
             <!-- Heart / Ornament -->
             <div class="flex justify-center mb-6">
@@ -921,8 +922,8 @@
 
           </div>
 
-          <!-- Bottom Rights -->
-          <div class="mt-12 text-center text-white/40 text-xs md:text-sm">
+          <!-- Bottom Rights (Always at Bottom) -->
+          <div class="relative z-20 text-center mt-auto py-4 text-white/40 text-xs md:text-sm border-t border-white/10">
             &copy; 2026 Keevia.id. All Rights Reserved.
           </div>
 
@@ -933,7 +934,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed, inject } from 'vue'
+import { ref, onMounted, computed, inject, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { useNuxtApp } from '#app'
 
@@ -962,6 +963,34 @@ const prevSlide = () => {
   current.value
     = (current.value - 1 + images.value.length) % images.value.length
 }
+
+// Refs untuk thumbnail container & items
+const thumbContainer = ref<HTMLElement | null>(null)
+const thumbs = ref<NodeListOf<HTMLButtonElement> | null>(null)
+
+// Scroll thumbnail aktif ke tengah
+const scrollThumbIntoView = () => {
+  nextTick(() => {
+    if (!thumbContainer.value || !thumbs.value) return
+    const container = thumbContainer.value
+    const activeThumb = thumbs.value[current.value]
+    if (!activeThumb) return
+
+    const containerRect = container.getBoundingClientRect()
+    const thumbRect = activeThumb.getBoundingClientRect()
+
+    // scroll container agar thumbnail aktif ada di tengah
+    container.scrollBy({
+      left: thumbRect.left - containerRect.left - containerRect.width / 2 + thumbRect.width / 2,
+      behavior: 'smooth'
+    })
+  })
+}
+
+// Watch current slide
+watch(current, () => {
+  scrollThumbIntoView()
+})
 
 // Simple Lightbox
 const openLightbox = (src: string) => {
@@ -998,6 +1027,9 @@ const openInvitation = () => {
 onMounted(() => {
   document.body.classList.add('overflow-hidden')
   _interval = window.setInterval(nextSlide, 4000)
+  if (thumbContainer.value) {
+    thumbs.value = thumbContainer.value.querySelectorAll('button')
+  }
 })
 
 // Countdown
