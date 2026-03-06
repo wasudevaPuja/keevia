@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: '~/plugins/aos', mode: 'client' },
-    '~/plugins/firebase'
+    '~/plugins/firebase.client'
   ],
   ssr: true,
 

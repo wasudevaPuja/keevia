@@ -1352,15 +1352,14 @@ interface FirebasePlugin {
   serverTimestamp: typeof import('firebase/firestore').serverTimestamp
 }
 
-const { $firebase } = useNuxtApp()
-const firebase = $firebase as FirebasePlugin
-
-if (!firebase) {
-  throw new Error('Firebase plugin tidak tersedia')
-}
+const firebase = import.meta.client
+  ? (useNuxtApp().$firebase as FirebasePlugin)
+  : null
 
 // Collection reference
-const rsvpCollection = firebase.collection(firebase.db, 'rsvp_messages')
+const rsvpCollection = import.meta.client && firebase
+  ? firebase.collection(firebase.db, 'rsvp_messages')
+  : null
 
 //  Form state
 const nama = ref('')
@@ -1385,6 +1384,7 @@ const isSubmitting = ref(false)
 const submitSuccess = ref<boolean | null>(null) // null = idle, true = sukses, false = error
 
 const submitRSVP = async () => {
+  if (!firebase || !rsvpCollection) return
   if (!nama.value || !kehadiran.value) return
 
   isSubmitting.value = true
@@ -1424,7 +1424,7 @@ const submitRSVP = async () => {
 
 //  Fetch guest messages realtime
 const fetchGuestMessages = async () => {
-  if (!firebase) return
+  if (!firebase || !rsvpCollection) return
 
   const { query, orderBy, onSnapshot } = await import('firebase/firestore')
 
