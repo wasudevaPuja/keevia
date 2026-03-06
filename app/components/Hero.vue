@@ -1377,7 +1377,7 @@ interface GuestMessage {
 const guestMessages = ref<GuestMessage[]>([])
 
 //  Google Apps Script URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrdbUN4Bg_r_ZV7n4FUhaHIcFX5UTUSMBqWAj9PFmiZnQkUQ45698GJSjfGvFU93Cq/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzBiQWZ2M9hnuDYdY-RV5mhugLL4HqNzsHFgfuy9xaC2tCKQaG0OU4UDu_oFzacROWN/exec'
 
 //  Submit RSVP
 const isSubmitting = ref(false)
@@ -1400,11 +1400,12 @@ const submitRSVP = async () => {
     })
 
     // Google Sheet
-    await fetch(GOOGLE_SCRIPT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nama: nama.value, kehadiran: kehadiran.value })
+    const params = new URLSearchParams({
+      nama: nama.value,
+      kehadiran: kehadiran.value
     })
+
+    await fetch(`${GOOGLE_SCRIPT_URL}?${params.toString()}`)
 
     submitSuccess.value = true
   } catch (err) {
