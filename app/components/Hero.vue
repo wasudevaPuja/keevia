@@ -1377,7 +1377,7 @@ interface GuestMessage {
 const guestMessages = ref<GuestMessage[]>([])
 
 //  Google Apps Script URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxvS9AjvTEBsYQwqwknQA3DUt6xBBEq5FMypm46e8X6wANMyMwpi-Cg8a3bVgq_awxq/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby4kUYXnmoRNCgVGHhs9H-uG-yi0LLE3LJFxYNHXX1WRecd4ynUos3Y-6Ou_QiiotXH/exec'
 
 //  Submit RSVP
 const isSubmitting = ref(false)
