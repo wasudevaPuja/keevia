@@ -5,14 +5,14 @@ import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/fire
 
 export default defineNuxtPlugin((nuxtApp) => {
   const firebaseConfig = {
-    apiKey: 'AIzaSyBBIJh0MQCThEv3dNc8mK8IrtWeVn9y2Bs',
-    authDomain: 'felix-wedding-resvp.firebaseapp.com',
-    databaseURL: 'https://felix-wedding-resvp-default-rtdb.firebaseio.com',
-    projectId: 'felix-wedding-resvp',
-    storageBucket: 'felix-wedding-resvp.firebasestorage.app',
-    messagingSenderId: '1014857657785',
-    appId: '1:1014857657785:web:7372f455cb7201036a1a68',
-    measurementId: 'G-97TGYK9NH2'
+    apiKey:  process.env.NUXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain:  process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.NUXT_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.NUXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NUXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NUXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NUXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NUXT_PUBLIC_FIREBASE_MEASURENT_ID
   }
 
   const app = initializeApp(firebaseConfig)
