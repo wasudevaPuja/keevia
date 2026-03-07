@@ -1,7 +1,7 @@
 <template>
-  <div class="h-screen flex overflow-hidden">
+  <div class="h-[100dvh] md:h-screen flex overflow-hidden w-full">
     <!-- LEFT PANEL (80%) -->
-    <div class="hidden md:block md:w-4/5 h-screen relative overflow-hidden">
+    <div class="hidden md:block flex-1 h-[100dvh] md:h-screen relative overflow-hidden">
       <!-- Background Image -->
 
       <img
@@ -45,7 +45,7 @@
     <!-- RIGHT PANEL (20%) -->
     <div
       :class="[
-        'relative lg:w-1/3 w-full h-screen transition-all duration-700',
+        'relative shrink-0 w-full md:w-[400px] lg:w-[450px] xl:w-[500px] max-w-full h-[100dvh] md:h-screen transition-all duration-700 z-20 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] bg-[#1a1a1a]',
         isOpen ? 'overflow-y-auto' : 'overflow-hidden'
       ]"
     >
@@ -68,7 +68,7 @@
 
       <!-- HERO CONTENT -->
       <div
-        class="relative z-10 h-screen flex flex-col justify-between text-white text-center px-8 py-10"
+        class="relative z-10 h-[100dvh] md:h-screen flex flex-col justify-between text-white text-center px-8 py-10 pb-20 md:pb-10"
       >
         <!-- Heading -->
         <div>
@@ -76,7 +76,7 @@
             The Wedding Of
           </p>
 
-          <h1 class="text-4xl md:text-5xl font-light font-serif tracking-wide">
+          <h1 class="text-4xl font-light font-serif tracking-wide">
             Gian <span class="text-pink-200">&</span> Kristiany
           </h1>
 
@@ -125,15 +125,14 @@
       <!-- SCROLL CONTENT -->
       <div
         v-if="isOpen"
-        class="relative z-10 bg-transparent text-white h-screen scroll-smooth overflow-y-auto
-           sm:snap-y sm:snap-mandatory"
+        class="relative z-10 bg-transparent text-white h-[100dvh] md:h-screen scroll-smooth overflow-y-auto"
       >
         <!-- MEMPELAI (The Couple) -->
         <section class="relative w-full bg-[#1a1a1a]">
           <!-- Vertical Layout (Stacked) -->
           <div class="flex flex-col w-full text-left">
             <!-- MEMPELAI PRIA -->
-            <div class="relative w-full h-screen snap-start group overflow-hidden">
+            <div class="relative w-full min-h-[100dvh] md:h-screen group overflow-hidden">
               <img
                 src="/img/groom-pria.jpg"
                 alt="Groom Gian Felix Sinaga"
@@ -144,7 +143,7 @@
               <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
 
               <!-- Content -->
-              <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-16 lg:p-24 z-10 w-full max-w-7xl mx-auto">
+              <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10 w-full mx-auto">
                 <div
                   class="space-y-4 max-w-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
                 >
@@ -155,7 +154,7 @@
                     </p>
                   </div>
 
-                  <h2 class="text-5xl md:text-6xl lg:text-7xl font-light text-white font-serif tracking-wide">
+                  <h2 class="text-4xl lg:text-5xl font-light text-white font-serif tracking-wide leading-tight">
                     Gian Felix<br><span class="italic text-pink-100">Sinaga</span>
                   </h2>
 
@@ -189,7 +188,7 @@
             </div>
 
             <!-- MEMPELAI WANITA -->
-            <div class="relative w-full h-screen snap-start group overflow-hidden">
+            <div class="relative w-full min-h-[100dvh] md:h-screen group overflow-hidden">
               <img
                 src="/img/groom-wanita.jpg"
                 alt="Bride Kristiany Munthe"
@@ -201,7 +200,7 @@
 
               <!-- Content (Aligned right on all screens to balance the Groom) -->
               <div
-                class="absolute inset-0 flex flex-col justify-end p-8 md:p-16 lg:p-24 z-10 items-end text-right w-full max-w-7xl mx-auto"
+                class="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10 items-end text-right w-full mx-auto"
               >
                 <div
                   class="space-y-4 max-w-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col items-end"
@@ -213,7 +212,7 @@
                     </p>
                   </div>
 
-                  <h2 class="text-5xl md:text-6xl lg:text-7xl font-light text-white font-serif tracking-wide">
+                  <h2 class="text-4xl lg:text-5xl font-light text-white font-serif tracking-wide leading-tight">
                     Kristiany<br><span class="italic text-pink-100">Munthe</span>
                   </h2>
 
@@ -249,7 +248,7 @@
         </section>
 
         <!-- JOURNEY OF LOVE -->
-        <section class="min-h-screen relative snap-start flex flex-col justify-center py-16 md:py-24">
+        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <div class="absolute inset-0 -z-10">
             <video
               autoplay
@@ -270,12 +269,12 @@
             <!-- Header -->
             <div class="text-center space-y-4 mb-16 md:mb-20">
               <div class="flex justify-center mb-4">
-                <i class="mdi mdi-flower-tulip-outline text-4xl md:text-5xl text-pink-300 animate-pulse" />
+                <i class="mdi mdi-flower-tulip-outline text-4xl text-pink-300 animate-pulse" />
               </div>
               <p class="text-xs md:text-sm tracking-[0.3em] uppercase text-pink-200/90 font-medium">
                 A Journey in Love
               </p>
-              <h2 class="text-4xl md:text-5xl lg:text-5xl font-light text-white font-serif italic">
+              <h2 class="text-4xl lg:text-5xl font-light text-white font-serif italic">
                 The Unfinished Chapter
               </h2>
             </div>
@@ -283,40 +282,28 @@
             <!-- Timeline -->
             <div class="relative">
               <!-- Timeline Center Line -->
-              <div
-                class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-pink-300/50 to-transparent -translate-x-1/2"
-              />
+              <!-- Center line removed for mobile-only single column -->
 
-              <div class="space-y-12 md:space-y-24">
+              <div class="space-y-8">
                 <!-- Event 1 -->
-                <div class="relative flex flex-col md:flex-row items-center md:items-start group">
-                  <div
-                    class="hidden md:flex absolute left-1/2 w-4 h-4 rounded-full bg-pink-300 -translate-x-1/2 mt-6 shadow-[0_0_15px_rgba(249,168,212,0.6)] group-hover:scale-150 transition-transform duration-500"
-                  />
+                <div class="relative flex flex-col items-center group">
+                  
                   <!-- Left Date/Title for Desktop -->
-                  <div class="md:w-1/2 md:pr-12 text-center md:text-right w-full mb-6 md:mb-0 space-y-2 pr-0 pl-0">
+                  <div class="w-full text-center mb-4 space-y-2">
                     <div
-                      class="inline-block px-4 py-1.5 rounded-full bg-pink-300/20 text-pink-200 text-xs font-semibold tracking-widest uppercase mb-2 md:hidden"
+                      class="inline-block px-4 py-1.5 rounded-full bg-pink-300/20 text-pink-200 text-xs font-semibold tracking-widest uppercase mb-2"
                     >
                       Juli 2023
                     </div>
-                    <div class="hidden md:block mt-4">
-                      <span class="text-4xl font-light text-pink-200/40 block mb-1">01</span>
-                      <h3 class="text-2xl md:text-3xl font-semibold text-white tracking-wide">
-                        The Unexpected Comeback
-                      </h3>
-                      <p class="text-pink-300/80 font-medium mt-1">
-                        Juli 2023
-                      </p>
-                    </div>
+                    
                   </div>
                   <!-- Right Content -->
-                  <div class="md:w-1/2 md:pl-12 w-full pl-0">
+                  <div class="w-full">
                     <div
-                      class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/15 transition-colors duration-500 shadow-xl relative overflow-hidden group-hover:-translate-y-2 transform transition-all"
+                      class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 transition-colors duration-500 shadow-xl relative overflow-hidden group-hover:-translate-y-2 transform transition-all"
                     >
                       <div class="absolute -right-6 -top-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl" />
-                      <div class="md:hidden mb-4 border-b border-white/10 pb-4">
+                      <div class="mb-4 border-b border-white/10 pb-4">
                         <h3 class="text-xl font-semibold text-white">
                           The Unexpected Comeback
                         </h3>
@@ -333,34 +320,24 @@
                 </div>
 
                 <!-- Event 2 -->
-                <div class="relative flex flex-col md:flex-row-reverse items-center md:items-start group">
-                  <div
-                    class="hidden md:flex absolute left-1/2 w-4 h-4 rounded-full bg-pink-300 -translate-x-1/2 mt-6 shadow-[0_0_15px_rgba(249,168,212,0.6)] group-hover:scale-150 transition-transform duration-500"
-                  />
+                <div class="relative flex flex-col items-center group">
+                  
                   <!-- Right Date/Title for Desktop -->
-                  <div class="md:w-1/2 md:pl-12 text-center md:text-left w-full mb-6 md:mb-0 space-y-2 pl-0 pr-0">
+                  <div class="w-full text-center mb-4 space-y-2">
                     <div
-                      class="inline-block px-4 py-1.5 rounded-full bg-pink-300/20 text-pink-200 text-xs font-semibold tracking-widest uppercase mb-2 md:hidden"
+                      class="inline-block px-4 py-1.5 rounded-full bg-pink-300/20 text-pink-200 text-xs font-semibold tracking-widest uppercase mb-2"
                     >
                       2023 - 2025
                     </div>
-                    <div class="hidden md:block mt-4">
-                      <span class="text-4xl font-light text-pink-200/40 block mb-1">02</span>
-                      <h3 class="text-2xl md:text-3xl font-semibold text-white tracking-wide">
-                        The Beautiful Mess
-                      </h3>
-                      <p class="text-pink-300/80 font-medium mt-1">
-                        2023 - 2025
-                      </p>
-                    </div>
+                    
                   </div>
                   <!-- Left Content -->
-                  <div class="md:w-1/2 md:pr-12 w-full pr-0 text-left md:text-right">
+                  <div class="w-full">
                     <div
-                      class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/15 transition-colors duration-500 shadow-xl relative overflow-hidden group-hover:-translate-y-2 transform transition-all"
+                      class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 transition-colors duration-500 shadow-xl relative overflow-hidden group-hover:-translate-y-2 transform transition-all"
                     >
                       <div class="absolute -left-6 -bottom-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl" />
-                      <div class="md:hidden mb-4 border-b border-white/10 pb-4 text-left">
+                      <div class="mb-4 border-b border-white/10 pb-4 text-center">
                         <h3 class="text-xl font-semibold text-white">
                           The Beautiful Mess
                         </h3>
@@ -377,34 +354,24 @@
                 </div>
 
                 <!-- Event 3 -->
-                <div class="relative flex flex-col md:flex-row items-center md:items-start group">
-                  <div
-                    class="hidden md:flex absolute left-1/2 w-4 h-4 rounded-full bg-pink-300 -translate-x-1/2 mt-6 shadow-[0_0_15px_rgba(249,168,212,0.6)] group-hover:scale-150 transition-transform duration-500"
-                  />
+                <div class="relative flex flex-col items-center group">
+                  
                   <!-- Left Date/Title for Desktop -->
-                  <div class="md:w-1/2 md:pr-12 text-center md:text-right w-full mb-6 md:mb-0 space-y-2 pr-0 pl-0">
+                  <div class="w-full text-center mb-4 space-y-2">
                     <div
-                      class="inline-block px-4 py-1.5 rounded-full bg-pink-300/20 text-pink-200 text-xs font-semibold tracking-widest uppercase mb-2 md:hidden"
+                      class="inline-block px-4 py-1.5 rounded-full bg-pink-300/20 text-pink-200 text-xs font-semibold tracking-widest uppercase mb-2"
                     >
                       Maret 2026
                     </div>
-                    <div class="hidden md:block mt-4">
-                      <span class="text-4xl font-light text-pink-200/40 block mb-1">03</span>
-                      <h3 class="text-2xl md:text-3xl font-semibold text-white tracking-wide">
-                        The Forever Chapter
-                      </h3>
-                      <p class="text-pink-300/80 font-medium mt-1">
-                        Maret 2026
-                      </p>
-                    </div>
+                    
                   </div>
                   <!-- Right Content -->
-                  <div class="md:w-1/2 md:pl-12 w-full pl-0">
+                  <div class="w-full">
                     <div
-                      class="bg-gradient-to-br from-pink-500/20 to-white/5 backdrop-blur-md border border-pink-300/30 rounded-2xl p-6 md:p-8 hover:border-pink-300/60 transition-colors duration-500 shadow-[0_8px_32px_rgba(249,168,212,0.15)] relative overflow-hidden group-hover:-translate-y-2 transform transition-all text-left"
+                      class="bg-gradient-to-br from-pink-500/20 to-white/5 backdrop-blur-md border border-pink-300/30 rounded-2xl p-6 hover:border-pink-300/60 transition-colors duration-500 shadow-[0_8px_32px_rgba(249,168,212,0.15)] relative overflow-hidden group-hover:-translate-y-2 transform transition-all text-left"
                     >
                       <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-pink-400/20 rounded-full blur-3xl" />
-                      <div class="md:hidden mb-4 border-b border-pink-300/20 pb-4 text-left">
+                      <div class="mb-4 border-b border-pink-300/20 pb-4 text-center">
                         <h3 class="text-xl font-semibold text-white">
                           The Forever Chapter
                         </h3>
@@ -424,7 +391,7 @@
         </section>
 
         <!-- SAVE OUR DATE -->
-        <section class="min-h-screen relative snap-start flex flex-col justify-center py-16 md:py-24">
+        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <!-- Background Video with elegant overlay -->
           <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
             <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
@@ -450,7 +417,7 @@
           <div class="relative z-30 max-w-4xl mx-auto text-center px-6 md:px-12 w-full">
             <!-- Main Content Container with Glassmorphism -->
             <div
-              class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-14 lg:p-20 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group"
+              class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group"
             >
               <!-- Decorative elements -->
               <div
@@ -474,7 +441,7 @@
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">
                     Save Our Date
                   </h2>
-                  <p class="text-3xl md:text-5xl font-serif italic font-light text-white tracking-wide mt-2">
+                  <p class="text-3xl font-serif italic font-light text-white tracking-wide mt-2">
                     Rabu, 25 Maret 2026
                   </p>
                 </div>
@@ -484,36 +451,36 @@
                   <div class="grid grid-cols-4 gap-2 md:gap-6 max-w-2xl mx-auto">
                     <!-- Days -->
                     <div
-                      class="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
+                      class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
                     >
-                      <span class="text-3xl md:text-5xl font-light text-white font-serif">{{ countdown.days }}</span>
+                      <span class="text-3xl font-light text-white font-serif">{{ countdown.days }}</span>
                       <span
                         class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200/70 mt-2 font-medium"
                       >Hari</span>
                     </div>
                     <!-- Hours -->
                     <div
-                      class="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
+                      class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
                     >
-                      <span class="text-3xl md:text-5xl font-light text-white font-serif">{{ countdown.hours }}</span>
+                      <span class="text-3xl font-light text-white font-serif">{{ countdown.hours }}</span>
                       <span
                         class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200/70 mt-2 font-medium"
                       >Jam</span>
                     </div>
                     <!-- Minutes -->
                     <div
-                      class="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
+                      class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
                     >
-                      <span class="text-3xl md:text-5xl font-light text-white font-serif">{{ countdown.minutes }}</span>
+                      <span class="text-3xl font-light text-white font-serif">{{ countdown.minutes }}</span>
                       <span
                         class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200/70 mt-2 font-medium"
                       >Menit</span>
                     </div>
                     <!-- Seconds -->
                     <div
-                      class="flex flex-col items-center justify-center p-3 md:p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
+                      class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors"
                     >
-                      <span class="text-3xl md:text-5xl font-light text-pink-300 font-serif">{{ countdown.seconds
+                      <span class="text-3xl font-light text-pink-300 font-serif">{{ countdown.seconds
                       }}</span>
                       <span
                         class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200/70 mt-2 font-medium"
@@ -614,7 +581,7 @@
         </section>
 
         <!-- RSVP -->
-        <section class="min-h-screen relative snap-start flex flex-col justify-center py-16 md:py-24">
+        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <!-- Background Video with elegant overlay -->
           <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
@@ -647,7 +614,7 @@
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">
                     RSVP & Wishes
                   </h2>
-                  <p class="text-4xl md:text-5xl font-serif italic font-light text-white tracking-wide mt-2">
+                  <p class="text-4xl font-serif italic font-light text-white tracking-wide mt-2">
                     Kehadiran Anda
                   </p>
                   <p class="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -659,7 +626,7 @@
 
                 <!-- Form RSVP -->
                 <form
-                  class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group space-y-6"
+                  class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group space-y-6"
                   @submit.prevent="submitRSVP"
                 >
                   <div class="absolute -top-40 -right-40 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
@@ -784,7 +751,7 @@
               <!-- Bottom side: List Ucapan Tamu -->
               <div class="h-full">
                 <div
-                  class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-8 h-full min-h-[500px] flex flex-col shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group"
+                  class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 h-full min-h-[500px] flex flex-col shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group"
                 >
                   <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
 
@@ -852,7 +819,7 @@
         </section>
 
         <!-- Wedding Gift -->
-        <section class="min-h-screen relative snap-start flex flex-col justify-center py-16 md:py-24">
+        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <!-- Background Video with elegant overlay -->
           <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
             <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
@@ -878,7 +845,7 @@
           <!-- Content -->
           <div class="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-12 w-full">
             <div
-              class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-14 lg:p-20 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group"
+              class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group"
             >
               <!-- Decorative elements -->
               <div
@@ -898,7 +865,7 @@
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">
                     Wedding Gift
                   </h2>
-                  <p class="text-3xl md:text-5xl font-serif italic font-light text-white tracking-wide mt-2">
+                  <p class="text-3xl font-serif italic font-light text-white tracking-wide mt-2">
                     Tanda Kasih
                   </p>
                   <p class="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-4">
@@ -912,7 +879,7 @@
                 <div class="flex flex-col gap-6 pt-6 max-w-2xl mx-auto w-full">
                   <!-- Card 1: Kirim Kado / Alamat -->
                   <div
-                    class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
+                    class="bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
                   >
                     <div
                       class="absolute inset-0 bg-gradient-to-b from-pink-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
@@ -948,7 +915,7 @@
 
                   <!-- Card 2: Nomor Rekening BCA -->
                   <div
-                    class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
+                    class="bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
                   >
                     <div
                       class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
@@ -988,7 +955,7 @@
 
                   <!-- Card 3: Gopay / E-Wallet -->
                   <div
-                    class="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden md:col-span-2 lg:col-span-1"
+                    class="bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden md:col-span-2 lg:col-span-1"
                   >
                     <div
                       class="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
@@ -1031,7 +998,7 @@
         </section>
 
         <!-- GALERI -->
-        <section class="min-h-screen relative snap-start flex flex-col justify-center py-16 md:py-24 overflow-hidden">
+        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24 overflow-hidden">
           <!-- Background -->
           <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
             <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 via-black to-black z-0" />
@@ -1057,7 +1024,7 @@
 
             <!-- Gallery Grid / Carousel Container -->
             <div
-              class="relative flex-1 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              class="relative flex-1 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
             >
               <!-- Decorative ambient glow -->
               <div
@@ -1129,12 +1096,12 @@
               <!-- Thumbnails / Pagination -->
               <div
                 ref="thumbContainer"
-                class="mt-6 md:mt-8 flex justify-start md:justify-center gap-3 overflow-x-auto py-4 custom-scrollbar px-2 snap-x snap-mandatory"
+                class="mt-6 md:mt-8 flex justify-start md:justify-center gap-3 overflow-x-auto py-4 custom-scrollbar px-2"
               >
                 <button
                   v-for="(img, idx) in images"
                   :key="'thumb-' + idx"
-                  ref="thumbs"
+                  :ref="(el) => { if (el) thumbs[idx] = el as HTMLElement }"
                   class="relative w-16 h-16 md:w-24 md:h-24 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300"
                   :class="current === idx ? 'border-pink-400 scale-110 shadow-[0_0_15px_rgba(249,168,212,0.5)] z-10' : 'border-transparent opacity-50 hover:opacity-100 hover:scale-105'"
                   @click="current = idx"
@@ -1154,7 +1121,7 @@
         </section>
 
         <!-- FOOTER / THANK YOU -->
-        <section class="relative w-full min-h-screen overflow-hidden snap-start flex flex-col">
+        <section class="relative w-full min-h-[100dvh] md:min-h-screen overflow-hidden flex flex-col">
           <!-- Background Gradient Vertikal -->
           <div class="absolute inset-0 -z-10">
             <div class="absolute inset-0 bg-gradient-to-b from-pink-800/30 via-black/70 to-black/95" />
@@ -1167,7 +1134,7 @@
           <div class="relative z-20 max-w-4xl mx-auto text-center px-6 md:px-12 flex flex-col justify-center flex-1">
             <!-- Heart / Ornament -->
             <div class="flex justify-center mb-6">
-              <i class="mdi mdi-heart text-4xl md:text-5xl text-pink-300 animate-pulse" />
+              <i class="mdi mdi-heart text-4xl text-pink-300 animate-pulse" />
             </div>
 
             <!-- Thank You Text -->
@@ -1250,12 +1217,12 @@ const prevSlide = () => {
 
 // Refs untuk thumbnail container & items
 const thumbContainer = ref<HTMLElement | null>(null)
-const thumbs = ref<NodeListOf<HTMLButtonElement> | null>(null)
+const thumbs = ref<HTMLElement[]>([])
 
 // Scroll thumbnail aktif ke tengah
 const scrollThumbIntoView = () => {
   nextTick(() => {
-    if (!thumbContainer.value || !thumbs.value) return
+    if (!thumbContainer.value || !thumbs.value.length) return
     const container = thumbContainer.value
     const activeThumb = thumbs.value[current.value]
     if (!activeThumb) return
@@ -1263,9 +1230,10 @@ const scrollThumbIntoView = () => {
     const containerRect = container.getBoundingClientRect()
     const thumbRect = activeThumb.getBoundingClientRect()
 
-    // scroll container agar thumbnail aktif ada di tengah
-    container.scrollBy({
-      left: thumbRect.left - containerRect.left - containerRect.width / 2 + thumbRect.width / 2,
+    // Calculate actual center taking into account scroll position
+    const scrollLeftTo = activeThumb.offsetLeft - (containerRect.width / 2) + (activeThumb.offsetWidth / 2)
+    container.scrollTo({
+      left: scrollLeftTo,
       behavior: 'smooth'
     })
   })
@@ -1274,6 +1242,25 @@ const scrollThumbIntoView = () => {
 // Watch current slide
 watch(current, () => {
   scrollThumbIntoView()
+})
+
+watch(isOpen, (val) => {
+  if (val) {
+    // Interval only starts when opened
+  } else {
+    clearInterval(_interval)
+    current.value = 0
+  }
+})
+
+// Start interval if open
+watch(isOpen, (val) => {
+  if (val) {
+    // Interval only starts when opened
+  } else {
+    clearInterval(_interval)
+    current.value = 0 // reset ke data pertama
+  }
 })
 
 // Simple Lightbox
@@ -1310,9 +1297,9 @@ const openInvitation = () => {
 
 onMounted(() => {
   document.body.classList.add('overflow-hidden')
-  _interval = window.setInterval(nextSlide, 4000)
+  // Interval dipindahkan ke watcher / observer
   if (thumbContainer.value) {
-    thumbs.value = thumbContainer.value.querySelectorAll('button')
+    // // Manual select removed // removed manual select
   }
 })
 
