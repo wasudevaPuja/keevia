@@ -953,7 +953,7 @@
                     name="mdi:magnify-plus-outline"
                     class="w-4 h-4 text-pink-300"
                   />
-                  <span class="text-xs text-white uppercase tracking-widest font-medium">{{ t("tapEnlarge") }}</span>
+                  <span class="text-xs text-white uppercase tracking-widest font-medium whitespace-nowrap">{{ t("tapEnlarge") }}</span>
                 </div>
               </div>
 
