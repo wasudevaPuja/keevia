@@ -42,7 +42,7 @@
     <div
       :class="[
         'relative shrink-0 w-full md:w-[400px] lg:w-[450px] xl:w-[500px] max-w-full h-[100dvh] md:h-screen transition-all duration-700 z-20 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] bg-[#1a1a1a]',
-        isOpen ? 'overflow-y-auto' : 'overflow-hidden'
+        isOpen ? 'overflow-x-hidden overflow-y-auto' : 'overflow-hidden'
       ]"
     >
       <!-- BACKGROUND VIDEO UTAMA -->
@@ -106,7 +106,7 @@
       <!-- SCROLL CONTENT -->
       <div
         v-if="isOpen"
-        class="relative z-10 bg-transparent text-white h-[100dvh] md:h-screen scroll-smooth overflow-y-auto"
+        class="relative z-10 bg-transparent text-white w-full"
       >
         <!-- MEMPELAI (The Couple) -->
         <section class="relative w-full bg-[#1a1a1a]">
@@ -1302,14 +1302,22 @@ const openInvitation = () => {
   })
 
   if (audioControl?.audio.value && !audioControl.isPlaying.value) {
-    audioControl.audio.value.play()
+    const playPromise = audioControl.audio.value.play()
+    if (playPromise !== undefined) {
+      playPromise.catch(e => console.warn('Audio prevented:', e))
+    }
     audioControl.isPlaying.value = true
   }
 
   startCountdown()
 
   // Force play all background videos upon user interaction
-  document.querySelectorAll('video').forEach(vid => vid.play().catch(() => {}))
+  document.querySelectorAll('video').forEach(vid => {
+    const playPromise = vid.play()
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {})
+    }
+  })
 }
 
 // Start interval if open
@@ -1339,7 +1347,10 @@ const initScrollAnimations = () => {
 onMounted(() => {
   // Force play videos
   document.querySelectorAll('video').forEach(vid => {
-    vid.play().catch(e => console.warn('Autoplay prevented:', e))
+    const playPromise = vid.play()
+    if (playPromise !== undefined) {
+      playPromise.catch(e => console.warn('Autoplay prevented:', e))
+    }
   })
 
   setTimeout(() => {
@@ -1530,7 +1541,9 @@ const showToast = (message: string, _isError = false) => {
 </script>
 
 <style>
-html {
+html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 </style>
