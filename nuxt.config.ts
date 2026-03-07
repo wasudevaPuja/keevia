@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
   plugins: [
-    { src: '~/plugins/aos', mode: 'client' }
+    { src: '~/plugins/firebase.client', mode: 'client' }
   ],
   ssr: true,
 
