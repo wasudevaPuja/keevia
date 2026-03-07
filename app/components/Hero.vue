@@ -235,7 +235,7 @@
 
           <div class="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12">
             <!-- Header -->
-            <div class="opacity-0 transition-all ease-out scroll-animate -translate-y-10 duration-[1000ms] text-center space-y-4 mb-16 md:mb-20">
+            <div class="opacity-0 transition-all ease-out transform-gpu scroll-animate -translate-y-10 duration-[700ms] text-center space-y-4 mb-16 md:mb-20">
               <div class="flex justify-center mb-4">
                 <i class="mdi mdi-flower-tulip-outline text-4xl text-pink-300 animate-pulse" />
               </div>
@@ -261,7 +261,7 @@
                   </div>
                   <!-- Right Content -->
                   <div class="w-full">
-                    <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 transition-colors duration-500 shadow-xl relative overflow-hidden group-hover:-translate-y-2 transform transition-all"
+                    <div class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 shadow-xl relative overflow-hidden group-hover:-translate-y-2 text-left"
                     >
                       <div class="absolute -right-6 -top-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl" />
                       <div class="mb-4 border-b border-white/10 pb-4">
@@ -284,7 +284,7 @@
                   </div>
                   <!-- Left Content -->
                   <div class="w-full">
-                    <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 transition-colors duration-500 shadow-xl relative overflow-hidden group-hover:-translate-y-2 transform transition-all"
+                    <div class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 shadow-xl relative overflow-hidden group-hover:-translate-y-2 text-left"
                     >
                       <div class="absolute -left-6 -bottom-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl" />
                       <div class="mb-4 border-b border-white/10 pb-4 text-center">
@@ -308,7 +308,7 @@
                   <!-- Right Content -->
                   <div class="w-full">
                     <div
-                      class="bg-gradient-to-br from-pink-500/20 to-white/5 backdrop-blur-md border border-pink-300/30 rounded-2xl p-6 hover:border-pink-300/60 transition-colors duration-500 shadow-[0_8px_32px_rgba(249,168,212,0.15)] relative overflow-hidden group-hover:-translate-y-2 transform transition-all text-left"
+                      class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-gradient-to-br from-pink-500/20 to-white/5 backdrop-blur-md border border-pink-300/30 rounded-2xl p-6 hover:border-pink-300/60 shadow-[0_8px_32px_rgba(249,168,212,0.15)] relative overflow-hidden group-hover:-translate-y-2 text-left"
                     >
                       <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-pink-400/20 rounded-full blur-3xl" />
                       <div class="mb-4 border-b border-pink-300/20 pb-4 text-center">
@@ -1545,5 +1545,11 @@ html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
+}
+
+.scroll-animate {
+  will-change: opacity, transform;
+  transform: translateZ(0); /* Hardware acceleration iOS */
+  backface-visibility: hidden;
 }
 </style>
