@@ -1,6 +1,8 @@
 <script setup lang="ts">
-await navigateTo('https://keevia.id/', {
-  external: true
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  window.location.href = 'https://keevia.id/'
 })
 </script>
 

@@ -1,5 +1,28 @@
 <template>
   <div class="flex w-full min-h-[100dvh]">
+    <!-- PRELOADER SPLASH SCREEN -->
+    <transition name="fade">
+      <div 
+        v-if="isLoading" 
+        class="fixed inset-0 z-[100] bg-[#1a1a1a] text-white flex flex-col items-center justify-center font-sans tracking-wide"
+      >
+        <!-- Center Content -->
+        <div class="flex flex-col items-center space-y-6">
+          <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/70">{{ t("weddingOf") }}</p>
+          <div class="w-24 h-32 md:w-32 md:h-40 overflow-hidden rounded-md border border-white/10 shadow-lg relative">
+            <div class="absolute inset-0 bg-black/20 z-10"></div>
+            <img src="/img/groom-pria.jpg" alt="Preloading" class="w-full h-full object-cover grayscale opacity-80" />
+          </div>
+          <p class="text-sm md:text-base font-medium tracking-[0.2em] uppercase mt-2">GIAN <span class="text-pink-300/80">&</span> KRISTIANY</p>
+        </div>
+
+        <!-- Progress Text -->
+        <div class="absolute bottom-8 left-8 md:bottom-12 md:left-12">
+          <p class="text-[10px] md:text-xs tracking-[0.15em] text-white/50">LOADING... {{ loadingProgress }}%</p>
+        </div>
+      </div>
+    </transition>
+
     <!-- LEFT PANEL (80%) -->
     <div class="hidden md:block flex-1 sticky top-0 self-start h-[100dvh] md:h-screen relative overflow-hidden">
       <!-- Background Image -->
@@ -1075,6 +1098,8 @@ import { useRoute } from 'vue-router'
 import { useNuxtApp } from '#app'
 
 const isVideoPlaying = ref(false)
+const isLoading = ref(true)
+const loadingProgress = ref(0)
 
 // Daftar gambar
 const images = ref<string[]>([
@@ -1370,6 +1395,28 @@ const initScrollAnimations = () => {
 }
 
 onMounted(() => {
+  // Simulate loading progress
+  const duration = 2000 // 2 seconds minimum loading time
+  const intervalTime = 30
+  const steps = duration / intervalTime
+  let currentStep = 0
+
+  const loadingInterval = setInterval(() => {
+    currentStep++
+    loadingProgress.value = Math.min(Math.round((currentStep / steps) * 100), 100)
+    
+    if (currentStep >= steps) {
+      clearInterval(loadingInterval)
+      setTimeout(() => {
+        isLoading.value = false
+        // Start scroll animations slightly after preloader starts fading out
+        setTimeout(() => {
+          initScrollAnimations()
+        }, 500)
+      }, 500)
+    }
+  }, intervalTime)
+
   // Force play videos
   document.querySelectorAll('video').forEach(vid => {
     const playPromise = vid.play()
@@ -1378,13 +1425,7 @@ onMounted(() => {
     }
   })
 
-  setTimeout(() => {
-    initScrollAnimations()
-  }, 500)
-
   document.body.classList.add('overflow-hidden') // Require visitor to open invitation to scroll
-
-  
 
   // Interval dipindahkan ke watcher / observer
   if (thumbContainer.value) {
@@ -1631,5 +1672,15 @@ html, body {
   will-change: opacity, transform;
   transform: translateZ(0); /* Hardware acceleration iOS */
   backface-visibility: hidden;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
