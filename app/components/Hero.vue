@@ -68,30 +68,14 @@
         isOpen ? 'overflow-x-hidden overflow-y-auto' : 'overflow-hidden'
       ]"
     >
-      <!-- BACKGROUND VIDEO UTAMA -->
+      <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-        <!-- Background Fallback Image (Shows before video loads or if video fails) -->
         <img 
           src="/img/background-hero.webp"
-          class="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-1000 z-0"
-          :class="isVideoPlaying ? 'opacity-0' : 'opacity-60'"
+          class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80"
+          alt="Hero Background"
         >
-        <video
-          poster="/img/background-hero.webp"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-1000"
-          :class="!isVideoPlaying ? 'opacity-0' : 'opacity-70'"
-          @play="isVideoPlaying = true"
-        >
-          <source
-            src="/video/wedding-video.mp4"
-            type="video/mp4"
-          >
-        </video>
-        <!-- Overlay Gradient over the video to make text readable -->
+        <!-- Overlay Gradient over the image to make text readable -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-20 pointer-events-none" />
       </div>
 
