@@ -46,21 +46,24 @@
       ]"
     >
       <!-- BACKGROUND VIDEO UTAMA -->
-      <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
+        <!-- Background Fallback Image (Shows before video loads or if video fails) -->
+        <div class="absolute inset-0 bg-[url('/img/background-hero.webp')] bg-cover bg-center opacity-40 mix-blend-screen scale-105 z-0" />
         <video
           poster="/img/background-hero.webp"
           autoplay
           muted
           loop
           playsinline
-          class="absolute inset-0 w-full h-full object-cover -z-10"
+          class="absolute inset-0 w-full h-full object-cover z-10 opacity-70"
         >
           <source
             src="/video/wedding-video.mp4"
             type="video/mp4"
           >
         </video>
-        <div class="absolute inset-0 bg-black/50" />
+        <!-- Overlay Gradient over the video to make text readable -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20 z-20" />
       </div>
 
       <!-- HERO CONTENT -->
@@ -691,6 +694,18 @@
                             {{ formatDate(entry.tanggal) }}
                           </p>
                         </div>
+
+                        <!-- Load More Button -->
+                        <div v-if="hasMore" class="pt-4 pb-2 flex justify-center w-full">
+                          <button
+                            @click="loadMoreMessages"
+                            :disabled="isLoadingMore"
+                            class="px-6 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-pink-300/30 rounded-full text-xs text-white transition-all flex items-center gap-2"
+                          >
+                            <span v-if="isLoadingMore" class="animate-spin border-2 border-t-transparent border-white rounded-full w-4 h-4"></span>
+                            <span v-else>{{ t('loadMore') }}</span>
+                          </button>
+                        </div>
                       </template>
                       <template v-else>
                         <div
@@ -1190,6 +1205,7 @@ const dict = {
     attendBadge: "✔️ Hadir",
     absentBadge: "❌ Tidak Hadir",
     noWishes: "Belum ada ucapan. Jadilah yang pertama!",
+    loadMore: "Muat Lebih Banyak",
     giftSub: "Wedding Gift",
     giftTitle: "Tanda Kasih",
     giftDesc: "Kehadiran dan doa restu Anda adalah kado terindah bagi kami. Namun, jika Anda ingin memberikan tanda kasih berupa kado fisik maupun digital, dapat melalui opsi di bawah ini.",
@@ -1266,6 +1282,7 @@ const dict = {
     attendBadge: "✔️ Attending",
     absentBadge: "❌ Not Attending",
     noWishes: "No wishes yet. Be the first to send one!",
+    loadMore: "Load More",
     giftSub: "Wedding Gift",
     giftTitle: "Token of Love",
     giftDesc: "Your presence and blessings are the best gifts for us. However, if you wish to give a token of love in the form of a physical or digital gift, you can use the options below.",
@@ -1450,6 +1467,14 @@ const submitRSVP = async () => {
       tanggal: firebase.serverTimestamp()
     })
 
+    // Update locally so it appears immediately
+    guestMessages.value.unshift({
+      nama: nama.value,
+      kehadiran: kehadiran.value as 'Hadir' | 'Tidak Hadir',
+      ucapan: ucapan.value,
+      tanggal: new Date()
+    })
+
     // Google Sheet
     const params = new URLSearchParams({
       nama: nama.value,
@@ -1475,18 +1500,59 @@ const submitRSVP = async () => {
   }
 }
 
-//  Fetch guest messages realtime
+// Pagination state
+const lastVisible = ref<any>(null)
+const hasMore = ref(true)
+const isLoadingMore = ref(false)
+
+// Fetch initial guest messages
 const fetchGuestMessages = async () => {
   if (!import.meta.client || !firebase || !rsvpCollection) return
 
-  const { query, orderBy, onSnapshot } = await import('firebase/firestore')
+  const { query, orderBy, limit, getDocs } = await import('firebase/firestore')
 
-  const q = query(rsvpCollection, orderBy('tanggal', 'desc'))
+  const q = query(rsvpCollection, orderBy('tanggal', 'desc'), limit(10))
+  const snapshot = await getDocs(q)
 
-  onSnapshot(q, (snapshot) => {
-    guestMessages.value = snapshot.docs.map((doc) => {
+  if (snapshot.empty) {
+    hasMore.value = false
+    return
+  }
+
+  lastVisible.value = snapshot.docs[snapshot.docs.length - 1]
+  hasMore.value = snapshot.docs.length === 10
+
+  guestMessages.value = snapshot.docs.map((doc) => {
+    const data = doc.data()
+    return {
+      nama: data.nama,
+      kehadiran: data.kehadiran,
+      ucapan: data.ucapan,
+      tanggal: data.tanggal?.toDate?.() || new Date()
+    }
+  })
+}
+
+// Load more messages
+const loadMoreMessages = async () => {
+  if (!import.meta.client || !firebase || !rsvpCollection || !lastVisible.value) return
+  isLoadingMore.value = true
+
+  try {
+    const { query, orderBy, limit, getDocs, startAfter } = await import('firebase/firestore')
+    const q = query(rsvpCollection, orderBy('tanggal', 'desc'), startAfter(lastVisible.value), limit(10))
+    const snapshot = await getDocs(q)
+
+    if (snapshot.empty) {
+      hasMore.value = false
+      return
+    }
+
+    lastVisible.value = snapshot.docs[snapshot.docs.length - 1]
+    hasMore.value = snapshot.docs.length === 10
+
+    const newMessages = snapshot.docs.map((doc) => {
       const data = doc.data()
-
       return {
         nama: data.nama,
         kehadiran: data.kehadiran,
@@ -1494,7 +1560,13 @@ const fetchGuestMessages = async () => {
         tanggal: data.tanggal?.toDate?.() || new Date()
       }
     })
-  })
+
+    guestMessages.value = [...guestMessages.value, ...newMessages]
+  } catch (err) {
+    console.error('Error loading more messages:', err)
+  } finally {
+    isLoadingMore.value = false
+  }
 }
 
 // Format tanggal
