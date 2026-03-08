@@ -14,7 +14,7 @@ useSeoMeta({
   description: `Join us in celebrating the wedding of ${formattedName}. With love and joy, we invite you to be part of our special day.`,
 
   // Basic Meta
-  author: 'Keevia',
+  author: 'Keevia.id',
   robots: 'index, follow',
 
   // Open Graph
@@ -23,7 +23,7 @@ useSeoMeta({
   ogType: 'website',
   ogUrl: `https://keevia.id/${slug}`,
   ogImage: `https://keevia.id/images/${slug}-cover.jpg`,
-  ogSiteName: 'Keevia',
+  ogSiteName: 'Keevia.id',
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogLocale: 'en_US',
@@ -33,8 +33,8 @@ useSeoMeta({
   twitterTitle: `The Wedding of ${formattedName}`,
   twitterDescription: `Join us in celebrating the wedding of ${formattedName}.`,
   twitterImage: `https://keevia.id/images/${slug}-cover.jpg`,
-  twitterSite: '@keevia',
-  twitterCreator: '@keevia'
+  twitterSite: '@keevia.id',
+  twitterCreator: '@keevia.id'
 })
 </script>
 
