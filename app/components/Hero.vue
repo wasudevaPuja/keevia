@@ -48,14 +48,19 @@
       <!-- BACKGROUND VIDEO UTAMA -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
         <!-- Background Fallback Image (Shows before video loads or if video fails) -->
-        <div class="absolute inset-0 bg-[url('/img/background-hero.webp')] bg-cover bg-center opacity-40 mix-blend-screen scale-105 z-0" />
+        <div 
+          class="absolute inset-0 bg-[url('/img/background-hero.webp')] bg-cover bg-center mix-blend-screen scale-105 z-0 transition-opacity duration-1000"
+          :class="isVideoPlaying ? 'opacity-0' : 'opacity-40'"
+        />
         <video
           poster="/img/background-hero.webp"
           autoplay
           muted
           loop
           playsinline
-          class="absolute inset-0 w-full h-full object-cover z-10 opacity-70"
+          class="absolute inset-0 w-full h-full object-cover z-10"
+          :class="!isVideoPlaying ? 'opacity-0' : 'opacity-70'"
+          @play="isVideoPlaying = true"
         >
           <source
             src="/video/wedding-video.mp4"
@@ -1067,6 +1072,8 @@
 import { ref, onMounted, computed, inject, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { useNuxtApp } from '#app'
+
+const isVideoPlaying = ref(false)
 
 // Daftar gambar
 const images = ref<string[]>([
