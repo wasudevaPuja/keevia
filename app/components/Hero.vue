@@ -141,7 +141,7 @@
 
               <!-- Content -->
               <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10 w-full mx-auto">
-                <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] space-y-4 max-w-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+                <div class="opacity-0 transition-all ease-[cubic-bezier(0.25,1,0.5,1)] scroll-animate translate-y-16 duration-[1500ms] space-y-4 max-w-sm"
                 >
                   <div class="flex items-center gap-4">
                     <div class="w-12 h-px bg-pink-300" />
@@ -192,7 +192,7 @@
               <div
                 class="absolute inset-0 flex flex-col justify-end p-8 md:p-12 z-10 items-end text-right w-full mx-auto"
               >
-                <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] space-y-4 max-w-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500 flex flex-col items-end"
+                <div class="opacity-0 transition-all ease-[cubic-bezier(0.25,1,0.5,1)] scroll-animate translate-y-16 duration-[1500ms] space-y-4 max-w-sm flex flex-col items-end"
                 >
                   <div class="flex items-center gap-4 flex-row-reverse">
                     <div class="w-12 h-px bg-pink-300" />
@@ -916,8 +916,23 @@
               <p class="text-4xl md:text-6xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("memoriesTitle") }}</p>
             </div>
 
-            <!-- Gallery Grid / Carousel Container -->
-            <div class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] relative flex-1 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+            <!-- Prewedding Video Card -->
+            <div class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] relative w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-8">
+              <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg z-10 bg-black/50">
+                <iframe 
+                  class="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+                  title="Prewedding Video" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Gallery Grid / Carousel Card -->
+            <div class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] delay-200 relative flex-1 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mt-4">
               <!-- Decorative ambient glow -->
               <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-pink-500/10 rounded-full blur-[100px] pointer-events-none"
