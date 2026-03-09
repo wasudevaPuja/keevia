@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import Blossom from '~/components/blossom.vue';
+
 const formattedName = 'Gian & Kristiany'
 const slug = 'gian-munthe'
 
@@ -33,6 +35,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <Hero />
+    <Blossom />
   </div>
 </template>
