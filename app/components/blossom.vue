@@ -11,7 +11,7 @@
           <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/70">{{ t("weddingOf") }}</p>
           <div class="w-40 h-56 md:w-32 md:h-40 overflow-hidden rounded-md border border-white/10 shadow-lg relative">
             <div class="absolute inset-0 bg-black/20 z-10"></div>
-            <img src="/img/gian/loading_img.JPEG" alt="Preloading" class="w-full h-full object-cover grayscale opacity-80" />
+            <img src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp" alt="Preloading" class="w-full h-full object-cover grayscale opacity-80" />
           </div>
           <p class="text-sm md:text-base font-medium tracking-[0.2em] uppercase mt-2">GIAN <span class="text-pink-300/80">&</span> KRISTIANI</p>
         </div>
@@ -28,7 +28,7 @@
       <!-- Background Image -->
 
       <img
-        src="/img/gian/cover.webp"
+        src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1200/v1773331570/cover_poiflp.webp"
         class="absolute inset-0 w-full h-full object-cover scale-105"
       >
 
@@ -70,7 +70,7 @@
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
         <img 
-          src="/img/gian/cover.webp"
+          src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
           class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80"
           alt="Hero Background"
         >
@@ -130,7 +130,7 @@
             <!-- MEMPELAI PRIA -->
             <div class="relative w-full min-h-[85dvh] lg:h-screen group overflow-hidden border-b border-white/5">
               <img
-                src="/img/gian/the_groom.jpg"
+                src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331571/the_groom_qihvwb.jpg"
                 alt="Groom Gian Felix Sinaga"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear group-hover:scale-110"
                 loading="lazy"
@@ -181,7 +181,7 @@
             <!-- MEMPELAI WANITA -->
             <div class="relative w-full min-h-[85dvh] lg:h-screen group overflow-hidden border-b border-white/5">
               <img
-                src="/img/gian/the_bride.jpg"
+                src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331573/the_bride_zy1not.jpg"
                 alt="Bride Kristiani Munthe"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear group-hover:scale-110"
                 loading="lazy"
@@ -237,7 +237,7 @@
         <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <div class="absolute inset-0 -z-10">
             <video
-              poster="/img/gian/cover.webp"
+              poster="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331570/cover_poiflp.webp"
               preload="none"
               autoplay
               muted
@@ -246,7 +246,7 @@
               class="w-full h-full object-cover filter brightness-75 contrast-125"
             >
               <source
-                src="/video/gian/Reels.mp4"
+                src="https://res.cloudinary.com/debcjiypk/video/upload/v1773331519/Reels_adujdu.mp4"
                 type="video/mp4"
               >
             </video>
@@ -350,7 +350,7 @@
             <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
             <video
-          poster="/img/gian/cover.webp"
+          poster="https://res.cloudinary.com/debcjiypk/image/upload/v1773331570/cover_poiflp.webp"
               autoplay
               muted
               loop
@@ -358,7 +358,7 @@
               class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen"
             >
               <source
-                src="/video/gian/Reels.mp4"
+                src="https://res.cloudinary.com/debcjiypk/video/upload/v1773331519/Reels_adujdu.mp4"
                 type="video/mp4"
               >
             </video>
@@ -543,7 +543,7 @@
             <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
             <video
-              poster="/img/gian/cover.webp"
+              poster="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331570/cover_poiflp.webp"
               preload="none"
               autoplay
               muted
@@ -552,7 +552,7 @@
               class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen grayscale"
             >
               <source
-                src="/video/gian/Reels.mp4"
+                src="https://res.cloudinary.com/debcjiypk/video/upload/v1773331519/Reels_adujdu.mp4"
                 type="video/mp4"
               >
             </video>
@@ -697,7 +697,7 @@
           <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
             <video
-          poster="/img/gian/cover.webp"
+          poster="https://res.cloudinary.com/debcjiypk/image/upload/v1773331570/cover_poiflp.webp"
               autoplay
               muted
               loop
@@ -705,7 +705,7 @@
               class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen"
             >
               <source
-                src="/video/gian/Reels.mp4"
+                src="https://res.cloudinary.com/debcjiypk/video/upload/v1773331519/Reels_adujdu.mp4"
                 type="video/mp4"
               >
             </video>
@@ -1132,21 +1132,21 @@ const loadingProgress = ref(0)
 
 // Daftar gambar
 const images = ref<string[]>([
-  '/img/gian/gallery/gallery_1.JPEG',
-  '/img/gian/gallery/gallery_2.JPEG',
-  '/img/gian/gallery/gallery_3.JPEG',
-  '/img/gian/gallery/gallery_4.JPEG',
-  '/img/gian/gallery/gallery_5.JPEG',
-  '/img/gian/gallery/gallery_6.JPEG',
-  '/img/gian/gallery/gallery_7.JPEG',
-  '/img/gian/gallery/gallery_8.JPEG',
-  '/img/gian/gallery/gallery_9.JPEG',
-  '/img/gian/gallery/gallery_10.JPEG',
-  '/img/gian/gallery/gallery_11.JPEG',
-  '/img/gian/gallery/gallery_12.JPEG',
-  '/img/gian/gallery/gallery_13.JPEG',
-  '/img/gian/gallery/gallery_14.JPEG',
-  '/img/gian/gallery/gallery_15.JPEG',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331426/gallery_1_h8i0id.webp',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331434/gallery_2_gumsn6.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331434/gallery_3_ejaubq.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331433/gallery_4_nflzrb.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331431/gallery_5_tar6ch.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331422/gallery_6_i4lgp8.webp',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331425/gallery_7_hzw0zq.webp',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331425/gallery_8_fpmbxq.webp',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331426/gallery_9_tbzmxe.webp',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331424/gallery_10_peunkb.webp',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331430/gallery_11_jlatay.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331429/gallery_12_zwtepw.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331428/gallery_13_fkrfzg.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331427/gallery_14_kcydhz.jpg',
+  'https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331426/gallery_15_ujzall.jpg',
 ])
 
 const current = ref(0)
