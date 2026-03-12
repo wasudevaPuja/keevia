@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import Blossom from '~/components/blossom.vue';
 
-const formattedName = 'Gian & Kristiany'
-const slug = 'gian-munthe'
+const formattedName = 'Gian & Kristiani'
+const slug = 'gian-kristiani'
 
 useSeoMeta({
-  title: `The Wedding of ${formattedName} | Keevia`,
+  title: `The Wedding of ${formattedName} | Keevia.id`,
   description: `Join us in celebrating the wedding of ${formattedName}. With love and joy, we invite you to be part of our special day.`,
 
   // Basic Meta
@@ -17,7 +17,7 @@ useSeoMeta({
   ogDescription: `With love and happiness, ${formattedName} invite you to celebrate their wedding day.`,
   ogType: 'website',
   ogUrl: `https://keevia.id/${slug}`,
-  ogImage: `https://keevia.id/images/${slug}-cover.jpg`,
+  ogImage: `https://res.cloudinary.com/debcjiypk/image/upload/v1773331570/cover_poiflp.webp`,
   ogSiteName: 'Keevia.id',
   ogImageWidth: 1200,
   ogImageHeight: 630,
@@ -27,7 +27,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterTitle: `The Wedding of ${formattedName}`,
   twitterDescription: `Join us in celebrating the wedding of ${formattedName}.`,
-  twitterImage: `https://keevia.id/images/${slug}-cover.jpg`,
+  twitterImage: `https://res.cloudinary.com/debcjiypk/image/upload/v1773331570/cover_poiflp.webp`,
   twitterSite: '@keevia.id',
   twitterCreator: '@keevia.id'
 })
