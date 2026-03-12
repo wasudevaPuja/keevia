@@ -64,24 +64,14 @@ useHead(() => {
 })
 
 const isPlaying = ref(false)
-const audio = ref<HTMLAudioElement | null>(null)
 
 const toggleAudio = () => {
-  if (!audio.value) return
-
-  if (isPlaying.value) {
-    audio.value.pause()
-  } else {
-    audio.value.play()
-  }
-
   isPlaying.value = !isPlaying.value
 }
 
 provide('audioControl', {
   isPlaying,
-  toggleAudio,
-  audio
+  toggleAudio
 })
 </script>
 
@@ -92,11 +82,13 @@ provide('audioControl', {
     <main>
       <NuxtPage />
       <!-- Global Audio Player, hidden -->
-      <audio
-        ref="audio"
-        src="/audio/wedding-music.mp3"
-        loop
-      />
+      <iframe
+        v-if="isPlaying"
+        width="0"
+        height="0"
+        src="https://www.youtube.com/embed/Aa29L3jtg-o?autoplay=1&loop=1&playlist=Aa29L3jtg-o"
+        allow="autoplay"
+      ></iframe>
       <FloatingButtons />
     </main>
   </div>

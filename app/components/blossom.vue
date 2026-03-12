@@ -9,11 +9,11 @@
         <!-- Center Content -->
         <div class="flex flex-col items-center space-y-6">
           <p class="text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/70">{{ t("weddingOf") }}</p>
-          <div class="w-24 h-32 md:w-32 md:h-40 overflow-hidden rounded-md border border-white/10 shadow-lg relative">
+          <div class="w-40 h-56 md:w-32 md:h-40 overflow-hidden rounded-md border border-white/10 shadow-lg relative">
             <div class="absolute inset-0 bg-black/20 z-10"></div>
-            <img src="/img/groom-pria.jpg" alt="Preloading" class="w-full h-full object-cover grayscale opacity-80" />
+            <img src="/img/gian/loading_img.JPEG" alt="Preloading" class="w-full h-full object-cover grayscale opacity-80" />
           </div>
-          <p class="text-sm md:text-base font-medium tracking-[0.2em] uppercase mt-2">GIAN <span class="text-pink-300/80">&</span> KRISTIANY</p>
+          <p class="text-sm md:text-base font-medium tracking-[0.2em] uppercase mt-2">GIAN <span class="text-pink-300/80">&</span> KRISTIANI</p>
         </div>
 
         <!-- Progress Text -->
@@ -28,7 +28,7 @@
       <!-- Background Image -->
 
       <img
-        src="/img/background-hero.webp"
+        src="/img/gian/cover.webp"
         class="absolute inset-0 w-full h-full object-cover scale-105"
       >
 
@@ -53,7 +53,7 @@
         <!-- Names -->
         <h1 class="text-6xl lg:text-7xl font-light font-serif leading-tight tracking-wide">
           Gian <span class="text-pink-200">&</span><br>
-          Kristiany
+          Kristiani
         </h1>
 
         <!-- Date -->
@@ -61,17 +61,16 @@
       </div>
     </div>
 
-    <!-- RIGHT PANEL (20%) -->
     <div
       :class="[
-        'relative shrink-0 w-full md:w-[400px] lg:w-[450px] xl:w-[500px] max-w-full h-[100dvh] md:h-screen transition-all duration-700 z-20 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] bg-[#1a1a1a]',
+        'relative shrink-0 w-full md:w-7/12 lg:w-5/12 xl:w-4/12 xxl:w-[600px] max-w-full h-[100dvh] md:h-screen transition-all duration-700 z-20 shadow-[-10px_0_30px_rgba(0,0,0,0.5)] bg-[#1a1a1a] border-l border-white/5',
         isOpen ? 'overflow-x-hidden overflow-y-auto' : 'overflow-hidden'
       ]"
     >
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
         <img 
-          src="/img/background-hero.webp"
+          src="/img/gian/cover.webp"
           class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80"
           alt="Hero Background"
         >
@@ -84,14 +83,14 @@
         class="relative z-10 h-[100dvh] md:h-screen flex flex-col justify-between text-white text-center px-8 py-10 pb-20 md:pb-10"
       >
         <!-- Heading -->
-        <div>
-          <p class="tracking-[0.4em] text-[11px] mb-4 uppercase text-white/80">{{ t("weddingOf") }}</p>
+        <div class="space-y-6">
+          <p class="tracking-[0.5em] text-[10px] md:text-xs mb-4 uppercase text-white/70">{{ t("weddingOf") }}</p>
 
-          <h1 class="text-4xl font-light font-serif tracking-wide">
-            Gian <span class="text-pink-200">&</span> Kristiany
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-light font-serif tracking-wide leading-tight">
+            Gian <span class="text-pink-200">&</span> Kristiani
           </h1>
 
-          <p class="mt-5 text-sm text-white/80 tracking-wide">{{ t("dateFull") }}</p>
+          <p class="mt-6 text-sm md:text-base text-white/80 tracking-[0.2em] uppercase font-light">{{ t("dateFull") }}</p>
         </div>
 
         <!-- Invitation Box -->
@@ -129,9 +128,9 @@
           <!-- Vertical Layout (Stacked) -->
           <div class="flex flex-col w-full text-left">
             <!-- MEMPELAI PRIA -->
-            <div class="relative w-full min-h-[100dvh] md:h-screen group overflow-hidden">
+            <div class="relative w-full min-h-[85dvh] lg:h-screen group overflow-hidden border-b border-white/5">
               <img
-                src="/img/groom-pria.jpg"
+                src="/img/gian/the_groom.jpg"
                 alt="Groom Gian Felix Sinaga"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear group-hover:scale-110"
               >
@@ -162,7 +161,7 @@
                     class="pt-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100"
                   >
                     <a
-                      href="https://instagram.com/username"
+                      href="https://instagram.com/gianfelixs_"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-pink-400 hover:border-pink-300 transition-all hover:scale-110"
@@ -178,10 +177,10 @@
             </div>
 
             <!-- MEMPELAI WANITA -->
-            <div class="relative w-full min-h-[100dvh] md:h-screen group overflow-hidden">
+            <div class="relative w-full min-h-[85dvh] lg:h-screen group overflow-hidden border-b border-white/5">
               <img
-                src="/img/groom-wanita.jpg"
-                alt="Bride Kristiany Munthe"
+                src="/img/gian/the_bride.jpg"
+                alt="Bride Kristiani Munthe"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear group-hover:scale-110"
               >
               <!-- Elegant Overlay Gradients -->
@@ -200,12 +199,12 @@
                   </div>
 
                   <h2 class="text-4xl lg:text-5xl font-light text-white font-serif tracking-wide leading-tight">
-                    Kristiany<br><span class="italic text-pink-100">Munthe</span>
+                    Kristiani<br><span class="italic text-pink-100">Munthe</span>
                   </h2>
 
                   <div class="pt-4 space-y-1">
                     <p class="text-base md:text-lg text-white/80 font-light">{{ t("daughterOf") }}</p>
-                    <p class="text-base md:text-lg text-white font-medium">{{ t("parentsGroom") }}</p>
+                    <p class="text-base md:text-lg text-white font-medium">{{ t("parentsBride") }}</p>
                   </div>
 
                   <!-- Sosial Media -->
@@ -213,7 +212,7 @@
                     class="pt-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100"
                   >
                     <a
-                      href="https://instagram.com/username"
+                      href="https://instagram.com/kristianymth_"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-pink-400 hover:border-pink-300 transition-all hover:scale-110"
@@ -234,7 +233,7 @@
         <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <div class="absolute inset-0 -z-10">
             <video
-          poster="/img/background-hero.webp"
+          poster="/img/gian/cover.webp"
               autoplay
               muted
               loop
@@ -242,7 +241,7 @@
               class="w-full h-full object-cover filter brightness-75 contrast-125"
             >
               <source
-                src="/video/wedding-video.mp4"
+                src="/video/gian/Reels.mp4"
                 type="video/mp4"
               >
             </video>
@@ -277,11 +276,11 @@
                   </div>
                   <!-- Right Content -->
                   <div class="w-full">
-                    <div class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 shadow-xl relative overflow-hidden group-hover:-translate-y-2 text-left"
+                    <div class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-white/15 shadow-xl relative overflow-hidden group-hover:-translate-y-2 text-left"
                     >
                       <div class="absolute -right-6 -top-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl" />
                       <div class="mb-4 border-b border-white/10 pb-4">
-                        <h3 class="text-xl font-semibold text-white">{{ t("ch1Title") }}</h3>
+                        <h3 class="text-xl font-semibold text-white text-center">{{ t("ch1Title") }}</h3>
                       </div>
                       <p class="text-white/80 leading-relaxed text-sm md:text-base font-light">{{ t("ch1Desc") }}</p>
                     </div>
@@ -300,7 +299,7 @@
                   </div>
                   <!-- Left Content -->
                   <div class="w-full">
-                    <div class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/15 shadow-xl relative overflow-hidden group-hover:-translate-y-2 text-left"
+                    <div class="opacity-0 transition-all transform-gpu ease-out scroll-animate translate-y-10 duration-[700ms] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:bg-white/15 shadow-xl relative overflow-hidden group-hover:-translate-y-2 text-left"
                     >
                       <div class="absolute -left-6 -bottom-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl" />
                       <div class="mb-4 border-b border-white/10 pb-4 text-center">
@@ -346,7 +345,7 @@
             <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
             <video
-          poster="/img/background-hero.webp"
+          poster="/img/gian/cover.webp"
               autoplay
               muted
               loop
@@ -354,7 +353,7 @@
               class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen"
             >
               <source
-                src="/video/wedding-video.mp4"
+                src="/video/gian/Reels.mp4"
                 type="video/mp4"
               >
             </video>
@@ -468,7 +467,7 @@
                     </div>
                   </div>
 
-                  <!-- Resepsi -->
+                  <!-- Youth Party -->
                   <div class="relative pl-6 md:pl-8 border-l border-pink-300/30">
                     <div
                       class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-pink-300 shadow-[0_0_10px_rgba(249,168,212,0.8)]"
@@ -490,12 +489,34 @@
 </p>
                     </div>
                   </div>
+                  <!-- Adat -->
+                  <div class="relative pl-6 md:pl-8 border-l border-pink-300/30">
+                    <div
+                      class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-pink-300 shadow-[0_0_10px_rgba(249,168,212,0.8)]"
+                    />
+                    <h3 class="font-serif italic text-2xl text-white mb-2">{{ t("adatTitle") }}</h3>
+                    <div class="space-y-3 text-white/80 font-light text-sm md:text-base">
+                      <p class="flex items-center gap-3">
+                        <UIcon
+                          name="mdi:clock-outline"
+                          class="w-4 h-4 text-pink-300/70"
+                        /> {{ t("adatTime") }}
+                      </p>
+                      <p class="flex items-start gap-3">
+                        <UIcon
+                          name="mdi:map-marker-outline"
+                          class="w-4 h-4 text-pink-300/70 mt-1 flex-shrink-0"
+                        />
+<span class="leading-relaxed">{{ t("resepsiLocation") }}</span>
+</p>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Maps Button -->
                 <div class="pt-6">
                   <a
-                    href="https://www.google.com/maps/place/Jl.+Batu+Luwih+Kawan,+Penebel,+Tabanan"
+                    href="https://maps.app.goo.gl/CGjFjVbBF8SQpLMe7?g_st=aw"
                     target="_blank"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full text-sm font-medium tracking-wide transition-all duration-300"
                   >
@@ -510,13 +531,167 @@
           </div>
         </section>
 
+        <!-- Wedding Gift -->
+        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
+          <!-- Background Video with elegant overlay -->
+          <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
+            <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
+            <video
+          poster="/img/gian/cover.webp"
+              autoplay
+              muted
+              loop
+              playsinline
+              class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen grayscale"
+            >
+              <source
+                src="/video/gian/Reels.mp4"
+                type="video/mp4"
+              >
+            </video>
+            <!-- Vignette/Shadow overlay -->
+            <div
+              class="absolute inset-0 bg-black/40 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)] z-20 pointer-events-none"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-12 w-full">
+            <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1200ms] bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+              <!-- Decorative elements -->
+              <div
+                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400/50 to-transparent opacity-50"
+              />
+              <div class="absolute -top-40 -left-40 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
+              <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
+
+              <div class="relative z-10 space-y-12">
+                <!-- Heading -->
+                <div class="opacity-0 transition-all ease-out scroll-animate -translate-y-10 duration-[1000ms] space-y-4">
+                  <div class="flex justify-center mb-6">
+                    <div class="w-16 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent mx-2 my-auto" />
+                    <i class="mdi mdi-gift-outline text-3xl md:text-4xl text-pink-300 mx-4" />
+                    <div class="w-16 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent mx-2 my-auto" />
+                  </div>
+                  <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("giftSub") }}</h2>
+                  <p class="text-3xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("giftTitle") }}</p>
+                  <p class="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-4">{{ t("giftDesc") }}</p>
+                </div>
+
+                <!-- Cards Container -->
+                <div class="flex flex-col gap-6 pt-6 max-w-2xl mx-auto w-full">
+                  <!-- Card 1: Nomor Rekening BCA -->
+                  <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] delay-[400ms] bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
+                  >
+                    <div
+                      class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+                    />
+
+                    <div class="space-y-4 relative z-10 flex-1 text-left">
+                      <!-- Tambah Icon Bank Asli jika punya, untuk sementara pakai icon bank dummy -->
+                      <div class="w-12 h-12 rounded-full bg-blue-400/20 flex items-center justify-center mb-6">
+                        <UIcon
+                          name="mdi:bank-outline"
+                          class="w-6 h-6 text-blue-300"
+                        />
+                      </div>
+                      <h3 class="font-serif italic text-2xl text-white">{{ t("bankTransfer") }}</h3>
+                      <div class="space-y-2">
+                        <p class="text-xs tracking-widest uppercase text-white/50 font-medium">
+                          Mandiri - Gian Felix Sinaga
+                        </p>
+                        <p class="font-mono text-2xl text-white tracking-wider flex items-center gap-3">
+                          1450014144972
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      class="w-full mt-6 relative z-10 flex items-center justify-center gap-2 px-5 py-3.5 bg-blue-500 hover:bg-blue-600 text-white rounded-xl text-sm font-medium tracking-wide transition-all shadow-lg"
+                      @click="copyText('1450014144972')"
+                    >
+                      <UIcon name="mdi:content-copy" class="w-5 h-5" /> {{ t("copyAcc") }}
+                    </button>
+                  </div>
+
+                  <!-- Card 2: Gopay / E-Wallet -->
+                  <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] delay-[600ms] bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden md:col-span-2 lg:col-span-1"
+                  >
+                    <div
+                      class="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+                    />
+
+                    <div class="space-y-4 relative z-10 flex-1 text-left">
+                      <div class="w-12 h-12 rounded-full bg-green-400/20 flex items-center justify-center mb-6">
+                        <UIcon
+                          name="mdi:wallet-outline"
+                          class="w-6 h-6 text-green-300"
+                        />
+                      </div>
+                      <h3 class="font-serif italic text-2xl text-white">{{ t("digitalWallet") }}</h3>
+                      <div class="space-y-2">
+                        <p class="text-xs tracking-widest uppercase text-white/50 font-medium">
+                          Dana - Kristiani Munthe
+                        </p>
+                        <p class="font-mono text-xl md:text-2xl text-white tracking-wider">
+                          085835306808
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      class="w-full mt-6 relative z-10 flex items-center justify-center gap-2 px-5 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-xl text-sm font-medium tracking-wide transition-all shadow-lg"
+                      @click="copyText('085835306808')"
+                    >
+                      <UIcon name="mdi:content-copy" class="w-5 h-5" /> {{ t("copyNum") }}
+                    </button>
+                  </div>
+
+                  <!-- Card 3: Kirim Kado / Alamat -->
+                  <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] delay-[200ms] bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
+                  >
+                    <div
+                      class="absolute inset-0 bg-gradient-to-b from-pink-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
+                    />
+
+                    <div class="space-y-4 relative z-10 flex-1 text-left">
+                      <div class="w-12 h-12 rounded-full bg-pink-300/20 flex items-center justify-center mb-6">
+                        <UIcon
+                          name="mdi:home-heart"
+                          class="w-6 h-6 text-pink-300"
+                        />
+                      </div>
+                      <h3 class="font-serif italic text-2xl text-white">{{ t("physGift") }}</h3>
+                      <p class="text-white/70 font-light text-sm leading-relaxed pb-4">
+{{ t("physAddress") }}
+</p>
+                    </div>
+
+                    <a
+                      href="https://maps.app.goo.gl/nYpG8PgVewvY1wTT8"
+                      target="_blank"
+                      class="w-full relative z-10 flex items-center justify-center gap-2 px-5 py-3.5 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl text-sm font-medium tracking-wide transition-all text-white mt-auto"
+                    >
+                      <UIcon
+                        name="mdi:google-maps"
+                        class="w-5 h-5 text-pink-300"
+                      /> Google Maps
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- RSVP -->
         <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <!-- Background Video with elegant overlay -->
           <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
             <video
-          poster="/img/background-hero.webp"
+          poster="/img/gian/cover.webp"
               autoplay
               muted
               loop
@@ -524,7 +699,7 @@
               class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen"
             >
               <source
-                src="/video/wedding-video.mp4"
+                src="/video/gian/Reels.mp4"
                 type="video/mp4"
               >
             </video>
@@ -538,13 +713,13 @@
               <!-- Top side: Header & Form -->
               <div class="space-y-8 lg:text-left">
                 <!-- Judul + Intro -->
-                <div class="opacity-0 transition-all ease-out scroll-animate -translate-x-10 duration-[1000ms] space-y-4 text-center lg:text-left">
+                <div class="opacity-0 transition-all ease-out scroll-animate -translate-x-10 duration-[1000ms] space-y-6 text-center lg:text-left">
                   <div class="flex justify-center lg:justify-start mb-4">
-                    <i class="mdi mdi-flower-tulip-outline text-3xl md:text-4xl text-pink-300" />
+                    <i class="mdi mdi-flower-tulip-outline text-3xl md:text-5xl text-pink-300" />
                   </div>
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("rsvpSub") }}</h2>
-                  <p class="text-4xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("rsvpTitle") }}</p>
-                  <p class="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">{{ t("rsvpDesc") }}</p>
+                  <p class="text-3xl md:text-5xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("rsvpTitle") }}</p>
+                  <p class="text-white/70 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">{{ t("rsvpDesc") }}</p>
                 </div>
 
                 <!-- Form RSVP -->
@@ -741,160 +916,6 @@
           </div>
         </section>
 
-        <!-- Wedding Gift -->
-        <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
-          <!-- Background Video with elegant overlay -->
-          <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-            <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
-            <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
-            <video
-          poster="/img/background-hero.webp"
-              autoplay
-              muted
-              loop
-              playsinline
-              class="w-full h-full object-cover opacity-60 z-10 relative mix-blend-screen grayscale"
-            >
-              <source
-                src="/video/wedding-video.mp4"
-                type="video/mp4"
-              >
-            </video>
-            <!-- Vignette/Shadow overlay -->
-            <div
-              class="absolute inset-0 bg-black/40 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)] z-20 pointer-events-none"
-            />
-          </div>
-
-          <!-- Content -->
-          <div class="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-12 w-full">
-            <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1200ms] bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] relative overflow-hidden group">
-              <!-- Decorative elements -->
-              <div
-                class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pink-400/50 to-transparent opacity-50"
-              />
-              <div class="absolute -top-40 -left-40 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
-              <div class="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
-
-              <div class="relative z-10 space-y-12">
-                <!-- Heading -->
-                <div class="opacity-0 transition-all ease-out scroll-animate -translate-y-10 duration-[1000ms] space-y-4">
-                  <div class="flex justify-center mb-6">
-                    <div class="w-16 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent mx-2 my-auto" />
-                    <i class="mdi mdi-gift-outline text-3xl md:text-4xl text-pink-300 mx-4" />
-                    <div class="w-16 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent mx-2 my-auto" />
-                  </div>
-                  <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("giftSub") }}</h2>
-                  <p class="text-3xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("giftTitle") }}</p>
-                  <p class="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-4">{{ t("giftDesc") }}</p>
-                </div>
-
-                <!-- Cards Container -->
-                <div class="flex flex-col gap-6 pt-6 max-w-2xl mx-auto w-full">
-                  <!-- Card 1: Kirim Kado / Alamat -->
-                  <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] delay-[200ms] bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
-                  >
-                    <div
-                      class="absolute inset-0 bg-gradient-to-b from-pink-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
-                    />
-
-                    <div class="space-y-4 relative z-10 flex-1 text-left">
-                      <div class="w-12 h-12 rounded-full bg-pink-300/20 flex items-center justify-center mb-6">
-                        <UIcon
-                          name="mdi:home-heart"
-                          class="w-6 h-6 text-pink-300"
-                        />
-                      </div>
-                      <h3 class="font-serif italic text-2xl text-white">{{ t("physGift") }}</h3>
-                      <p class="text-white/70 font-light text-sm leading-relaxed pb-4">
-{{ t("physAddress") }}
-</p>
-                    </div>
-
-                    <a
-                      href="https://www.google.com/maps/place/Jl.+Batu+Luwih+Kawan,+Penebel,+Tabanan"
-                      target="_blank"
-                      class="w-full relative z-10 flex items-center justify-center gap-2 px-5 py-3.5 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl text-sm font-medium tracking-wide transition-all text-white mt-auto"
-                    >
-                      <UIcon
-                        name="mdi:google-maps"
-                        class="w-5 h-5 text-pink-300"
-                      /> Google Maps
-                    </a>
-                  </div>
-
-                  <!-- Card 2: Nomor Rekening BCA -->
-                  <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] delay-[400ms] bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden"
-                  >
-                    <div
-                      class="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
-                    />
-
-                    <div class="space-y-4 relative z-10 flex-1 text-left">
-                      <!-- Tambah Icon Bank Asli jika punya, untuk sementara pakai icon bank dummy -->
-                      <div class="w-12 h-12 rounded-full bg-blue-400/20 flex items-center justify-center mb-6">
-                        <UIcon
-                          name="mdi:bank-outline"
-                          class="w-6 h-6 text-blue-300"
-                        />
-                      </div>
-                      <h3 class="font-serif italic text-2xl text-white">{{ t("bankTransfer") }}</h3>
-                      <div class="space-y-2">
-                        <p class="text-xs tracking-widest uppercase text-white/50 font-medium">
-                          BCA - Wasudewa Puja
-                        </p>
-                        <p class="font-mono text-2xl text-white tracking-wider flex items-center gap-3">
-                          1234567890
-                        </p>
-                      </div>
-                    </div>
-
-                    <button
-                      class="w-full mt-6 relative z-10 flex items-center justify-center gap-2 px-5 py-3.5 bg-blue-500 hover:bg-blue-600 text-white rounded-xl text-sm font-medium tracking-wide transition-all shadow-lg"
-                      @click="copyText('1234567890')"
-                    >
-                      <UIcon name="mdi:content-copy" class="w-5 h-5" /> {{ t("copyAcc") }}
-                    </button>
-                  </div>
-
-                  <!-- Card 3: Gopay / E-Wallet -->
-                  <div class="opacity-0 transition-all ease-out scroll-animate translate-y-10 duration-[1000ms] delay-[600ms] bg-white/5 border border-white/10 rounded-2xl p-6 text-white flex flex-col justify-between hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group/card relative overflow-hidden md:col-span-2 lg:col-span-1"
-                  >
-                    <div
-                      class="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"
-                    />
-
-                    <div class="space-y-4 relative z-10 flex-1 text-left">
-                      <div class="w-12 h-12 rounded-full bg-green-400/20 flex items-center justify-center mb-6">
-                        <UIcon
-                          name="mdi:wallet-outline"
-                          class="w-6 h-6 text-green-300"
-                        />
-                      </div>
-                      <h3 class="font-serif italic text-2xl text-white">{{ t("digitalWallet") }}</h3>
-                      <div class="space-y-2">
-                        <p class="text-xs tracking-widest uppercase text-white/50 font-medium">
-                          Gopay / OVO / Dana
-                        </p>
-                        <p class="font-mono text-xl md:text-2xl text-white tracking-wider">
-                          0812-3456-7890
-                        </p>
-                      </div>
-                    </div>
-
-                    <button
-                      class="w-full mt-6 relative z-10 flex items-center justify-center gap-2 px-5 py-3.5 bg-green-500 hover:bg-green-600 text-white rounded-xl text-sm font-medium tracking-wide transition-all shadow-lg"
-                      @click="copyText('081234567890')"
-                    >
-                      <UIcon name="mdi:content-copy" class="w-5 h-5" /> {{ t("copyNum") }}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <!-- GALERI -->
         <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24 overflow-hidden">
           <!-- Background -->
@@ -918,14 +939,13 @@
 
             <!-- Prewedding Video Card -->
             <div class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] relative w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-8">
-              <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg z-10 bg-black/50">
+              <div class="relative w-full max-w-[360px] aspect-[9/16] mx-auto">
                 <iframe 
                   class="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+                  src="https://www.youtube.com/embed/xkNAcFxU6XI?autoplay=1&mute=1&loop=1&playlist=xkNAcFxU6XI"
                   title="Prewedding Video" 
                   frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   allowfullscreen
                 ></iframe>
               </div>
@@ -939,7 +959,7 @@
               />
 
               <!-- Image Display -->
-              <div class="relative w-full h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden group">
+              <div class="relative w-full h-[65dvh] lg:h-[75vh] rounded-2xl overflow-hidden group">
                 <!-- Main Featured Images -->
                 <transition-group
                   name="fade"
@@ -1056,7 +1076,7 @@
 
             <!-- Footer Branding / Couple Name -->
             <p class="text-pink-200 text-sm md:text-base uppercase tracking-[0.25em] font-medium mb-4">
-              Gian & Kristiany
+              Gian & Kristiani
             </p>
 
             <!-- Keevia Label Before Instagram -->
@@ -1102,16 +1122,21 @@ const loadingProgress = ref(0)
 
 // Daftar gambar
 const images = ref<string[]>([
-  '/img/groom-pria.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg',
-  '/img/groom-wanita.jpg'
+  '/img/gian/gallery/gallery_1.jpeg',
+  '/img/gian/gallery/gallery_2.jpeg',
+  '/img/gian/gallery/gallery_3.jpeg',
+  '/img/gian/gallery/gallery_4.jpeg',
+  '/img/gian/gallery/gallery_5.jpeg',
+  '/img/gian/gallery/gallery_6.jpeg',
+  '/img/gian/gallery/gallery_7.jpeg',
+  '/img/gian/gallery/gallery_8.jpeg',
+  '/img/gian/gallery/gallery_9.jpeg',
+  '/img/gian/gallery/gallery_10.jpeg',
+  '/img/gian/gallery/gallery_11.jpeg',
+  '/img/gian/gallery/gallery_12.jpeg',
+  '/img/gian/gallery/gallery_13.jpeg',
+  '/img/gian/gallery/gallery_14.jpeg',
+  '/img/gian/gallery/gallery_15.jpeg',
 ])
 
 const current = ref(0)
@@ -1170,7 +1195,6 @@ const openLightbox = (src: string) => {
 const audioControl = inject('audioControl') as {
   isPlaying: Ref<boolean>
   toggleAudio: () => void
-  audio: Ref<HTMLAudioElement | null>
 } | undefined
 
 const route = useRoute()
@@ -1178,45 +1202,47 @@ const route = useRoute()
 const dict = {
   id: {
     weddingOf: "Pernikahan",
-    dateFull: "Selasa, 3 Februari 2026",
+    dateFull: "Sabtu, 25 April 2026",
     toYth: "Kepada Yth.",
     openingMsg: "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.",
     openBtn: "BUKA UNDANGAN",
-    bibleQuote: "“Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah tidak boleh diceraikan manusia.”",
-    bibleVerse: "Matius 19:6 & Markus 10:6-8",
+    bibleQuote: "“Sebab itu seorang laki-laki akan meninggalkan ayahnya dan ibunya dan bersatu dengan isterinya, sehingga keduanya menjadi satu daging.”",
+    bibleVerse: "Kejadian 2:24",
     theGroom: "Mempelai Pria",
     sonOf: "Putra Pertama dari",
-    parentsGroom: "Bapak Ahmad & Ibu Siti",
+    parentsGroom: "Bapak Ranal Sinaga & Ibu Merianta br Purba",
     theBride: "Mempelai Wanita",
-    daughterOf: "Putri Pertama dari",
-    parentsBride: "Bapak Ahmad & Ibu Siti",
+    daughterOf: "Putri Kedua dari",
+    parentsBride: "Bapak Manuel Munthe & Ibu Henny br Girsang",
     journeySub: "Kisah Cinta Menuju Pelaminan",
     journeyTitle: "Lembaran Baru Kami",
-    ch1DateAbbr: "Juli 2023",
-    ch1DateFull: "Juli 2023",
+    ch1DateAbbr: "2018-2019",
+    ch1DateFull: "2018-2019",
     ch1Title: "Pertemuan Pertama",
-    ch1Desc: "Pada Juli 2023, Gian & Munthe dipertemukan kembali. Sebuah kebetulan manis yang menjadi titik temu cerita kami. Benih-benih cinta itu perlahan tumbuh melalui sapaan sederhana menjadi lebih bermakna.",
-    ch2DateAbbr: "2023 - 2025",
-    ch2DateFull: "2023 - 2025",
+    ch1Desc: "Pada tahun 2018, Gian dan Kristi bertemu di gereja. Tahun 2019 kami melayani bersama di sekolah minggu. Pada awalnya, perbedaan karakter dan latar belakang membuat kami tidak saling tertarik, namun Tuhan perlahan menumbuhkan sesuatu yang indah di antara kami.",
+    ch2DateAbbr: "2020-2025",
+    ch2DateFull: "2020-2025",
     ch2Title: "Saling Melengkapi",
-    ch2Desc: "Menjadi dua kepribadian yang berbeda membuat perjalanan ini kaya akan warna. Canda tawa serta lika-liku yang dilalui mempererat jalinan hati, memantapkan tekad kami untuk terus saling percaya.",
-    ch3DateAbbr: "Maret 2026",
-    ch3DateFull: "Maret 2026",
+    ch2Desc: "Kami juga memiliki visi hidup yang berbeda, sehingga perjalanan ini tidak selalu mudah. Namun pada tahun 2021, Tuhan mempersatukan kami dalam visi baru melalui sebuah komunitas. Sejak itu, Kristus menjadi fondasi hubungan kami dan kasih di antara kami semakin bertumbuh dan berwarna.",
+    ch3DateAbbr: "April 2026",
+    ch3DateFull: "April 2026",
     ch3Title: "Melangkah Bersama",
-    ch3Desc: "Hingga tiba saatnya membawa ikatan ini menuju tujuan yang mulia. Diiringi restu Yang Mahakuasa dan kedua belah keluarga, hari ini kami memantapkan diri membina kehidupan bersama selamanya.",
+    ch3Desc: "Enam tahun perjalanan ini dipimpin oleh kasih Kristus hingga kami tiba di bab ini. Dengan berkat dan penyertaan-Nya, kami melangkah ke perjalanan baru yang indah—bersama Dia, selamanya.",
     saveOurDate: "Menuju Hari Bahagia",
-    dateMain: "Rabu, 25 Maret 2026",
+    dateMain: "Sabtu, 25 April 2026",
     days: "Hari",
     hours: "Jam",
     minutes: "Menit",
     seconds: "Detik",
     saveToCal: "Simpan Tanggal",
     pemberkatanTitle: "Pemberkatan Pernikahan",
-    pemberkatanTime: "07.00 - 11.00 WITA",
-    pemberkatanLocation: "Jl. Batu Luwih Kawan, Br. Bendul, Ds. Wongaya Gede, Penebel, Tabanan",
-    resepsiTitle: "Resepsi Pernikahan",
-    resepsiTime: "15.00 - 22.00 WITA",
-    resepsiLocation: "Jl. Tepuh Indah, Gang Kampung Baru, Br. Wongaya Kaja, Ds. Wongaya Gede, Penebel, Tabanan",
+    pemberkatanTime: "09.00 - 11.00 WITA",
+    pemberkatanLocation: "Jl. RE Martadinata Jl. Raya Pelabuhan Benoa, Benoa, Denpasar Selatan, Kota Denpasar, Bali 80119",
+    resepsiTitle: "Youth Party",
+    adatTitle : "Adat",
+    resepsiTime: "11.30 - 12.30 WITA",
+    adatTime : "12.30 - Selesai",
+    resepsiLocation: "Jl. WR Supratman No.302, Kesiman Kertalangu, Kec. Denpasar Tim., Kota Denpasar, Bali 80237",
     openMap: "Buka Google Maps",
     rsvpSub: "Konfirmasi Kehadiran",
     rsvpTitle: "Kehadiran Tanda Kasih",
@@ -1232,17 +1258,17 @@ const dict = {
     sentSuccess: "Pesan Berhasil Terkirim",
     sentFailed: "Gagal Mengirim, Coba Kembali",
     sendBtn: "Kirim Ucapan",
-    wishesTitle: "Untaian Doa",
+    wishesTitle: "Ucapan & Doa",
     messagesCount: "Pesan",
-    attendBadge: "✔️ Sedia Hadir",
+    attendBadge: "✔️ Hadir",
     absentBadge: "❌ Berhalangan",
-    noWishes: "Jadilah yang pertama untuk berbagi doa bahagia!",
+    noWishes: "Jadilah yang pertama untuk berbagi ucapan dan doa!",
     loadMore: "Muat Pesan Lainnya",
     giftSub: "Titipan Kasih",
     giftTitle: "Hadiah Pernikahan",
     giftDesc: "Kehadiran dan restu Anda adalah hadiah terbaik bagi kami. Namun, jika Anda ingin memberikan tanda kasih sayang berupa hadiah fisik atau digital, Anda dapat menggunakan opsi di bawah ini.",
     physGift: "Alamat Pengiriman",
-    physAddress: "Jl. Pantai Kedungu No.123, Br. Kedungu, Ds. Belalang, Kediri, Tabanan, Bali (Belakang Warung Bu Ani)",
+    physAddress: "Jl. PB. Sudirman II No. 4, Denpasar Barat, Bali",
     bankTransfer: "Transfer Nomor Rekening",
     copyAcc: "Salin Ke Papan Klip",
     digitalWallet: "Dompet Digital",
@@ -1255,45 +1281,47 @@ const dict = {
   },
   en: {
     weddingOf: "The Wedding Of",
-    dateFull: "Tuesday, February 3rd 2026",
+    dateFull: "Saturday, April 25th 2026",
     toYth: "Dear",
     openingMsg: "It is an honor and joy for us if you would be willing to attend and give your blessings.",
     openBtn: "OPEN INVITATION",
-    bibleQuote: '“So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.”',
-    bibleVerse: "Matthew 19:6 & Mark 10:6-8",
+    bibleQuote: '“Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.”',
+    bibleVerse: "Genesis 2:24",
     theGroom: "The Groom",
     sonOf: "First Son of",
-    parentsGroom: "Mr. Ahmad & Mrs. Siti",
+    parentsGroom: "Mr. Ranal Sinaga & Mrs. Merianta br Purba",
     theBride: "The Bride",
-    daughterOf: "First Daughter of",
-    parentsBride: "Mr. Ahmad & Mrs. Siti",
+    daughterOf: "Second Daughter of",
+    parentsBride: "Mr. Manuel Munthe & Mrs. Henny br Girsang",
     journeySub: "A Journey in Love",
     journeyTitle: "The Unfinished Chapter",
-    ch1DateAbbr: "July 2023",
-    ch1DateFull: "July 2023",
+    ch1DateAbbr: "2018-2019",
+    ch1DateFull: "2018-2019",
     ch1Title: "The Unexpected Comeback",
-    ch1Desc: "In July 2023, Gian & Munthe reunited. An unplanned coincidence that became the start of a new story. Seeds of love began to grow from simple conversations into something more meaningful.",
-    ch2DateAbbr: "2023 - 2025",
-    ch2DateFull: "2023 - 2025",
+    ch1Desc: "In 2018, Gian and Kristi met at church. By 2019, we were serving together in Sunday School. At first, our different characters and backgrounds meant there was no mutual attraction, but slowly, God grew something beautiful between us.",
+    ch2DateAbbr: "2020-2025",
+    ch2DateFull: "2020-2025",
     ch2Title: "The Beautiful Mess",
-    ch2Desc: "As two individuals with different characters, our journey was colorful. There were laughs, tears, and sweet moments that built the foundation of our relationship, making us stronger and trusting each other more every day.",
-    ch3DateAbbr: "March 2026",
-    ch3DateFull: "March 2026",
+    ch2Desc: "We also held different visions for our lives, which made this journey far from easy. But in 2021, God united us with a new, shared vision through a community. Since then, Christ has become the foundation of our relationship, and the love between us continues to grow and flourish in vibrant color.",
+    ch3DateAbbr: "April 2026",
+    ch3DateFull: "April 2026",
     ch3Title: "The Forever Chapter",
-    ch3Desc: "This long journey finally brought Gian & Munthe to a beautiful destination. With God's blessing and our parents, we confidently step together to start a new chapter of life, forever.",
+    ch3Desc: "This six-year journey has been led by the love of Christ, bringing us to this very chapter. With His blessing and guidance, we are stepping into a beautiful new journey—together with Him, forever.",
     saveOurDate: "Save Our Date",
-    dateMain: "Wednesday, March 25th 2026",
+    dateMain: "Saturday, April 25th 2026",
     days: "Days",
     hours: "Hours",
     minutes: "Mins",
     seconds: "Secs",
     saveToCal: "Save to Calendar",
     pemberkatanTitle: "Holy Matrimony",
-    pemberkatanTime: "07.00 - 11.00 WITA",
-    pemberkatanLocation: "Jl. Batu Luwih Kawan, Br. Bendul, Ds. Wongaya Gede, Penebel, Tabanan",
-    resepsiTitle: "Wedding Reception",
-    resepsiTime: "15.00 - 22.00 WITA",
-    resepsiLocation: "Jl. Tepuh Indah, Gang Kampung Baru, Br. Wongaya Kaja, Ds. Wongaya Gede, Penebel, Tabanan",
+    pemberkatanTime: "09.00 - 11.00 WITA",
+    pemberkatanLocation: "Jl. RE Martadinata Jl. Raya Pelabuhan Benoa, Benoa, Denpasar Selatan, Kota Denpasar, Bali 80119",
+    resepsiTitle: "Youth Party",
+    adatTitle : "Cultural Ceremony",
+    resepsiTime: "11.30 - 12.30 WITA",
+    adatTime : "12.30 - End",
+    resepsiLocation: "Jl. WR Supratman No.302, Kesiman Kertalangu, Kec. Denpasar Tim., Kota Denpasar, Bali 80237",
     openMap: "Open in Google Maps",
     rsvpSub: "RSVP & Wishes",
     rsvpTitle: "Your Presence",
@@ -1319,7 +1347,7 @@ const dict = {
     giftTitle: "Token of Love",
     giftDesc: "Your presence and blessings are the best gifts for us. However, if you wish to give a token of love in the form of a physical or digital gift, you can use the options below.",
     physGift: "Send Physical Gift",
-    physAddress: "Jl. Pantai Kedungu No.123, Br. Kedungu, Ds. Belalang, Kediri, Tabanan, Bali (Behind Warung Bu Ani)",
+    physAddress: "Jl. PB. Sudirman II No. 4, Denpasar Barat, Bali",
     bankTransfer: "Bank Transfer",
     copyAcc: "Copy Account",
     digitalWallet: "Digital Wallet",
@@ -1350,11 +1378,7 @@ const openInvitation = () => {
     initScrollAnimations()
   })
 
-  if (audioControl?.audio.value && !audioControl.isPlaying.value) {
-    const playPromise = audioControl.audio.value.play()
-    if (playPromise !== undefined) {
-      playPromise.catch(e => console.warn('Audio prevented:', e))
-    }
+  if (audioControl && !audioControl.isPlaying.value) {
     audioControl.isPlaying.value = true
   }
 
@@ -1440,7 +1464,7 @@ const countdown = ref({
   seconds: '00'
 })
 
-const saveOurDate = new Date('March 25, 2026 07:00:00').getTime()
+const saveOurDate = new Date('April 25, 2026 09:00:00').getTime()
 let countdownInterval: ReturnType<typeof setInterval>
 
 const startCountdown = () => {

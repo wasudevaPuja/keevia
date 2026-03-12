@@ -46,7 +46,6 @@ import { inject } from 'vue'
 const audioControl = inject('audioControl') as {
   isPlaying: Ref<boolean>
   toggleAudio: () => void
-  audio: Ref<HTMLAudioElement | null>
 } | undefined
 
 const isPlaying = audioControl?.isPlaying
