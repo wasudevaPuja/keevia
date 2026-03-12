@@ -1195,6 +1195,8 @@ const openLightbox = (src: string) => {
 const audioControl = inject('audioControl') as {
   isPlaying: Ref<boolean>
   toggleAudio: () => void
+  play: () => void
+  pause: () => void
 } | undefined
 
 const route = useRoute()
@@ -1379,7 +1381,7 @@ const openInvitation = () => {
   })
 
   if (audioControl && !audioControl.isPlaying.value) {
-    audioControl.isPlaying.value = true
+    audioControl.play()
   }
 
   startCountdown()
