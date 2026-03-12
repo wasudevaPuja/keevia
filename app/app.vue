@@ -81,13 +81,13 @@ provide('audioControl', {
 
     <main>
       <NuxtPage />
-      <!-- Global Audio Player, hidden -->
+      <!-- Global Audio Player - Fixed for Mobile compatibility -->
       <iframe
-        v-if="isPlaying"
-        width="0"
-        height="0"
-        src="https://www.youtube.com/embed/Aa29L3jtg-o?autoplay=1&loop=1&playlist=Aa29L3jtg-o"
+        width="1"
+        height="1"
+        :src="isPlaying ? 'https://www.youtube.com/embed/Aa29L3jtg-o?autoplay=1&loop=1&playlist=Aa29L3jtg-o' : ''"
         allow="autoplay"
+        class="fixed -top-[100px] left-0 pointer-events-none opacity-0 invisible"
       ></iframe>
       <FloatingButtons />
     </main>

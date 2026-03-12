@@ -1122,21 +1122,21 @@ const loadingProgress = ref(0)
 
 // Daftar gambar
 const images = ref<string[]>([
-  '/img/gian/gallery/gallery_1.jpeg',
-  '/img/gian/gallery/gallery_2.jpeg',
-  '/img/gian/gallery/gallery_3.jpeg',
-  '/img/gian/gallery/gallery_4.jpeg',
-  '/img/gian/gallery/gallery_5.jpeg',
-  '/img/gian/gallery/gallery_6.jpeg',
-  '/img/gian/gallery/gallery_7.jpeg',
-  '/img/gian/gallery/gallery_8.jpeg',
-  '/img/gian/gallery/gallery_9.jpeg',
-  '/img/gian/gallery/gallery_10.jpeg',
-  '/img/gian/gallery/gallery_11.jpeg',
-  '/img/gian/gallery/gallery_12.jpeg',
-  '/img/gian/gallery/gallery_13.jpeg',
-  '/img/gian/gallery/gallery_14.jpeg',
-  '/img/gian/gallery/gallery_15.jpeg',
+  '/img/gian/gallery/gallery_1.JPEG',
+  '/img/gian/gallery/gallery_2.JPEG',
+  '/img/gian/gallery/gallery_3.JPEG',
+  '/img/gian/gallery/gallery_4.JPEG',
+  '/img/gian/gallery/gallery_5.JPEG',
+  '/img/gian/gallery/gallery_6.JPEG',
+  '/img/gian/gallery/gallery_7.JPEG',
+  '/img/gian/gallery/gallery_8.JPEG',
+  '/img/gian/gallery/gallery_9.JPEG',
+  '/img/gian/gallery/gallery_10.JPEG',
+  '/img/gian/gallery/gallery_11.JPEG',
+  '/img/gian/gallery/gallery_12.JPEG',
+  '/img/gian/gallery/gallery_13.JPEG',
+  '/img/gian/gallery/gallery_14.JPEG',
+  '/img/gian/gallery/gallery_15.JPEG',
 ])
 
 const current = ref(0)
