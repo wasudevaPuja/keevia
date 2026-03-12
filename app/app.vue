@@ -4,7 +4,7 @@ import { ref, provide } from 'vue'
 const url = useRequestURL()
 const route = useRoute()
 
-const PROD_DOMAINS = ['keevia.id', 'www.keevia.id']
+const PROD_DOMAINS = ['keevia.id', 'www.keevia.id', 'undangandigital.keevia.id']
 
 const isProdDomain
   = import.meta.env.PROD

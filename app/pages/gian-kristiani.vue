@@ -3,6 +3,8 @@ import Blossom from '~/components/blossom.vue';
 
 const formattedName = 'Gian & Kristiani'
 const slug = 'gian-kristiani'
+const domain = 'https://undangandigital.keevia.id'
+const previewImg = 'https://res.cloudinary.com/debcjiypk/image/upload/f_jpg,c_fill,g_center,w_1200,h_630/v1773331570/cover_poiflp.jpg'
 
 useSeoMeta({
   title: `The Wedding of ${formattedName} | Keevia.id`,
@@ -16,20 +18,20 @@ useSeoMeta({
   ogTitle: `The Wedding of ${formattedName}`,
   ogDescription: `With love and happiness, ${formattedName} invite you to celebrate their wedding day.`,
   ogType: 'website',
-  ogUrl: `https://undangandigital.keevia.id/${slug}`,
-  ogImage: `https://res.cloudinary.com/debcjiypk/image/upload/f_jpg,c_fill,w_1200,h_630/v1773331570/cover_poiflp.jpg`,
-  ogSiteName: 'Keevia.id',
+  ogUrl: `${domain}/${slug}`,
+  ogImage: previewImg,
+  ogImageSecureUrl: previewImg,
+  ogImageType: 'image/jpeg',
   ogImageWidth: 1200,
   ogImageHeight: 630,
+  ogSiteName: 'Keevia.id',
   ogLocale: 'id_ID',
 
   // Twitter
   twitterCard: 'summary_large_image',
   twitterTitle: `The Wedding of ${formattedName}`,
   twitterDescription: `Join us in celebrating the wedding of ${formattedName}.`,
-  twitterImage: `https://res.cloudinary.com/debcjiypk/image/upload/f_jpg,c_fill,w_1200,h_630/v1773331570/cover_poiflp.jpg`,
-  twitterSite: '@keevia.id',
-  twitterCreator: '@keevia.id'
+  twitterImage: previewImg
 })
 </script>
 

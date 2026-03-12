@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://www.keevia.id'
+    url: 'https://undangandigital.keevia.id'
   },
   runtimeConfig: {
     public: {
@@ -33,7 +33,8 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/': { ssr: false }
+    '/': { ssr: false },
+    '/gian-kristiani': { prerender: true, ssr: true }
   },
 
   compatibilityDate: '2025-01-15',
