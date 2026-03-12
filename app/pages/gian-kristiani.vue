@@ -16,18 +16,18 @@ useSeoMeta({
   ogTitle: `The Wedding of ${formattedName}`,
   ogDescription: `With love and happiness, ${formattedName} invite you to celebrate their wedding day.`,
   ogType: 'website',
-  ogUrl: `https://keevia.id/${slug}`,
-  ogImage: `https://res.cloudinary.com/debcjiypk/image/upload/v1773331570/cover_poiflp.webp`,
+  ogUrl: `https://undangandigital.keevia.id/${slug}`,
+  ogImage: `https://res.cloudinary.com/debcjiypk/image/upload/f_jpg,c_fill,w_1200,h_630/v1773331570/cover_poiflp.jpg`,
   ogSiteName: 'Keevia.id',
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  ogLocale: 'en_US',
+  ogLocale: 'id_ID',
 
   // Twitter
   twitterCard: 'summary_large_image',
   twitterTitle: `The Wedding of ${formattedName}`,
   twitterDescription: `Join us in celebrating the wedding of ${formattedName}.`,
-  twitterImage: `https://res.cloudinary.com/debcjiypk/image/upload/v1773331570/cover_poiflp.webp`,
+  twitterImage: `https://res.cloudinary.com/debcjiypk/image/upload/f_jpg,c_fill,w_1200,h_630/v1773331570/cover_poiflp.jpg`,
   twitterSite: '@keevia.id',
   twitterCreator: '@keevia.id'
 })
