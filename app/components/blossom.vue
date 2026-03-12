@@ -133,6 +133,8 @@
                 src="/img/gian/the_groom.jpg"
                 alt="Groom Gian Felix Sinaga"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
               >
               <!-- Elegant Overlay Gradients -->
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />
@@ -182,6 +184,8 @@
                 src="/img/gian/the_bride.jpg"
                 alt="Bride Kristiani Munthe"
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
               >
               <!-- Elegant Overlay Gradients -->
               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />
@@ -233,7 +237,8 @@
         <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <div class="absolute inset-0 -z-10">
             <video
-          poster="/img/gian/cover.webp"
+              poster="/img/gian/cover.webp"
+              preload="none"
               autoplay
               muted
               loop
@@ -538,7 +543,8 @@
             <!-- Elegant background alternative if video fails to load, maybe subtle static image or gradient -->
             <div class="absolute inset-0 bg-gradient-to-br from-pink-900/20 to-black z-0" />
             <video
-          poster="/img/gian/cover.webp"
+              poster="/img/gian/cover.webp"
+              preload="none"
               autoplay
               muted
               loop
@@ -976,6 +982,8 @@
                       :src="img"
                       class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear hover:scale-105 cursor-pointer"
                       @click="openLightbox(img)"
+                      loading="lazy"
+                      decoding="async"
                     >
                     <!-- Vignette Overlay -->
                     <div
@@ -1036,6 +1044,8 @@
                   <img
                     :src="img"
                     class="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   >
                   <div
                     class="absolute inset-0 bg-black/20"
@@ -1386,13 +1396,8 @@ const openInvitation = () => {
 
   startCountdown()
 
-  // Force play all background videos upon user interaction
-  document.querySelectorAll('video').forEach(vid => {
-    const playPromise = vid.play()
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {})
-    }
-  })
+  // No longer force-playing all videos at once to save mobile resources
+  // Browsers will handle playback of visible videos based on their own optimization rules
 }
 
 // Start interval if open
