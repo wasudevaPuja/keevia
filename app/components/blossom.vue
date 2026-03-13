@@ -1471,7 +1471,7 @@ const countdown = ref({
   seconds: '00'
 })
 
-const saveOurDate = new Date('April 25, 2026 09:00:00').getTime()
+const saveOurDate = new Date('2026-04-25T09:00:00+08:00').getTime()
 let countdownInterval: ReturnType<typeof setInterval>
 
 const startCountdown = () => {
