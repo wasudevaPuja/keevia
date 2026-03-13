@@ -69,11 +69,25 @@
     >
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-        <img 
+        <!-- <img 
           src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
           class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80"
           alt="Hero Background"
+        > -->
+        <video
+          poster="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773331570/cover_poiflp.webp"
+          preload="none"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-full h-full object-cover filter brightness-75 contrast-125"
         >
+          <source
+            src="https://res.cloudinary.com/debcjiypk/video/upload/v1773331519/Reels_adujdu.mp4"
+            type="video/mp4"
+          >
+        </video>
         <!-- Overlay Gradient over the image to make text readable -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-20 pointer-events-none" />
       </div>
@@ -128,7 +142,7 @@
           <!-- Vertical Layout (Stacked) -->
           <div class="flex flex-col w-full text-left">
             <!-- MEMPELAI PRIA -->
-            <div class="relative w-full min-h-[85dvh] lg:h-screen group overflow-hidden border-b border-white/5">
+            <div class="relative w-full min-h-[100dvh] lg:h-screen group overflow-hidden border-b border-white/5">
               <img
                 src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331571/the_groom_qihvwb.jpg"
                 alt="Groom Gian Felix Sinaga"
@@ -141,7 +155,7 @@
               <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
 
               <!-- Content -->
-              <div class="absolute inset-0 flex flex-col justify-end p-8 pb-36 md:p-12 md:pb-36 lg:p-16 lg:pb-36 z-10 w-full mx-auto">
+              <div class="absolute inset-0 flex flex-col justify-end p-8 pb-20 md:p-12 md:pb-36 lg:p-16 lg:pb-36 z-10 w-full mx-auto">
                 <div class="opacity-0 transition-all ease-[cubic-bezier(0.25,1,0.5,1)] scroll-animate translate-y-16 duration-[1500ms] space-y-4 max-w-sm"
                 >
                   <div class="flex items-center gap-4">
@@ -193,7 +207,7 @@
 
               <!-- Content (Aligned right on all screens to balance the Groom) -->
               <div
-                class="absolute inset-0 flex flex-col justify-end p-8 pb-36 md:p-12 md:pb-36 lg:p-16 lg:pb-36 z-10 items-end text-right w-full mx-auto"
+                class="absolute inset-0 flex flex-col justify-end p-8 pb-20 md:p-12 md:pb-36 lg:p-16 lg:pb-36 z-10 items-end text-right w-full mx-auto"
               >
                 <div class="opacity-0 transition-all ease-[cubic-bezier(0.25,1,0.5,1)] scroll-animate translate-y-16 duration-[1500ms] space-y-4 max-w-sm flex flex-col items-end"
                 >
