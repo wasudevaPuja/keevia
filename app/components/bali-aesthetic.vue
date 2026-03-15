@@ -8,7 +8,7 @@
 
 
         <!-- 1. HERO SECTION -->
-        <section class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#1a1510] py-16 sm:py-20">
+        <section class="relative w-full h-[100svh] flex items-center justify-center overflow-hidden bg-[#1a1510] px-4">
             <!-- Cinematic Background -->
             <div class="absolute inset-0 z-0">
                 <div
@@ -32,7 +32,7 @@
                 <div class="opacity-0 translate-y-8 scale-95 transition-all duration-[1500ms] cubic-bezier(0.2, 0, 0, 1)"
                     :class="{ 'opacity-100 translate-y-0 scale-100': hasMounted }">
                     <!-- Elegant Badge -->
-                    <div class="inline-flex items-center gap-4 mb-12">
+                    <div class="inline-flex items-center gap-4 mb-6 md:mb-12">
                         <div class="w-8 h-px bg-white/20"></div>
                         <span
                             class="text-[9px] md:text-[11px] tracking-[0.6em] uppercase font-medium text-amber-200/80 drop-shadow-sm">
@@ -42,9 +42,9 @@
                     </div>
 
                     <!-- Artistic Typography -->
-                    <div class="relative mb-12">
+                    <div class="relative mb-8 md:mb-12">
                         <h1
-                            class="text-4xl md:text-7xl font-display leading-none text-white flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                            class="text-4xl md:text-7xl font-display leading-[1.1] text-white flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8">
                             <span class="relative">
                                 {{ groomName }}
                                 <div
@@ -52,7 +52,7 @@
                                 </div>
                             </span>
                             <span
-                                class="italic text-amber-300/80 font-serif text-3xl md:text-5xl my-4 md:my-0 drop-shadow-lg">&</span>
+                                class="italic text-amber-300/80 font-serif text-3xl md:text-5xl my-2 md:my-0 drop-shadow-lg">&</span>
                             <span class="relative">
                                 {{ brideName }}
                                 <div
@@ -62,12 +62,12 @@
                         </h1>
                     </div>
 
-                    <p class="text-[10px] md:text-xs tracking-[0.5em] font-light uppercase text-white/60 mb-20">
+                    <p class="text-[10px] md:text-xs tracking-[0.5em] font-light uppercase text-white/60 mb-12 md:mb-20">
                         {{ weddingDate }}
                     </p>
 
                     <!-- Decorative Reveal Area -->
-                    <div class="relative w-full flex justify-center py-10 min-h-[100px]">
+                    <div class="relative w-full flex justify-center py-6 md:py-10 min-h-[100px]">
                         <!-- Transition Decoration -->
                         <div class="absolute inset-0 flex justify-center items-center transition-all duration-[2000ms] ease-out-expo"
                             :class="isOpen ? 'scale-100' : 'opacity-0 scale-75 pointer-events-none'">
@@ -87,23 +87,23 @@
                             </div>
 
                             <div
-                                class="relative p-10 rounded-[40px] bg-white/[0.03] backdrop-blur-3xl border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 overflow-hidden group">
+                                class="relative p-7 sm:p-10 rounded-[40px] bg-white/[0.04] backdrop-blur-3xl border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 overflow-hidden group">
                                 <!-- Geometric Accent -->
                                 <div class="absolute top-0 right-0 w-32 h-32 bg-amber-400/5 blur-3xl -tr-10 -te-10">
                                 </div>
 
-                                <p class="text-[9px] tracking-[0.5em] uppercase font-bold text-white/30 mb-5">{{
+                                <p class="text-[9px] tracking-[0.5em] uppercase font-bold text-white/30 mb-4">{{
                                     t('guestLabel') }}</p>
-                                <h3 class="text-3xl font-serif text-white mb-8 tracking-wide font-light">{{ guestName }}
+                                <h3 class="text-2xl sm:text-3xl font-serif text-white mb-6 md:mb-8 tracking-wide font-light">{{ guestName }}
                                 </h3>
 
                                 <p
-                                    class="text-sm md:text-base font-extralight leading-relaxed text-white/50 font-serif italic mb-10 px-4">
+                                    class="text-xs sm:text-sm md:text-base font-extralight leading-relaxed text-white/50 font-serif italic mb-8 md:mb-10 px-4">
                                     {{ t('inviteText') }}
                                 </p>
 
                                 <button @click="openInvitation"
-                                    class="relative overflow-hidden w-full px-10 py-5 bg-white text-black rounded-2xl hover:bg-amber-50 transition-all font-bold tracking-[0.3em] text-[9px] group shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-95">
+                                    class="relative overflow-hidden w-full px-10 py-4 md:py-5 bg-white text-black rounded-2xl hover:bg-amber-50 transition-all font-bold tracking-[0.3em] text-[9px] group shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-95">
                                     <span class="relative z-10">{{ t('openButton') }}</span>
                                     <!-- Shimmer Effect -->
                                     <div
@@ -120,8 +120,9 @@
             <!-- 2. OPENING MESSAGE -->
             <section class="w-full py-32 px-6 flex flex-col items-center">
                 <div class="max-w-3xl text-center scroll-animate opacity-0 translate-y-10 duration-1000">
-                    <h2 class="text-3xl md:text-4xl font-serif font-light text-[#4a3f35] mb-8 italic">Om Swastiastu</h2>
-                    <p class="text-base md:text-lg font-light leading-relaxed text-[#4a3f35]/80 font-serif">
+                    <h2 class="text-3xl font-bold md:text-4xl font-serif font-light text-[#4a3f35] mb-8 italic">Om
+                        Swastiastu</h2>
+                    <p class="text-base font-bold md:text-lg font-light leading-relaxed text-[#4a3f35]/80 italic">
                         Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa kami bermaksud
                         mengundang Bapak/Ibu/Saudara/i pada Upacara Manusa Yadnya Pawiwahan (Pernikahan) Putra dan Putri
                         kami.
@@ -138,7 +139,8 @@
                         <div
                             class="scroll-animate opacity-0 -translate-x-10 duration-[1500ms] flex flex-col items-center md:items-end text-center md:text-right">
                             <!-- Symbolic Seal -->
-                            <div class="relative w-48 h-48 md:w-64 md:h-64 mb-12 group">
+                            <div
+                                class="relative w-48 h-48 md:w-64 md:h-64 mb-12 group scroll-animate opacity-0 scale-90 rotate-[-12deg] duration-[1500ms] delay-200">
                                 <div
                                     class="absolute inset-0 border border-amber-400/20 rounded-full animate-spin-veryslow">
                                 </div>
@@ -154,27 +156,33 @@
                                 </div>
                             </div>
 
-                            <span
-                                class="text-[10px] md:text-[11px] tracking-[0.6em] uppercase font-bold text-amber-600/40 mb-4">{{
-                                    t('groomLabel') }}</span>
-                            <h2 class="text-4xl md:text-6xl font-display text-[#4a3f35] mb-6 leading-tight">{{
-                                groomFullName }}</h2>
+                            <div class="scroll-animate opacity-0 translate-y-8 duration-1000 delay-400">
+                                <span
+                                    class="text-[10px] md:text-[11px] tracking-[0.6em] uppercase font-bold text-amber-600/40 mb-4 block">
+                                    {{ t('groomLabel') }}
+                                </span>
+                                <h2 class="text-3xl md:text-6xl font-display text-[#4a3f35] mb-6 leading-tight">
+                                    {{ groomFullName }}
+                                </h2>
 
-                            <div class="w-12 h-px bg-amber-400/30 mb-6 md:ml-auto"></div>
+                                <div class="w-12 h-px bg-amber-400/30 mb-6 md:ml-auto"></div>
 
-                            <p
-                                class="text-sm md:text-base font-light text-[#4a3f35]/60 max-w-sm md:ml-auto leading-relaxed">
-                                {{ t('sonOf') }} <br />
-                                <strong class="text-[#4a3f35] font-semibold text-lg md:text-xl block mt-2">{{
-                                    groomParents }}</strong>
-                            </p>
+                                <p
+                                    class="text-sm md:text-base font-light text-[#4a3f35]/60 max-w-sm md:ml-auto leading-relaxed">
+                                    {{ t('sonOf') }} <br />
+                                    <strong class="text-[#4a3f35] font-semibold text-lg md:text-xl block mt-2">
+                                        {{ groomParents }}
+                                    </strong>
+                                </p>
+                            </div>
                         </div>
 
                         <!-- Bride -->
                         <div
                             class="scroll-animate opacity-0 translate-x-10 duration-[1500ms] flex flex-col items-center md:items-start text-center md:text-left pt-12 md:pt-48">
                             <!-- Symbolic Seal -->
-                            <div class="relative w-48 h-48 md:w-64 md:h-64 mb-12 group order-first md:order-none">
+                            <div
+                                class="relative w-48 h-48 md:w-64 md:h-64 mb-12 group order-first md:order-none scroll-animate opacity-0 scale-90 rotate-[12deg] duration-[1500ms] delay-200">
                                 <div class="absolute inset-0 border border-amber-400/20 rounded-full animate-spin-veryslow"
                                     style="animation-direction: reverse;"></div>
                                 <div class="absolute inset-4 border border-amber-600/10 rounded-full rotate-45"></div>
@@ -189,19 +197,24 @@
                                 </div>
                             </div>
 
-                            <span
-                                class="text-[10px] md:text-[11px] tracking-[0.6em] uppercase font-bold text-amber-600/40 mb-4">{{
-                                    t('brideLabel') }}</span>
-                            <h2 class="text-4xl md:text-6xl font-display text-[#4a3f35] mb-6 leading-tight">{{
-                                brideFullName }}</h2>
+                            <div class="scroll-animate opacity-0 translate-y-8 duration-1000 delay-400">
+                                <span
+                                    class="text-[10px] md:text-[11px] tracking-[0.6em] uppercase font-bold text-amber-600/40 mb-4 block">
+                                    {{ t('brideLabel') }}
+                                </span>
+                                <h2 class="text-3xl md:text-6xl font-display text-[#4a3f35] mb-6 leading-tight">
+                                    {{ brideFullName }}
+                                </h2>
 
-                            <div class="w-12 h-px bg-amber-400/30 mb-6"></div>
+                                <div class="w-12 h-px bg-amber-400/30 mb-6"></div>
 
-                            <p class="text-sm md:text-base font-light text-[#4a3f35]/60 max-w-sm leading-relaxed">
-                                {{ t('daughterOf') }} <br />
-                                <strong class="text-[#4a3f35] font-semibold text-lg md:text-xl block mt-2">{{
-                                    brideParents }}</strong>
-                            </p>
+                                <p class="text-sm md:text-base font-light text-[#4a3f35]/60 max-w-sm leading-relaxed">
+                                    {{ t('daughterOf') }} <br />
+                                    <strong class="text-[#4a3f35] font-semibold text-lg md:text-xl block mt-2">
+                                        {{ brideParents }}
+                                    </strong>
+                                </p>
+                            </div>
                         </div>
 
                     </div>
@@ -210,17 +223,26 @@
 
             <!-- 4. QUOTE -->
             <section class="w-full py-32 px-6 flex justify-center bg-[#fdfaf5]">
-                <div class="max-w-3xl text-center scroll-animate opacity-0 scale-95 duration-1000">
-                    <p class="text-xl md:text-2xl font-serif italic text-[#4a3f35]/90 leading-relaxed mb-6">
-                        "Ihaiva stam ma vi yaustam, visvam ayur vyasnutam, kridantau putrair naptrbhih, modamanau sve
-                        grhe."
-                        <br />
-                        Wahai pasangan suami-istri, semoga kalian tetap bersatu dan tidak pernah terpisahkan. Semoga
-                        kalian mencapai hidup penuh kebahagiaan, tinggal di rumah yang penuh kegembiraan bersama seluruh
-                        keturunanmu.
-                    </p>
-                    <div class="w-12 h-[1px] bg-amber-400 mx-auto mb-6" />
-                    <p class="text-[11px] tracking-[0.2em] font-bold uppercase text-amber-600/70">Rg Veda X.85.42</p>
+                <div class="max-w-3xl text-center">
+                    <div class="scroll-animate opacity-0 translate-y-10 duration-[1500ms]">
+                        <p class="text-xl md:text-2xl font-serif italic text-[#4a3f35]/90 leading-relaxed mb-6">
+                            "Ihaiva stam ma vi yaustam, visvam ayur vyasnutam, kridantau putrair naptrbhih, modamanau sve
+                            grhe."
+                        </p>
+                    </div>
+
+                    <div class="scroll-animate opacity-0 translate-y-8 duration-[1500ms] delay-300">
+                        <p class="text-base md:text-lg font-serif italic text-[#4a3f35]/60 leading-relaxed mb-10 max-w-2xl mx-auto">
+                            Wahai pasangan suami-istri, semoga kalian tetap bersatu dan tidak pernah terpisahkan. Semoga
+                            kalian mencapai hidup penuh kebahagiaan, tinggal di rumah yang penuh kegembiraan bersama seluruh
+                            keturunanmu.
+                        </p>
+                    </div>
+
+                    <div class="scroll-animate opacity-0 scale-95 duration-1000 delay-500">
+                        <div class="w-12 h-[1px] bg-amber-400 mx-auto mb-6" />
+                        <p class="text-[11px] tracking-[0.2em] font-bold uppercase text-amber-600/70">Rg Veda X.85.42</p>
+                    </div>
                 </div>
             </section>
 
@@ -550,9 +572,9 @@
 
                     <!-- Couple Name -->
                     <div class="mb-20">
-                        <h2
-                            class="text-5xl md:text-7xl font-serif font-light text-[#4a3f35] mb-4 tracking-tighter leading-none">
-                            {{ groomName }} <span class="italic text-amber-500/40">&</span> {{ brideName }}
+                        <h2 class="text-4xl md:text-7xl font-display text-[#4a3f35] mb-4 tracking-tighter leading-none">
+                            {{ groomName }} <span class="italic text-amber-500/40 normal-case font-serif">&</span> {{
+                                brideName }}
                         </h2>
                         <div class="w-20 h-px bg-amber-500/20 mx-auto"></div>
                     </div>
@@ -588,7 +610,7 @@ const props = defineProps({
     groomName: { type: String, default: 'Darma' },
     brideName: { type: String, default: 'Dewi' },
     groomFullName: { type: String, default: 'I Putu Sedana Darma Putra' },
-    brideFullName: { type: String, default: 'Ni Putu Dewi Susinta. Amd.kom' },
+    brideFullName: { type: String, default: 'Ni Putu Dewi Susinta' },
     groomParents: { type: String, default: 'Bpk. ⁠I Made Wiranata & Ibu.  ⁠Ni Made Dwi Hudiani' },
     brideParents: { type: String, default: 'Bpk. ⁠I Made Sukerta & Ibu. ⁠Ni Wayan Sutami' },
     weddingDate: { type: String, default: 'Rabu, 25 Maret 2026' },
@@ -724,8 +746,8 @@ const initScrollAnimations = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.remove('opacity-0', 'translate-y-10', '-translate-y-10', 'translate-x-10', '-translate-x-10', 'scale-95')
-                entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100')
+                entry.target.classList.remove('opacity-0', 'translate-y-10', '-translate-y-10', 'translate-y-8', 'translate-x-10', '-translate-x-10', 'scale-95', 'scale-90', 'rotate-[-12deg]', 'rotate-[12deg]')
+                entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100', 'rotate-0')
             }
         })
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
@@ -891,6 +913,7 @@ const sendRSVP = async () => {
 }
 
 onMounted(() => {
+    if (audioControl?.currentTheme) audioControl.currentTheme.value = 'bali'
     hasMounted.value = true
     window.addEventListener('scroll', updateScroll)
     if (audioControl && audioControl.setMusicId) {

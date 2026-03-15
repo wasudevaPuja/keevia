@@ -73,6 +73,7 @@ useHead(() => {
 })
 
 const isPlaying = ref(false)
+const currentTheme = ref('blossom') // 'blossom' | 'bali'
 const currentMusicId = ref('Aa29L3jtg-o') // Default music
 let player: any = null
 
@@ -162,6 +163,7 @@ onMounted(() => {
 
 provide('audioControl', {
   isPlaying,
+  currentTheme,
   currentMusicId,
   toggleAudio,
   play,
