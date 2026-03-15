@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Keevia//Darma & Dewi Wedding//SaveTheDate//EN
+BEGIN:VEVENT
+UID:20260325@keevia.id
+DTSTAMP:20260315T232200Z
+SUMMARY:Save Our Date - Darma & Dewi
+LOCATION:Br. Dinas Bun, Desa Sangketan, Kecamatan Penebel, Kabupaten Tabanan
+DESCRIPTION:Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+STATUS:CONFIRMED
+CLASS:PUBLIC
+DTSTART:20260325T010000Z
+DTEND:20260325T130000Z
+END:VEVENT
+END:VCALENDAR

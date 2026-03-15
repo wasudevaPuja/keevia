@@ -1,11 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/sitemap'
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/google-fonts', '@nuxtjs/sitemap', '@nuxt/image'],
   plugins: [
     { src: '~/plugins/firebase.client', mode: 'client' }
   ],

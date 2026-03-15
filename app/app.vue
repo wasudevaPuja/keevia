@@ -11,8 +11,16 @@ const isProdDomain
     && PROD_DOMAINS.includes(url.hostname)
 
 useHead(() => {
+  const meta = [
+    {
+      name: 'Permissions-Policy',
+      content: 'compute-pressure=()'
+    }
+  ]
+
   if (!isProdDomain) {
     return {
+      meta,
       link: [
         {
           rel: 'icon',
@@ -37,6 +45,7 @@ useHead(() => {
 
   // production domain → inject canonical dynamic
   return {
+    meta,
     link: [
       {
         rel: 'canonical',
@@ -64,6 +73,7 @@ useHead(() => {
 })
 
 const isPlaying = ref(false)
+const currentMusicId = ref('Aa29L3jtg-o') // Default music
 let player: any = null
 
 const toggleAudio = () => {
@@ -91,6 +101,23 @@ const pause = () => {
   }
 }
 
+const setMusicId = (id: string) => {
+  if (currentMusicId.value !== id) {
+    currentMusicId.value = id
+    if (player && player.loadVideoById) {
+      player.loadVideoById({
+        videoId: id,
+        suggestedQuality: 'default'
+      })
+      // If it was playing, keep playing. If it was paused, keep paused.
+      // Usually loadVideoById starts playing automatically unless specified.
+      if (!isPlaying.value) {
+        player.pauseVideo()
+      }
+    }
+  }
+}
+
 onMounted(() => {
   // Load YouTube IFrame API
   const tag = document.createElement('script')
@@ -105,11 +132,11 @@ onMounted(() => {
     player = new (window as any).YT.Player('youtube-player', {
       height: '1',
       width: '1',
-      videoId: 'Aa29L3jtg-o',
+      videoId: currentMusicId.value,
       playerVars: {
         autoplay: 0,
         loop: 1,
-        playlist: 'Aa29L3jtg-o',
+        playlist: currentMusicId.value,
         controls: 0,
         showinfo: 0,
         autohide: 1,
@@ -121,7 +148,7 @@ onMounted(() => {
           console.log('YouTube Player Ready')
         },
         onStateChange: (event: any) => {
-          // Sync state if player is controlled externally (e.g. YouTube's own controls if visible)
+          // Sync state if player is controlled externally
           if (event.data === (window as any).YT.PlayerState.PLAYING) {
             isPlaying.value = true
           } else if (event.data === (window as any).YT.PlayerState.PAUSED) {
@@ -135,9 +162,11 @@ onMounted(() => {
 
 provide('audioControl', {
   isPlaying,
+  currentMusicId,
   toggleAudio,
   play,
-  pause
+  pause,
+  setMusicId
 })
 </script>
 
