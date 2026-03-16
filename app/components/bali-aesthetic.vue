@@ -235,7 +235,7 @@
                         <span class="text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-bold text-amber-600/40 mb-6 block">
                             {{ t('journeySub') }}
                         </span>
-                        <h2 class="text-4xl md:text-5xl font-serif font-light text-[#4a3f35] mb-8">
+                        <h2 class="text-3xl md:text-5xl font-display font-light text-[#4a3f35] mb-8">
                             {{ t('journeyTitle') }}
                         </h2>
                         <div class="w-24 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent mx-auto"></div>
@@ -364,7 +364,7 @@
                 <div class="max-w-6xl mx-auto relative z-10">
                     <div class="text-center mb-24 scroll-animate opacity-0 -translate-y-10 duration-[1200ms]">
                         <span
-                            class="text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-bold text-amber-600/40 mb-6 block">{{
+                            class="text-[12px] md:text-[11px] tracking-[0.5em] uppercase font-bold text-amber-600/40 mb-6 block">{{
                                 t('countdownHeading') }}</span>
                         <div
                             class="w-24 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent mx-auto">
@@ -431,7 +431,7 @@
                                         <div>
                                             <p class="text-lg text-[#4a3f35] font-medium">{{ weddingDate }}</p>
                                             <p
-                                                class="text-xs tracking-[0.3em] text-amber-600/60 uppercase font-bold mt-2">
+                                                class="text-sm tracking-[0.3em] text-amber-600/60 uppercase font-bold mt-2">
                                                 {{ weddingTime }}</p>
                                         </div>
                                     </div>
@@ -441,7 +441,7 @@
                                         <div class="px-4">
                                             <p class="text-xl text-[#4a3f35] mb-3 leading-tight">{{ weddingLocation }}</p>
                                             <p
-                                                class="text-xs leading-relaxed text-[#4a3f35]/50 italic max-w-xs mx-auto">
+                                                class="text-sm leading-relaxed text-[#4a3f35]/50 italic max-w-xs mx-auto">
                                                 {{ weddingAddress }}</p>
                                         </div>
                                     </div>
@@ -485,7 +485,7 @@
                                         <div>
                                             <p class="text-lg text-[#4a3f35] font-medium">{{ weddingDate }}</p>
                                             <p
-                                                class="text-xs tracking-[0.3em] text-amber-600/60 uppercase font-bold mt-2">
+                                                class="text-sm tracking-[0.3em] text-amber-600/60 uppercase font-bold mt-2">
                                                 {{ receptionTime }}</p>
                                         </div>
                                     </div>
@@ -496,7 +496,7 @@
                                             <p class="text-xl text-[#4a3f35] mb-3 leading-tight">{{ receptionLocation }}
                                             </p>
                                             <p
-                                                class="text-xs leading-relaxed text-[#4a3f35]/50 italic max-w-xs mx-auto">
+                                                class="text-sm leading-relaxed text-[#4a3f35]/50 italic max-w-xs mx-auto">
                                                 {{ receptionAddress }}</p>
                                         </div>
                                     </div>
@@ -627,7 +627,7 @@
                 <div class="max-w-3xl mx-auto scroll-animate opacity-0 translate-y-10 duration-1000">
                     <span class="text-[10px] tracking-[0.4em] uppercase font-bold text-amber-600/60 mb-4 block">Titipan
                         Kasih</span>
-                    <h2 class="text-5xl font-serif text-[#4a3f35] mb-6">Hadiah Pernikahan</h2>
+                    <h2 class="text-3xl font-display text-[#4a3f35] mb-6">Hadiah Pernikahan</h2>
                     <p class="text-sm text-[#4a3f35]/60 mb-12">Kehadiran dan restu anda sudah merupakan hadiah terindah
                         bagi kami,
                         namun jika kamu ingin memberikan hadiah, kamu dapat melakukannya melalui kartu hadiah di bawah
@@ -687,7 +687,7 @@
 
                     <!-- Couple Name -->
                     <div class="mb-20">
-                        <h2 class="text-4xl md:text-7xl font-display text-[#4a3f35] mb-4 tracking-tighter leading-none">
+                        <h2 class="text-3xl md:text-7xl font-display text-[#4a3f35] mb-4 tracking-tighter leading-none">
                             {{ groomName }} <span class="italic text-amber-500/40 normal-case font-serif">&</span> {{
                                 brideName }}
                         </h2>
@@ -763,8 +763,8 @@ const dict = {
         inviteText: '"Atas doa restu Anda, kami mengundang Bapak/Ibu/Saudara/i untuk merayakan hari istimewa kami."',
         groomLabel: 'Mempelai Pria',
         brideLabel: 'Mempelai Wanita',
-        sonOf: 'Putra tercinta dari',
-        daughterOf: 'Putri tercinta dari',
+        sonOf: 'Putra pertama dari',
+        daughterOf: 'Putri pertama dari',
         saveDate: 'SIMPAN TANGGAL',
         mapDirection: 'PETUNJUK LOKASI',
         countdownHeading: 'Menuju Hari Bahagia',
