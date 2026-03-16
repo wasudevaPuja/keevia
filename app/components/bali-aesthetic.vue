@@ -392,8 +392,10 @@
                         </div>
 
                         <!-- Save Date Button -->
-                        <a href="/save-the-date-dewi.ics"
-                            class="mt-16 group relative flex items-center gap-4 px-12 py-5 bg-[#4a3f35] text-amber-200 rounded-full overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(74,63,53,0.3)] hover:-translate-y-1 active:scale-95 scroll-animate opacity-0 translate-y-8 delay-500">
+                        <a :href="isAndroid ? googleCalendarLink : '/save-the-date-dewi.ics'"
+                           :target="isAndroid ? '_blank' : undefined"
+                           :download="!isAndroid ? 'save-the-date-dewi.ics' : undefined"
+                           class="mt-16 group relative flex items-center gap-4 px-12 py-5 bg-[#4a3f35] text-amber-200 rounded-full overflow-hidden transition-all duration-500 hover:shadow-[0_20px_40px_rgba(74,63,53,0.3)] hover:-translate-y-1 active:scale-95 scroll-animate opacity-0 translate-y-8 delay-500">
                             <!-- Shimmer -->
                             <div
                                 class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
@@ -840,9 +842,22 @@ const isOpen = ref(false)
 const scrollProgress = ref(0)
 const activeImage = ref<string | null>(null)
 
-const openLightbox = (imgPath: string) => {
-    activeImage.value = imgPath
-}
+// Cross-platform Calendar Logic
+const formattedName = computed(() => `${props.groomName} & ${props.brideName}`)
+
+const isAndroid = computed(() => {
+    if (!import.meta.client) return false
+    return /Android/i.test(navigator.userAgent)
+})
+
+const googleCalendarLink = computed(() => {
+    const start = '20260325T080000'
+    const end = '20260325T200000'
+    const title = encodeURIComponent('Save Our Date - ' + formattedName.value)
+    const details = encodeURIComponent('Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.')
+    const location = encodeURIComponent(props.weddingAddress)
+    return `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}`
+})
 
 const countdown = ref({
     DAYS: '00',
