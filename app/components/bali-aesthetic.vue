@@ -216,7 +216,108 @@
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 3.5 OUR STORY -->
+            <section class="w-full py-32 px-6 relative overflow-hidden bg-white">
+                <!-- Symmetrical Motifs -->
+                <NuxtImg
+                    src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                    class="absolute top-0 right-[-100px] w-64 opacity-[0.03] rotate-12 pointer-events-none" />
+                <NuxtImg
+                    src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                    class="absolute bottom-0 left-[-100px] w-64 opacity-[0.03] -rotate-12 pointer-events-none" />
 
+                <div class="max-w-6xl mx-auto relative z-10">
+                    <div class="text-center mb-24 scroll-animate opacity-0 -translate-y-10 duration-[1200ms]">
+                        <span class="text-[10px] md:text-[11px] tracking-[0.5em] uppercase font-bold text-amber-600/40 mb-6 block">
+                            {{ t('journeySub') }}
+                        </span>
+                        <h2 class="text-4xl md:text-5xl font-serif font-light text-[#4a3f35] mb-8">
+                            {{ t('journeyTitle') }}
+                        </h2>
+                        <div class="w-24 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent mx-auto"></div>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Vertical Timeline Path -->
+                        <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-amber-400/0 via-amber-400/20 to-amber-400/0 -translate-x-1/2 hidden md:block"></div>
+                        
+                        <!-- Mobile Timeline Guide -->
+                        <div class="absolute left-4 top-0 bottom-0 w-px bg-amber-400/10 md:hidden"></div>
+
+                        <div class="space-y-32">
+                            <!-- Story 1: Left Content, Right Empty (Fade Right) -->
+                            <div class="relative grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+                                <div class="scroll-animate opacity-0 -translate-x-20 duration-[1500ms] md:text-right">
+                                    <div class="inline-block p-10 md:p-12 bg-[#fdfaf5] rounded-[50px] border border-amber-400/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all duration-700 group relative overflow-hidden">
+                                        <!-- Card Motif -->
+                                        <NuxtImg
+                                            src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                                            class="absolute top-[-30px] right-[-30px] w-32 opacity-[0.05] rotate-45 pointer-events-none group-hover:rotate-90 transition-transform duration-[2000ms]" />
+                                        
+                                        <span class="text-4xl md:text-5xl font-display text-amber-600/10 mb-6 block group-hover:text-amber-600/30 transition-colors duration-700">
+                                            {{ t('ch1Date') }}
+                                        </span>
+                                        <h3 class="text-2xl md:text-3xl font-serif text-[#4a3f35] mb-6">{{ t('ch1Title') }}</h3>
+                                        <p class="text-sm md:text-base text-[#4a3f35]/60 leading-relaxed font-light italic">
+                                            "{{ t('ch1Desc') }}"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex justify-start items-center">
+                                    <div class="w-5 h-5 rounded-full bg-white border-4 border-amber-400 shadow-[0_0_20px_rgba(251,191,36,0.5)] -ml-[10px] relative z-20"></div>
+                                </div>
+                            </div>
+
+                            <!-- Story 2: Right Content, Left Empty (Fade Left) -->
+                            <div class="relative grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+                                <div class="hidden md:flex justify-end items-center">
+                                    <div class="w-5 h-5 rounded-full bg-white border-4 border-amber-400 shadow-[0_0_20px_rgba(251,191,36,0.5)] -mr-[10px] relative z-20"></div>
+                                </div>
+                                <div class="scroll-animate opacity-0 translate-x-20 duration-[1500ms]">
+                                    <div class="inline-block p-10 md:p-12 bg-[#fdfaf5] rounded-[50px] border border-amber-400/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all duration-700 group relative overflow-hidden">
+                                        <!-- Card Motif -->
+                                        <NuxtImg
+                                            src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                                            class="absolute top-[-30px] left-[-30px] w-32 opacity-[0.05] -rotate-45 pointer-events-none group-hover:-rotate-90 transition-transform duration-[2000ms]" />
+                                        
+                                        <span class="text-4xl md:text-5xl font-display text-amber-600/10 mb-6 block group-hover:text-amber-600/30 transition-colors duration-700">
+                                            {{ t('ch2Date') }}
+                                        </span>
+                                        <h3 class="text-2xl md:text-3xl font-serif text-[#4a3f35] mb-6">{{ t('ch2Title') }}</h3>
+                                        <p class="text-sm md:text-base text-[#4a3f35]/60 leading-relaxed font-light italic">
+                                            "{{ t('ch2Desc') }}"
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Story 3: Left Content, Right Empty (Fade Right) -->
+                            <div class="relative grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+                                <div class="scroll-animate opacity-0 -translate-x-20 duration-[1500ms] md:text-right">
+                                    <div class="inline-block p-10 md:p-12 bg-[#fdfaf5] rounded-[50px] border border-amber-400/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.03)] hover:shadow-xl transition-all duration-700 group relative overflow-hidden">
+                                        <!-- Card Motif -->
+                                        <NuxtImg
+                                            src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                                            class="absolute top-[-30px] right-[-30px] w-32 opacity-[0.05] rotate-45 pointer-events-none group-hover:rotate-90 transition-transform duration-[2000ms]" />
+                                        
+                                        <span class="text-4xl md:text-5xl font-display text-amber-600/10 mb-6 block group-hover:text-amber-600/30 transition-colors duration-700">
+                                            {{ t('ch3Date') }}
+                                        </span>
+                                        <h3 class="text-2xl md:text-3xl font-serif text-[#4a3f35] mb-6">{{ t('ch3Title') }}</h3>
+                                        <p class="text-sm md:text-base text-[#4a3f35]/60 leading-relaxed font-light italic">
+                                            "{{ t('ch3Desc') }}"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="hidden md:flex justify-start items-center">
+                                    <div class="w-5 h-5 rounded-full bg-white border-4 border-amber-400 shadow-[0_0_20px_rgba(251,191,36,0.5)] -ml-[10px] relative z-20"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -346,7 +447,7 @@
                                     </div>
                                 </div>
 
-                                <a :href="'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(weddingAddress)"
+                                <a href="https://maps.app.goo.gl/nz4cCZkJwDdba6pF9"
                                     target="_blank"
                                     class="mt-16 inline-flex items-center gap-4 px-10 py-5 bg-[#4a3f35] text-amber-100 rounded-3xl font-bold tracking-[0.2em] text-[10px] hover:bg-[#5a4f45] transition-all w-full justify-center group/btn relative overflow-hidden whitespace-nowrap z-10">
 
@@ -401,7 +502,7 @@
                                     </div>
                                 </div>
 
-                                <a :href="'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(weddingAddress)"
+                                <a href="https://maps.app.goo.gl/nz4cCZkJwDdba6pF9"
                                     target="_blank"
                                     class="mt-16 inline-flex items-center gap-4 px-10 py-5 bg-[#4a3f35] text-amber-100 rounded-3xl font-bold tracking-[0.2em] text-[10px] hover:bg-[#5a4f45] transition-all w-full justify-center group/btn relative overflow-hidden whitespace-nowrap z-10">
 
@@ -672,7 +773,18 @@ const dict = {
         minutes: 'MENIT',
         seconds: 'DETIK',
         thankYouText: 'Terima kasih yang sebesar-besarnya atas restu dan ketersediaan waktu untuk menghadiri momen istimewa kami.',
-        thankYouSub: 'Rahmat dan damai sejahtera senantiasa membersamai langkah kehidupan kita.'
+        thankYouSub: 'Rahmat dan damai sejahtera senantiasa membersamai langkah kehidupan kita.',
+        journeySub: 'Kisah Cinta Menuju Pelaminan',
+        journeyTitle: 'Lembaran Baru Kami',
+        ch1Title: 'Pertemuan Pertama',
+        ch1Desc: 'Pada Februari 2023, kami tidak sengaja berkenalan melalui media sosial. Seiring bejalan waktu kamu memulai hubungan ini yang menjadi titik awal kami bisa bersama sampai saat ini, berawal dari iseng berujung ke hubungan yang serius.',
+        ch1Date: '2023',
+        ch2Title: 'Menjalin Kedekatan',
+        ch2Desc: 'Kami sebagai dua orang yang memiliki kepribadian yang berbeda, dimana selama beberapa tahun hubungan kami banyak dihiasi dengan tawa, tangis, banyak kenangan manis yang tercipta dan banyak kejadian-kejadian yang membuat kami lebih kuat dan berfikir lebih dewasa.',
+        ch2Date: '2023-2025',
+        ch3Title: 'Menuju Pelaminan',
+        ch3Desc: 'Akhirnya setelah sekian banyak drama kehidupan yang kami alami bersama, suka maupun duka, kami memutuskan untuk melanjutkan hubungan ke tahap yang lebih serius yaitu melangsungkan pernikahan, dengan adanya restu dari kedua orang tua kami dan keluarga, kami akan memulai lembaran baru sebagai keluarga, menjalani kehidupan bersama dalam suka maupun duka selamanya.',
+        ch3Date: 'Maret 2026'
     },
     en: {
         pawiwahanTitle: 'THE WEDDING',
@@ -691,7 +803,21 @@ const dict = {
         minutes: 'MINUTES',
         seconds: 'SECONDS',
         thankYouText: 'Thank you for the prayers, love, and your presence on our happy day.',
-        thankYouSub: 'May happiness and love always be with us all.'
+        thankYouSub: 'May happiness and love always be with us all.',
+        journeySub: 'A Journey in Love',
+        journeyTitle: 'Our Story',
+        ch1Title: 'First Meeting',
+        ch1Desc: 'Our humble yet memorable first meeting, where every small moment began to plant the seeds of sincere love in our hearts.',
+        ch1Date: '2023',
+        ch1DateFull: 'January 2018',
+        ch2Title: 'Growing Together',
+        ch2Desc: 'Through every laugh and shared moment, we found a connection that made us even more confident to walk together and face every challenge.',
+        ch2Date: '2021',
+        ch2DateFull: 'June 2021',
+        ch3Title: 'The Future Home',
+        ch3Desc: 'With the blessing of our parents and faith in our hearts, we decided to make a sacred promise on this special day, stepping into a new chapter of life.',
+        ch3Date: '2026',
+        ch3DateFull: 'March 2026'
     }
 }
 
@@ -760,7 +886,7 @@ const initScrollAnimations = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.remove('opacity-0', 'translate-y-10', '-translate-y-10', 'translate-y-8', 'translate-x-10', '-translate-x-10', 'scale-95', 'scale-90', 'rotate-[-12deg]', 'rotate-[12deg]')
+                entry.target.classList.remove('opacity-0', 'translate-y-10', '-translate-y-10', 'translate-y-16', 'translate-y-8', 'translate-x-20', '-translate-x-20', 'translate-x-10', '-translate-x-10', 'scale-95', 'scale-90', 'rotate-[-12deg]', 'rotate-[12deg]')
                 entry.target.classList.add('opacity-100', 'translate-y-0', 'translate-x-0', 'scale-100', 'rotate-0')
             }
         })
