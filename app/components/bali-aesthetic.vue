@@ -615,7 +615,7 @@
                             <div v-else
                                 class="h-full flex flex-col items-center justify-center py-20 text-center opacity-30">
                                 <UIcon name="mdi:message-off-outline" class="w-12 h-12 mb-4" />
-                                <p class="text-xs font-bold tracking-widest uppercase">No messages yet</p>
+                                <p class="text-xs font-bold tracking-widest uppercase">Belum Ada Ucapan</p>
                             </div>
                         </div>
                     </div>
