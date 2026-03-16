@@ -548,7 +548,7 @@
                                             rsvpStatus === 'not_attending' ? 'bg-[#eee] text-[#4a3f35] border-[#ccc] shadow-inner' : 'bg-[#fdfaf5] text-[#4a3f35]/40 border-[#eee] hover:bg-[#eee]',
                                             validationError && !rsvpStatus ? 'border-red-500 bg-red-50' : ''
                                         ]">
-                                        TIDAK HADIR
+                                        Tidak Hadir
                                     </button>
                                 </div>
                                 <p v-if="validationError && !rsvpStatus"
