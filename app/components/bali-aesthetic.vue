@@ -248,10 +248,14 @@
 
             <!-- 5. EVENTS -->
             <section class="w-full py-32 px-6 md:px-12 relative overflow-hidden bg-[#fdfaf5]">
-                <!-- Decorative Accents -->
+                <!-- Symmetrical Decorative Accents -->
                 <NuxtImg
                     src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
-                    class="absolute top-20 right-[-100px] w-96 opacity-[0.03] rotate-12 pointer-events-none animate-float [animation-duration:15s]" />
+                    class="absolute top-0 left-[-150px] w-[500px] opacity-[0.02] -rotate-12 pointer-events-none" />
+                <NuxtImg
+                    src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                    class="absolute bottom-0 right-[-150px] w-[500px] opacity-[0.02] rotate-[165deg] pointer-events-none" />
+                
                 <div
                     class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-[0.03] pointer-events-none">
                 </div>
@@ -269,16 +273,16 @@
                     <!-- Countdown -->
                     <div class="flex flex-col items-center mb-32">
                         <div
-                            class="grid grid-cols-4 gap-4 md:gap-8 max-w-3xl w-full scroll-animate opacity-0 scale-95 duration-1000 delay-200">
+                            class="grid grid-cols-4 gap-4 md:gap-8 max-w-4xl w-full scroll-animate opacity-0 scale-95 duration-1000 delay-200">
                             <div v-for="(val, unit) in countdown" :key="unit"
-                                class="relative flex flex-col items-center p-6 md:p-10 bg-white rounded-[40px] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.05)] border border-amber-400/5 group hover:shadow-2xl transition-all duration-700">
+                                class="relative flex flex-col items-center p-6 md:p-10 bg-white rounded-[40px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] border border-amber-400/10 group hover:shadow-2xl transition-all duration-700">
                                 <!-- Unit Decoration -->
                                 <div
                                     class="absolute inset-2 border border-amber-400/5 rounded-[32px] pointer-events-none">
                                 </div>
 
                                 <span
-                                    class="text-4xl md:text-7xl font-serif font-light text-[#4a3f35] group-hover:text-amber-600 transition-colors duration-500">{{
+                                    class="text-4xl md:text-7xl font-display font-light text-[#4a3f35] group-hover:text-amber-600 transition-colors duration-500">{{
                                         val }}</span>
                                 <span
                                     class="text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-bold text-amber-600/40 mt-4">{{
@@ -299,15 +303,20 @@
                         </a>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-stretch">
                         <!-- Event 1 (Pawiwahan) -->
                         <div class="scroll-animate opacity-0 translate-y-16 duration-[1500ms] delay-300 relative group">
                             <!-- Background Card -->
                             <div
-                                class="h-full p-12 md:p-16 bg-white rounded-[60px] border border-amber-400/10 shadow-sm transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col">
-                                <div class="flex flex-col items-center text-center mb-12">
+                                class="h-full p-10 md:p-16 bg-white rounded-[60px] border border-amber-400/10 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.03)] transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col relative">
+                                <!-- Subtle Motif Accent -->
+                                <NuxtImg
+                                    src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                                    class="absolute top-[-50px] right-[-50px] w-48 opacity-[0.03] rotate-45 pointer-events-none group-hover:rotate-90 transition-transform duration-[2000ms]" />
+
+                                <div class="flex flex-col items-center text-center mb-12 relative z-10">
                                     <div
-                                        class="w-16 h-16 flex items-center justify-center rounded-3xl bg-amber-500/5 text-amber-600 mb-8 ring-1 ring-amber-500/20 group-hover:rotate-[360deg] transition-all duration-1000">
+                                        class="w-16 h-16 flex items-center justify-center rounded-3xl bg-amber-500/5 text-amber-600 mb-8 ring-1 ring-amber-500/20 group-hover:rotate-[360deg] transition-all duration-[1200ms]">
                                         <UIcon name="mdi:calendar-heart" class="w-8 h-8" />
                                     </div>
                                     <h3 class="text-4xl md:text-5xl font-serif font-light text-[#4a3f35] mb-2">Pawiwahan
@@ -315,23 +324,23 @@
                                     <div class="w-12 h-px bg-amber-400/40"></div>
                                 </div>
 
-                                <div class="space-y-10 flex-grow">
+                                <div class="space-y-10 flex-grow relative z-10 font-serif">
                                     <div class="flex flex-col items-center text-center gap-3">
                                         <UIcon name="mdi:clock-outline" class="w-5 h-5 text-amber-600/30" />
                                         <div>
-                                            <p class="text-base font-serif italic text-[#4a3f35]">{{ weddingDate }}</p>
+                                            <p class="text-lg text-[#4a3f35] font-medium">{{ weddingDate }}</p>
                                             <p
-                                                class="text-xs tracking-widest text-amber-600/60 uppercase font-bold mt-2">
+                                                class="text-xs tracking-[0.3em] text-amber-600/60 uppercase font-bold mt-2">
                                                 {{ weddingTime }}</p>
                                         </div>
                                     </div>
 
                                     <div class="flex flex-col items-center text-center gap-3">
                                         <UIcon name="mdi:map-marker-outline" class="w-5 h-5 text-amber-600/30" />
-                                        <div>
-                                            <p class="text-xl font-serif text-[#4a3f35] mb-3">{{ weddingLocation }}</p>
+                                        <div class="px-4">
+                                            <p class="text-xl text-[#4a3f35] mb-3 leading-tight">{{ weddingLocation }}</p>
                                             <p
-                                                class="text-xs leading-relaxed text-[#4a3f35]/50 max-w-xs mx-auto italic">
+                                                class="text-xs leading-relaxed text-[#4a3f35]/50 italic max-w-xs mx-auto">
                                                 {{ weddingAddress }}</p>
                                         </div>
                                     </div>
@@ -339,7 +348,7 @@
 
                                 <a :href="'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(weddingAddress)"
                                     target="_blank"
-                                    class="mt-16 inline-flex items-center gap-4 px-10 py-5 bg-[#4a3f35]/5 text-[#4a3f35] rounded-3xl font-bold tracking-[0.2em] text-[10px] hover:bg-[#4a3f35] hover:text-white transition-all w-full justify-center group/btn relative overflow-hidden whitespace-nowrap">
+                                    class="mt-16 inline-flex items-center gap-4 px-10 py-5 bg-[#4a3f35] text-amber-100 rounded-3xl font-bold tracking-[0.2em] text-[10px] hover:bg-[#5a4f45] transition-all w-full justify-center group/btn relative overflow-hidden whitespace-nowrap z-10">
 
                                     <span class="relative z-10">{{ t('mapDirection') }}</span>
 
@@ -353,10 +362,15 @@
                         <div class="scroll-animate opacity-0 translate-y-16 duration-[1500ms] delay-500 relative group">
                             <!-- Background Card -->
                             <div
-                                class="h-full p-12 md:p-16 bg-white rounded-[60px] border border-amber-400/10 shadow-sm transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col">
-                                <div class="flex flex-col items-center text-center mb-12">
+                                class="h-full p-10 md:p-16 bg-white rounded-[60px] border border-amber-400/10 shadow-[0_40px_80px_-20px_rgba(0,0,0,0.03)] transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 overflow-hidden flex flex-col relative">
+                                <!-- Subtle Motif Accent -->
+                                <NuxtImg
+                                    src="https://res.cloudinary.com/debcjiypk/image/upload/v1773585924/bali_gold_motif-removebg-preview_p8kxmm.png"
+                                    class="absolute top-[-50px] left-[-50px] w-48 opacity-[0.03] -rotate-45 pointer-events-none group-hover:-rotate-90 transition-transform duration-[2000ms]" />
+
+                                <div class="flex flex-col items-center text-center mb-12 relative z-10">
                                     <div
-                                        class="w-16 h-16 flex items-center justify-center rounded-3xl bg-amber-500/5 text-amber-600 mb-8 ring-1 ring-amber-500/20 group-hover:rotate-[360deg] transition-all duration-1000">
+                                        class="w-16 h-16 flex items-center justify-center rounded-3xl bg-amber-500/5 text-amber-600 mb-8 ring-1 ring-amber-500/20 group-hover:rotate-[360deg] transition-all duration-[1200ms]">
                                         <UIcon name="mdi:glass-wine" class="w-8 h-8" />
                                     </div>
                                     <h3 class="text-4xl md:text-5xl font-serif font-light text-[#4a3f35] mb-2">Resepsi
@@ -364,24 +378,24 @@
                                     <div class="w-12 h-px bg-amber-400/40"></div>
                                 </div>
 
-                                <div class="space-y-10 flex-grow">
+                                <div class="space-y-10 flex-grow relative z-10 font-serif">
                                     <div class="flex flex-col items-center text-center gap-3">
                                         <UIcon name="mdi:clock-outline" class="w-5 h-5 text-amber-600/30" />
                                         <div>
-                                            <p class="text-base font-serif italic text-[#4a3f35]">{{ weddingDate }}</p>
+                                            <p class="text-lg text-[#4a3f35] font-medium">{{ weddingDate }}</p>
                                             <p
-                                                class="text-xs tracking-widest text-amber-600/60 uppercase font-bold mt-2">
+                                                class="text-xs tracking-[0.3em] text-amber-600/60 uppercase font-bold mt-2">
                                                 {{ receptionTime }}</p>
                                         </div>
                                     </div>
 
                                     <div class="flex flex-col items-center text-center gap-3">
                                         <UIcon name="mdi:map-marker-outline" class="w-5 h-5 text-amber-600/30" />
-                                        <div>
-                                            <p class="text-xl font-serif text-[#4a3f35] mb-3">{{ receptionLocation }}
+                                        <div class="px-4">
+                                            <p class="text-xl text-[#4a3f35] mb-3 leading-tight">{{ receptionLocation }}
                                             </p>
                                             <p
-                                                class="text-xs leading-relaxed text-[#4a3f35]/50 max-w-xs mx-auto italic">
+                                                class="text-xs leading-relaxed text-[#4a3f35]/50 italic max-w-xs mx-auto">
                                                 {{ receptionAddress }}</p>
                                         </div>
                                     </div>
@@ -389,7 +403,7 @@
 
                                 <a :href="'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(weddingAddress)"
                                     target="_blank"
-                                    class="mt-16 inline-flex items-center gap-4 px-10 py-5 bg-[#4a3f35]/5 text-[#4a3f35] rounded-3xl font-bold tracking-[0.2em] text-[10px] hover:bg-[#4a3f35] hover:text-white transition-all w-full justify-center group/btn relative overflow-hidden whitespace-nowrap">
+                                    class="mt-16 inline-flex items-center gap-4 px-10 py-5 bg-[#4a3f35] text-amber-100 rounded-3xl font-bold tracking-[0.2em] text-[10px] hover:bg-[#5a4f45] transition-all w-full justify-center group/btn relative overflow-hidden whitespace-nowrap z-10">
 
                                     <span class="relative z-10">{{ t('mapDirection') }}</span>
 
