@@ -13,7 +13,7 @@ useHead({
 
 useSeoMeta({
   title: `Pawiwahan ${formattedName} | Keevia.id`,
-  description: `Join us in celebrating the pawiwahan of ${formattedName}. With love and joy, we invite you to be part of our special day.`,
+  description: `Pawiwahan ${formattedName}. Dengan cinta dan bahagia, ${formattedName} mengundang Anda untuk menghadiri pawiwahan mereka.`,
 
   // Basic Meta
   author: 'Keevia.id',
@@ -21,17 +21,16 @@ useSeoMeta({
 
   // Open Graph
   ogTitle: `Undangan Pawiwahan ${formattedName}`,
-  ogDescription: `With love and happiness, ${formattedName} invite you to celebrate their pawiwahan day.`,
+  ogDescription: `Dengan cinta dan bahagia, ${formattedName} mengundang Anda untuk menghadiri pawiwahan mereka.`,
   ogType: 'website',
   ogUrl: `${domain}/${slug}`,
-  ogImageType: 'image/jpeg',
   ogSiteName: 'Keevia.id',
   ogLocale: 'id_ID',
 
   // Twitter
   twitterCard: 'summary_large_image',
   twitterTitle: `Undangan Pawiwahan ${formattedName}`,
-  twitterDescription: `Join us in celebrating the pawiwahan of ${formattedName}.`
+  twitterDescription: `Dengan cinta dan bahagia, ${formattedName} mengundang Anda untuk menghadiri pawiwahan mereka.`
 })
 </script>
 
