@@ -62,13 +62,15 @@
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
         <!-- Layer 1: Loading Image -->
-        <img src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp"
-          class="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-[1200ms] ease-in-out antialiased-gpu"
-          :class="isOpen ? 'opacity-0' : 'opacity-80'" alt="Hero Background" />
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out z-0 pointer-events-none" :class="isOpen ? 'opacity-0' : 'opacity-100'">
+          <img src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_800/v1773332602/loading_img_lzijfk.webp"
+            class="w-full h-full object-cover scale-105 opacity-80" alt="Loading Background" />
+        </div>
         <!-- Layer 2: Main Cover Image -->
-        <img src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
-          class="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-[1200ms] ease-in-out antialiased-gpu"
-          :class="isOpen ? 'opacity-80' : 'opacity-0'" alt="Hero Background" />
+        <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out z-0 pointer-events-none" :class="isOpen ? 'opacity-100' : 'opacity-0'">
+          <img src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
+            class="w-full h-full object-cover scale-105 opacity-80" alt="Hero Background" />
+        </div>
         <!-- Overlay Gradient over the image to make text readable -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-20 pointer-events-none" />
       </div>
@@ -1542,11 +1544,5 @@ body {
 .fade-up-leave-to {
   opacity: 0;
   transform: translateY(-30px);
-}
-
-.antialiased-gpu {
-  transform: translateZ(0);
-  will-change: opacity;
-  backface-visibility: hidden;
 }
 </style>
