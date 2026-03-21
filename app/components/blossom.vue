@@ -61,14 +61,16 @@
     ]">
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-        <img v-if="!isOpen" src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp"
-          class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background"></img>
-        <img v-else
-          src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
-          class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background">
+        <transition name="fade">
+          <img v-if="!isOpen" key="bg-loading"
+            src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp"
+            class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background" />
+          <img v-else key="bg-opened"
+            src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
+            class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background" />
+        </transition>
         <!-- Overlay Gradient over the image to make text readable -->
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-20 pointer-events-none" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-20 pointer-events-none" />
       </div>
 
       <!-- HERO CONTENT -->
@@ -88,25 +90,23 @@
 
         <!-- Invitation Box -->
         <div class="max-w-md mx-auto text-center">
-          <template v-if="!isOpen">
-            <p class="text-xs tracking-[0.3em] uppercase text-white/70">{{ t("toYth") }}</p>
+          <transition name="fade-up" mode="out-in">
+            <div v-if="!isOpen" key="to-yth" class="space-y-4">
+              <p class="text-xs tracking-[0.3em] uppercase text-white/70">{{ t("toYth") }}</p>
+              <p class="text-xl font-light text-white">
+                {{ guestName }}
+              </p>
+              <p class="text-[11px] text-white/60 leading-relaxed">{{ t("openingMsg") }}</p>
+              <button
+                class="mt-6 px-8 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full hover:bg-white/30 transition-all tracking-[0.25em] text-xs hover:scale-105 cursor-pointer"
+                @click="openInvitation">{{ t("openBtn") }}</button>
+            </div>
 
-            <p class="text-xl font-light mt-3 text-white">
-              {{ guestName }}
-            </p>
-
-            <p class="text-[11px] text-white/60 mt-4 leading-relaxed">{{ t("openingMsg") }}</p>
-
-            <button
-              class="mt-6 px-8 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full hover:bg-white/30 transition-all tracking-[0.25em] text-xs hover:scale-105 cursor-pointer"
-              @click="openInvitation">{{ t("openBtn") }}</button>
-          </template>
-
-          <template v-else>
-            <p class="text-sm md:text-base italic leading-relaxed text-white/90">{{ t("bibleQuote") }}</p>
-
-            <p class="text-xs mt-3 text-pink-200 tracking-wide">{{ t("bibleVerse") }}</p>
-          </template>
+            <div v-else key="bible-quote" class="space-y-3">
+              <p class="text-sm md:text-base italic leading-relaxed text-white/90">{{ t("bibleQuote") }}</p>
+              <p class="text-xs text-pink-200 tracking-wide">{{ t("bibleVerse") }}</p>
+            </div>
+          </transition>
         </div>
       </div>
 
@@ -1521,11 +1521,26 @@ body {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s ease;
+  transition: opacity 1.5s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
 }
 </style>
