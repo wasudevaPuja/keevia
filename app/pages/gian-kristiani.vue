@@ -4,7 +4,7 @@ import Blossom from '~/components/blossom.vue';
 const formattedName = 'Gian & Kristiani'
 const slug = 'gian-kristiani'
 const domain = 'https://undangandigital.keevia.id'
-const previewImg = 'https://res.cloudinary.com/debcjiypk/image/upload/f_jpg,c_fill,g_center,w_1200,h_630/v1773331570/cover_poiflp.jpg'
+const previewImg = 'https://res.cloudinary.com/debcjiypk/image/upload/v1773331434/gallery_3_ejaubq.jpg'
 
 useSeoMeta({
   title: `The Wedding of ${formattedName} | Keevia.id`,

@@ -61,7 +61,10 @@
     ]">
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-        <img src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
+        <img v-if="!isOpen" src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp"
+          class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background"></img>
+        <img v-else
+          src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
           class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background">
         <!-- Overlay Gradient over the image to make text readable -->
         <div
@@ -218,7 +221,7 @@
                 <i class="mdi mdi-flower-tulip-outline text-4xl text-pink-300 animate-pulse" />
               </div>
               <p class="text-xs md:text-sm tracking-[0.3em] uppercase text-pink-200/90 font-medium">{{ t("journeySub")
-              }}</p>
+                }}</p>
               <h2 class="text-4xl lg:text-5xl font-light text-white font-serif italic">{{ t("journeyTitle") }}</h2>
             </div>
 
@@ -340,7 +343,7 @@
                   </div>
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{
                     t("saveOurDate")
-                  }}</h2>
+                    }}</h2>
                   <p class="text-3xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("dateMain") }}</p>
                 </div>
 
@@ -375,7 +378,7 @@
                     <div
                       class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                       <span class="text-3xl font-light text-pink-300 font-serif">{{ countdown.seconds
-                      }}</span>
+                        }}</span>
                       <span
                         class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200/70 mt-2 font-medium">{{
                           t("seconds") }}</span>
@@ -492,12 +495,12 @@
                     <div class="w-16 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent mx-2 my-auto" />
                   </div>
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("giftSub")
-                  }}
+                    }}
                   </h2>
                   <p class="text-3xl font-serif italic font-light text-white tracking-wide mt-2">{{ t("giftTitle") }}
                   </p>
                   <p class="text-white/70 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-4">{{ t("giftDesc")
-                  }}</p>
+                    }}</p>
                 </div>
 
                 <!-- Cards Container -->
@@ -586,6 +589,107 @@
           </div>
         </section>
 
+        <!-- GALERI -->
+        <section
+          class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24 overflow-hidden">
+          <!-- Background -->
+          <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
+            <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 via-black to-black z-0" />
+            <div
+              class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(249,168,212,0.05)_0%,transparent_100%)] z-10" />
+          </div>
+
+          <!-- Content -->
+          <div class="relative z-30 max-w-6xl mx-auto px-6 md:px-12 w-full h-full flex flex-col">
+            <!-- Header Section -->
+            <div
+              class="opacity-0 transition-all ease-out scroll-animate -translate-y-10 duration-[1000ms] text-center space-y-4 mb-10 md:mb-16">
+              <div class="flex justify-center mb-4">
+                <i class="mdi mdi-camera-outline text-3xl md:text-4xl text-pink-300" />
+              </div>
+              <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("memoriesSub")
+                }}
+              </h2>
+              <p class="text-4xl md:text-6xl font-serif italic font-light text-white tracking-wide mt-2">{{
+                t("memoriesTitle")
+                }}</p>
+            </div>
+
+            <!-- Gallery Grid / Carousel Card -->
+            <div
+              class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] delay-200 relative flex-1 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+              <!-- Decorative ambient glow -->
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-pink-500/10 rounded-full blur-[100px] pointer-events-none" />
+
+              <!-- Image Display -->
+              <div class="relative w-full h-[65dvh] lg:h-[75vh] rounded-2xl overflow-hidden group">
+                <!-- Main Featured Images -->
+                <transition-group name="fade" tag="div" class="absolute inset-0 w-full h-full">
+                  <div v-for="(img, idx) in images" v-show="current === idx" :key="'main-' + idx"
+                    class="absolute inset-0 w-full h-full">
+                    <img :src="img"
+                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear hover:scale-105 cursor-pointer"
+                      @click="openLightbox(img)" loading="lazy" decoding="async">
+                    <!-- Vignette Overlay -->
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none mix-blend-multiply" />
+                  </div>
+                </transition-group>
+
+                <!-- Navigation Controls (Hover visible on desktop) -->
+                <div
+                  class="absolute inset-0 flex items-center justify-between px-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <button
+                    class="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-pink-500/80 hover:border-pink-300 transition-all hover:scale-110 pointer-events-auto"
+                    @click.stop="prevSlide">
+                    <UIcon name="mdi:chevron-left" class="w-8 h-8" />
+                  </button>
+                  <button
+                    class="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-pink-500/80 hover:border-pink-300 transition-all hover:scale-110 pointer-events-auto"
+                    @click.stop="nextSlide">
+                    <UIcon name="mdi:chevron-right" class="w-8 h-8" />
+                  </button>
+                </div>
+
+                <!-- Open Lightbox Hint -->
+                <div
+                  class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/10 z-20 pointer-events-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  <UIcon name="mdi:magnify-plus-outline" class="w-4 h-4 text-pink-300" />
+                  <span class="text-xs text-white uppercase tracking-widest font-medium whitespace-nowrap">{{
+                    t("tapEnlarge")
+                    }}</span>
+                </div>
+              </div>
+
+              <!-- Thumbnails / Pagination -->
+              <div ref="thumbContainer"
+                class="mt-6 md:mt-8 flex justify-start gap-3 overflow-x-auto py-4 custom-scrollbar px-2">
+                <button v-for="(img, idx) in images" :key="'thumb-' + idx"
+                  :ref="(el: any) => { if (el) thumbs[idx] = el }"
+                  class="relative w-16 h-16 md:w-24 md:h-24 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300"
+                  :class="current === idx ? 'border-pink-400 scale-110 shadow-[0_0_15px_rgba(249,168,212,0.5)] z-10' : 'border-transparent opacity-50 hover:opacity-100 hover:scale-105'"
+                  @click="current = idx">
+                  <img :src="img" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                  <div class="absolute inset-0 bg-black/20" :class="current === idx ? 'opacity-0' : 'opacity-100'" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Prewedding Video Card -->
+            <div
+              class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] relative w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mt-8">
+              <div class="relative w-full max-w-[360px] aspect-[9/16] mx-auto">
+                <iframe class="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/xkNAcFxU6XI?autoplay=1&mute=1&loop=1&playlist=xkNAcFxU6XI"
+                  title="Prewedding Video" frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- RSVP -->
         <section class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24">
           <!-- Background Video with elegant overlay -->
@@ -611,15 +715,16 @@
                     <i class="mdi mdi-flower-tulip-outline text-3xl md:text-5xl text-pink-300" />
                   </div>
                   <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("rsvpSub")
-                  }}
+                    }}
                   </h2>
                   <p class="text-3xl md:text-5xl font-serif italic font-light text-white tracking-wide mt-2">{{
                     t("rsvpTitle")
-                  }}</p>
+                    }}</p>
                   <p class="text-white/70 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">{{ t("rsvpDesc")
-                  }}
+                    }}
                   </p>
                 </div>
+
 
                 <!-- Form RSVP -->
                 <form
@@ -641,7 +746,7 @@
                     <div class="flex flex-col text-left space-y-3">
                       <p class="text-xs tracking-widest uppercase text-pink-200/80 font-medium ml-1">{{
                         t("confirmAttendance")
-                      }}</p>
+                        }}</p>
                       <div class="flex flex-col sm:flex-row gap-4">
                         <label class="flex-1 cursor-pointer">
                           <input v-model="kehadiran" type="radio" name="kehadiran" value="Hadir" class="peer sr-only"
@@ -751,107 +856,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- GALERI -->
-        <section
-          class="min-h-[100dvh] md:min-h-screen relative flex flex-col justify-center py-16 md:py-24 overflow-hidden">
-          <!-- Background -->
-          <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-            <div class="absolute inset-0 bg-gradient-to-t from-pink-900/20 via-black to-black z-0" />
-            <div
-              class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(249,168,212,0.05)_0%,transparent_100%)] z-10" />
-          </div>
-
-          <!-- Content -->
-          <div class="relative z-30 max-w-6xl mx-auto px-6 md:px-12 w-full h-full flex flex-col">
-            <!-- Header Section -->
-            <div
-              class="opacity-0 transition-all ease-out scroll-animate -translate-y-10 duration-[1000ms] text-center space-y-4 mb-10 md:mb-16">
-              <div class="flex justify-center mb-4">
-                <i class="mdi mdi-camera-outline text-3xl md:text-4xl text-pink-300" />
-              </div>
-              <h2 class="text-xs md:text-sm font-medium tracking-[0.4em] uppercase text-pink-200/80">{{ t("memoriesSub")
-              }}
-              </h2>
-              <p class="text-4xl md:text-6xl font-serif italic font-light text-white tracking-wide mt-2">{{
-                t("memoriesTitle")
-              }}</p>
-            </div>
-
-            <!-- Prewedding Video Card -->
-            <div
-              class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] relative w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-8">
-              <div class="relative w-full max-w-[360px] aspect-[9/16] mx-auto">
-                <iframe class="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/xkNAcFxU6XI?autoplay=1&mute=1&loop=1&playlist=xkNAcFxU6XI"
-                  title="Prewedding Video" frameborder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-
-            <!-- Gallery Grid / Carousel Card -->
-            <div
-              class="opacity-0 transition-all ease-out scroll-animate scale-95 duration-[1200ms] delay-200 relative flex-1 w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-4 md:p-6 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mt-4">
-              <!-- Decorative ambient glow -->
-              <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-pink-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-              <!-- Image Display -->
-              <div class="relative w-full h-[65dvh] lg:h-[75vh] rounded-2xl overflow-hidden group">
-                <!-- Main Featured Images -->
-                <transition-group name="fade" tag="div" class="absolute inset-0 w-full h-full">
-                  <div v-for="(img, idx) in images" v-show="current === idx" :key="'main-' + idx"
-                    class="absolute inset-0 w-full h-full">
-                    <img :src="img"
-                      class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear hover:scale-105 cursor-pointer"
-                      @click="openLightbox(img)" loading="lazy" decoding="async">
-                    <!-- Vignette Overlay -->
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none mix-blend-multiply" />
-                  </div>
-                </transition-group>
-
-                <!-- Navigation Controls (Hover visible on desktop) -->
-                <div
-                  class="absolute inset-0 flex items-center justify-between px-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
-                  <button
-                    class="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-pink-500/80 hover:border-pink-300 transition-all hover:scale-110 pointer-events-auto"
-                    @click.stop="prevSlide">
-                    <UIcon name="mdi:chevron-left" class="w-8 h-8" />
-                  </button>
-                  <button
-                    class="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white flex items-center justify-center hover:bg-pink-500/80 hover:border-pink-300 transition-all hover:scale-110 pointer-events-auto"
-                    @click.stop="nextSlide">
-                    <UIcon name="mdi:chevron-right" class="w-8 h-8" />
-                  </button>
-                </div>
-
-                <!-- Open Lightbox Hint -->
-                <div
-                  class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/10 z-20 pointer-events-none opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                  <UIcon name="mdi:magnify-plus-outline" class="w-4 h-4 text-pink-300" />
-                  <span class="text-xs text-white uppercase tracking-widest font-medium whitespace-nowrap">{{
-                    t("tapEnlarge")
-                  }}</span>
-                </div>
-              </div>
-
-              <!-- Thumbnails / Pagination -->
-              <div ref="thumbContainer"
-                class="mt-6 md:mt-8 flex justify-start gap-3 overflow-x-auto py-4 custom-scrollbar px-2">
-                <button v-for="(img, idx) in images" :key="'thumb-' + idx"
-                  :ref="(el: any) => { if (el) thumbs[idx] = el }"
-                  class="relative w-16 h-16 md:w-24 md:h-24 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-all duration-300"
-                  :class="current === idx ? 'border-pink-400 scale-110 shadow-[0_0_15px_rgba(249,168,212,0.5)] z-10' : 'border-transparent opacity-50 hover:opacity-100 hover:scale-105'"
-                  @click="current = idx">
-                  <img :src="img" class="w-full h-full object-cover" loading="lazy" decoding="async">
-                  <div class="absolute inset-0 bg-black/20" :class="current === idx ? 'opacity-0' : 'opacity-100'" />
-                </button>
               </div>
             </div>
           </div>
@@ -1019,7 +1023,7 @@ const dict = {
     theBride: "Mempelai Wanita",
     daughterOf: "Putri Kedua dari",
     parentsBride: "Bapak Manuel Munthe & Ibu Henny br Girsang",
-    journeySub: "Kisah Cinta Menuju Pelaminan",
+    journeySub: "Kisah Cinta Menuju Selamanya",
     journeyTitle: "Lembaran Baru Kami",
     ch1DateAbbr: "2018-2019",
     ch1DateFull: "2018-2019",
@@ -1041,12 +1045,12 @@ const dict = {
     seconds: "Detik",
     saveToCal: "Simpan Tanggal",
     pemberkatanTitle: "Pemberkatan Pernikahan",
-    pemberkatanTime: "09.00 - 11.00 WITA",
+    pemberkatanTime: "09.00 - 10.00 WITA",
     pemberkatanLocation: "Jl. RE Martadinata Jl. Raya Pelabuhan Benoa, Benoa, Denpasar Selatan, Kota Denpasar, Bali 80119",
     resepsiTitle: "Youth Party",
     adatTitle: "Adat",
-    resepsiTime: "11.30 - 12.30 WITA",
-    adatTime: "12.30 - Selesai",
+    resepsiTime: "11.00 - 12.00 WITA",
+    adatTime: "12.00 - Selesai",
     resepsiLocation: "Jl. WR Supratman No.302, Kesiman Kertalangu, Kec. Denpasar Tim., Kota Denpasar, Bali 80237",
     openMap: "Buka Google Maps",
     rsvpSub: "Konfirmasi Kehadiran",
@@ -1120,12 +1124,12 @@ const dict = {
     seconds: "Secs",
     saveToCal: "Save to Calendar",
     pemberkatanTitle: "Holy Matrimony",
-    pemberkatanTime: "09.00 - 11.00 WITA",
+    pemberkatanTime: "09.00 - 10.00 WITA",
     pemberkatanLocation: "Jl. RE Martadinata Jl. Raya Pelabuhan Benoa, Benoa, Denpasar Selatan, Kota Denpasar, Bali 80119",
     resepsiTitle: "Youth Party",
     adatTitle: "Cultural Ceremony",
-    resepsiTime: "11.30 - 12.30 WITA",
-    adatTime: "12.30 - End",
+    resepsiTime: "11.00 - 12.00 WITA",
+    adatTime: "12.00 - End",
     resepsiLocation: "Jl. WR Supratman No.302, Kesiman Kertalangu, Kec. Denpasar Tim., Kota Denpasar, Bali 80237",
     openMap: "Open in Google Maps",
     rsvpSub: "RSVP & Wishes",
