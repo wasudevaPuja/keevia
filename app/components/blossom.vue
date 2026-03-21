@@ -61,14 +61,14 @@
     ]">
       <!-- BACKGROUND PHOTO UTAMA (FAST LOAD) -->
       <div class="absolute inset-0 -z-10 bg-[#1a1a1a]">
-        <transition name="fade">
-          <img v-if="!isOpen" key="bg-loading"
-            src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp"
-            class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background" />
-          <img v-else key="bg-opened"
-            src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
-            class="absolute inset-0 w-full h-full object-cover scale-105 z-0 opacity-80" alt="Hero Background" />
-        </transition>
+        <!-- Layer 1: Loading Image -->
+        <img src="https://res.cloudinary.com/debcjiypk/image/upload/v1773332602/loading_img_lzijfk.webp"
+          class="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-[1200ms] ease-in-out antialiased-gpu"
+          :class="isOpen ? 'opacity-0' : 'opacity-80'" alt="Hero Background" />
+        <!-- Layer 2: Main Cover Image -->
+        <img src="https://res.cloudinary.com/debcjiypk/image/upload/f_auto,q_auto,w_1000/v1773331570/cover_poiflp.webp"
+          class="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-[1200ms] ease-in-out antialiased-gpu"
+          :class="isOpen ? 'opacity-80' : 'opacity-0'" alt="Hero Background" />
         <!-- Overlay Gradient over the image to make text readable -->
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-20 pointer-events-none" />
       </div>
@@ -1542,5 +1542,11 @@ body {
 .fade-up-leave-to {
   opacity: 0;
   transform: translateY(-30px);
+}
+
+.antialiased-gpu {
+  transform: translateZ(0);
+  will-change: opacity;
+  backface-visibility: hidden;
 }
 </style>
