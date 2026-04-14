@@ -810,7 +810,7 @@
                         {{ t("wishesTitle") }}
                       </h3>
                       <span class="bg-pink-300/20 text-pink-200 text-xs px-2.5 py-1 rounded-full font-medium">
-                        {{ guestMessages.length }} {{ t("messagesCount") }}
+                        {{ totalMessages }} {{ t("messagesCount") }}
                       </span>
                     </div>
 
@@ -1337,6 +1337,7 @@ interface GuestMessage {
 }
 
 const guestMessages = ref<GuestMessage[]>([])
+const totalMessages = ref(0)
 
 //  Google Apps Script URL
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby4kUYXnmoRNCgVGHhs9H-uG-yi0LLE3LJFxYNHXX1WRecd4ynUos3Y-6Ou_QiiotXH/exec'
@@ -1403,8 +1404,14 @@ const isLoadingMore = ref(false)
 const fetchGuestMessages = async () => {
   if (!import.meta.client || !firebase || !rsvpCollection) return
 
-  const { query, orderBy, limit, getDocs } = await import('firebase/firestore')
+  const { query, orderBy, limit, getDocs, onSnapshot } = await import('firebase/firestore')
 
+  // Real-time listener for total count (Option B)
+  onSnapshot(rsvpCollection, (snapshot) => {
+    totalMessages.value = snapshot.size
+  })
+
+  // Initial fetch for the message list (limited to 10)
   const q = query(rsvpCollection, orderBy('tanggal', 'desc'), limit(10))
   const snapshot = await getDocs(q)
 
