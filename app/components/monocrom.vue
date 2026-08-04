@@ -229,7 +229,7 @@
                 <div v-if="!isOpen" class="flex flex-col items-centerw-full">
 
                     <div
-                        class="w-full max-w-sm bg-black/55 backdrop-blur-xl border border-[#c8a96a]/30 p-8 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,.7)]">
+                        class="w-full max-w-sm bg-black/30 backdrop-blur-md border border-[#c8a96a]/30 p-8 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,.7)]">
 
                         <!-- Label -->
                         <p class="text-[10px] tracking-[0.4em] uppercase mb-3 text-[#c8a96a]">
@@ -288,7 +288,6 @@
                     <!-- CONTENT -->
                     <div
                         class="relative z-10 min-h-[100dvh] flex flex-col justify-end items-center text-center px-8 pb-24">
-
 
                         <!-- Ornament -->
                         <div class="w-16 h-px bg-white/40 mb-10"></div>
