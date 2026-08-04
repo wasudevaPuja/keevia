@@ -1259,7 +1259,7 @@ interface GuestMessage {
 const guestMessages = ref<GuestMessage[]>([])
 const totalMessages = ref(0)
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbycUWkK-T5QS12DtOoGrZAnSV66GUOmmX8SzSdzqje1A8VoFWX1txwiTPEOyC4TkxNp/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/library/d/1Tq8xXveV0z9cse37G1lg8xK9Rc2502bEIc4tcspAHo2j2vdRWAercHEL/2'
 
 const isSubmitting = ref(false)
 const submitSuccess = ref<boolean | null>(null)
