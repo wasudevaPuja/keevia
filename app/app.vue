@@ -161,6 +161,10 @@ onMounted(() => {
   }
 })
 
+const setTheme = (theme: string) => {
+    currentTheme.value = theme
+}
+
 provide('audioControl', {
   isPlaying,
   currentTheme,
@@ -168,7 +172,8 @@ provide('audioControl', {
   toggleAudio,
   play,
   pause,
-  setMusicId
+  setMusicId,
+  setTheme
 })
 </script>
 

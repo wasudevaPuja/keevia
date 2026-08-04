@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Keevia//Danan & Ayu Wedding//SaveTheDate//EN
+
+BEGIN:VEVENT
+UID:20260930@keevia.id
+DTSTAMP:20260804T000000Z
+SUMMARY:Pawiwahan - Danan & Ayu
+LOCATION:Jalan Raya Baturiti, Gang Sahadewa, No. 4, Baturiti Kelod, Tabanan
+DESCRIPTION:Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+STATUS:CONFIRMED
+CLASS:PUBLIC
+
+DTSTART;TZID=Asia/Makassar:20260930T120000
+DTEND;TZID=Asia/Makassar:20260930T235900
+
+END:VEVENT
+
+END:VCALENDAR

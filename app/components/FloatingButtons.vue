@@ -11,6 +11,8 @@
         currentTheme === 'blossom' ? 'bg-pink-500/20 hover:scale-110 hover:bg-pink-400 hover:border-pink-300' : '',
         // BALI THEME Styles
         currentTheme === 'bali' ? 'bg-[#4a3f35]/20 hover:scale-110 hover:bg-[#4a3f35] hover:border-amber-400/50' : '',
+        // monocrom THEME Styles
+        currentTheme === 'monocrom' ? 'bg-gray-500/20 hover:scale-110 hover:bg-gray-400 hover:border-gray-300' : '',
         isPlaying ? 'animate-[softPulse_3s_ease-in-out_infinite]' : ''
       ]"
       @click="toggleAudio"
@@ -22,7 +24,8 @@
           class="w-5 h-5"
           :class="[
             !isPlaying ? 'opacity-70' : '',
-            currentTheme === 'bali' && isPlaying ? 'text-amber-200' : ''
+            currentTheme === 'bali' && isPlaying ? 'text-amber-200' : '',
+            currentTheme === 'monocrom' && isPlaying ? 'text-gray-200' : ''
           ]"
         />
       </span>
@@ -33,7 +36,8 @@
         class="absolute inset-0 rounded-full blur-2xl -z-10 transition-colors duration-500"
         :class="[
           currentTheme === 'blossom' ? 'bg-pink-400/30' : '',
-          currentTheme === 'bali' ? 'bg-amber-400/20' : ''
+          currentTheme === 'bali' ? 'bg-amber-400/20' : '',
+          currentTheme === 'monocrom' ? 'bg-gray-400/20' : ''
         ]"
       />
       
@@ -49,6 +53,7 @@ import { inject } from 'vue'
 
 const audioControl = inject('audioControl') as {
   isPlaying: Ref<boolean>
+  setTheme: (theme: string) => void
   currentTheme: Ref<string>
   toggleAudio: () => void
   play: () => void
