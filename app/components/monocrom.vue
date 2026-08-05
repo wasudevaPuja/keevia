@@ -618,7 +618,7 @@
 
                                 <!-- TIME -->
                                 <p class="text-sm text-white font-medium mb-7 tracking-wide">
-                                    {{ t("resepsiTime") }}
+                                    Pukul {{ resepsiTime }}
                                 </p>
                                 <!-- DIVIDER -->
                                 <div class="w-10 h-px bg-white/30 mx-auto mb-7"></div>
@@ -1079,7 +1079,6 @@ const dict = {
         seconds: "Detik",
         saveToCal: "Simpan Tanggal",
         resepsiTitle: "Resepsi",
-        resepsiTime: "12:00 WITA - Selesai",
         resepsiLocation: "Jalan Raya Baturiti, Gang Sahadewa, No. 4, Baturiti Kelod, Tabanan",
         openMap: "Lihat Lokasi",
         rsvpSub: "Your Presence",
@@ -1121,6 +1120,7 @@ const dict = {
 const t = (key: keyof typeof dict.id) => dict.id[key]
 
 const guestName = computed(() => (route.query.to as string) || 'Nama Tamu')
+const resepsiTime = computed(() => (route.query.jam as string) || '12.00 WITA - Selesai')
 
 const isAndroid = computed(() => {
     if (!import.meta.client) return false
