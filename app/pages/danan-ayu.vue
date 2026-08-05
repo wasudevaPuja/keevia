@@ -4,7 +4,7 @@ import Monocrom from '~/components/monocrom.vue';
 const formattedName = 'Danan & Ayu'
 const slug = 'danan-ayu'
 const domain = 'https://undangandigital.keevia.id'
-const previewImg = 'https://assets.keevia.id/wedding-danan/IMG_3802.JPG'
+const previewImg = 'https://assets.keevia.id/wedding-danan/IMG_3802.jpg'
 
 useSeoMeta({
   title: `Pawiwahan of ${formattedName} | Keevia.id`,
