@@ -72,7 +72,7 @@
                     "></div>
 
 
-                        <img src="https://assets.keevia.id/wedding-danan/IMG_3801.JPG" alt="Preloading" class="
+                        <img src="https://assets.keevia.id/wedding-danan/IMG_3801.jpg" alt="Preloading" class="
                         w-full
                         h-full
                         object-cover
@@ -156,7 +156,7 @@
             class="hidden md:block md:w-[75%] flex-1 sticky top-0 self-start h-[100dvh] md:h-screen relative overflow-hidden bg-black">
             <!-- BACKGROUND PHOTO FOR LEFT PANEL (CRISP & SHARP) -->
             <div class="absolute inset-0 z-0 pointer-events-none">
-                <img src="https://assets.keevia.id/wedding-danan/IMG_3809.JPG"
+                <img src="https://assets.keevia.id/wedding-danan/IMG_3809.jpg"
                     class="w-full h-full object-cover object-center filter contrast-[1.05] brightness-95"
                     alt="Danan & Ayu Cover" />
                 <!-- Elegant Dark Vignette Gradient Overlay (No Blur) -->
@@ -248,7 +248,7 @@
 
                         <!-- Button -->
                         <button
-                            class="w-full py-3 rounded-full text-[10px] tracking-[0.35em] uppercase font-medium bg-[#c8a96a] text-black hover:bg-white transition-all duration-300 shadow-[0_8px_30px_rgba(200,169,106,.25)] cursor-pointer"
+                            class="w-full py-3 rounded-full text-[10px] tracking-[0.35em] uppercase font-medium bg-white text-black hover:bg-white/80 transition-all duration-300 shadow-[0_8px_30px_rgba(200,169,106,.25)] cursor-pointer"
                             @click="openInvitation">
                             {{ t("openBtn") }}
                         </button>
@@ -273,7 +273,7 @@
                 <section class="relative w-full min-h-[100dvh] overflow-hidden">
 
                     <!-- FULL BACKGROUND PHOTO -->
-                    <img src="https://assets.keevia.id/wedding-danan/IMG_3794.JPG" alt="Wedding Quote"
+                    <img src="https://assets.keevia.id/wedding-danan/IMG_3794.jpg" alt="Wedding Quote"
                         class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
 
 
@@ -358,7 +358,7 @@
                     <div class="flex flex-col w-full text-left">
                         <!-- MEMPELAI PRIA (GROOM) -->
                         <div class="relative w-full min-h-[100dvh] group overflow-hidden">
-                            <img src="https://assets.keevia.id/wedding-danan/IMG_3829.JPG" alt="Groom Danan"
+                            <img src="https://assets.keevia.id/wedding-danan/IMG_3829.jpg" alt="Groom Danan"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-linear group-hover:scale-110 filter sepia-[0.15]"
                                 loading="lazy" decoding="async">
                             <!-- Elegant Dark Vignette Overlay (same as Left Panel) -->
@@ -414,7 +414,7 @@
 
                         <!-- MEMPELAI WANITA (BRIDE) -->
                         <div class="relative w-full min-h-[100dvh] group overflow-hidden">
-                            <img src="https://assets.keevia.id/wedding-danan/IMG_3828.JPG" alt="Bride Ayu"
+                            <img src="https://assets.keevia.id/wedding-danan/IMG_3828.jpg" alt="Bride Ayu"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] ease-linear group-hover:scale-110 filter sepia-[0.15]"
                                 loading="lazy" decoding="async">
                             <!-- Elegant Dark Vignette Overlay (same as Left Panel) -->
@@ -477,7 +477,7 @@
                     <div class="absolute inset-0 bg-black/35"></div>
 
                     <div
-                        class="relative z-10 max-w-4xl mx-auto scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+                        class="relative z-10 max-w-4xl mx-auto scroll-animate opacity-90 translate-y-8 transition-all duration-1000">
 
                         <!-- Glass Container -->
                         <div
@@ -577,7 +577,7 @@
 
                         <!-- HEADER -->
                         <div
-                            class="flex flex-col items-center text-center mb-16 scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+                            class="flex flex-col items-center text-center mb-16 scroll-animate opacity-90 translate-y-8 transition-all duration-1000">
 
                             <p class="text-[9px] font-medium tracking-[0.5em] text-white/50 uppercase mb-5">
                                 The best is yet to come
@@ -641,7 +641,7 @@
 
                     <!-- HEADER -->
                     <div
-                        class="flex flex-col items-center text-center mb-16 scroll-animate opacity-0 translate-y-8 transition-all duration-1000">
+                        class="flex flex-col items-center text-center mb-16 scroll-animate opacity-90 translate-y-8 transition-all duration-1000">
 
                         <div class="w-px h-16 bg-gradient-to-b from-transparent to-white/40 mb-6"></div>
 
@@ -657,7 +657,7 @@
                     <div class="grid grid-cols-1 gap-12 items-start">
                         <!-- FORM -->
                         <div
-                            class="bg-black/35 backdrop-blur-xl border border-white/20 p-8 rounded-3xl shadow-2xl scroll-animate opacity-0 translate-y-8 transition-all duration-1000 delay-100">
+                            class="bg-black/35 backdrop-blur-xl border border-white/20 p-8 rounded-3xl shadow-2xl scroll-animate opacity-90 translate-y-8 transition-all duration-1000 delay-100">
 
                             <h3 class="text-xl font-serif mb-8 text-white">
                                 {{ t("confirmAttendance") }}
@@ -731,7 +731,7 @@
 
                         <!-- MESSAGE LIST -->
                         <div
-                            class="bg-black/30 backdrop-blur-xl border border-white/20 p-8 rounded-3xl shadow-2xl h-full max-h-[550px] scroll-animate opacity-0 translate-y-8 transition-all duration-1000 delay-200">
+                            class="bg-black/30 backdrop-blur-xl border border-white/20 p-8 rounded-3xl shadow-2xl h-full max-h-[550px] scroll-animate opacity-90 translate-y-8 transition-all duration-1000 delay-200">
                             <div class="mb-6 border-b border-white/20 pb-4 flex items-center justify-between">
                                 <h3 class="text-xl font-serif text-white">
                                     {{ t("wishesTitle") }}
@@ -797,7 +797,7 @@
                     class="py-24 px-6 text-center relative mt-8 bg-black/20 backdrop-blur-sm border-t border-white/10 w-full">
 
                     <div
-                        class="flex flex-col items-center max-w-2xl mx-auto scroll-animate opacity-0 translate-y-8 transition-all duration-1000 bg-black/35 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/20 shadow-2xl relative z-10">
+                        class="flex flex-col items-center max-w-2xl mx-auto scroll-animate opacity-90 translate-y-8 transition-all duration-1000 bg-black/35 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/20 shadow-2xl relative z-10">
 
                         <!-- Icon -->
                         <div
@@ -842,6 +842,23 @@
                                     a.n I Kadek Wahyu Dananjaya
                                 </p>
                                 <button @click="copyText('012401035788506')"
+                                    class="py-3 px-8 bg-white/10 backdrop-blur-md border border-white/30 text-white text-[10px] font-medium tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all rounded-full cursor-pointer">
+
+                                    {{ t("copyAcc") }}
+                                </button>
+                            </div>
+                            <div
+                                class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg flex flex-col items-center">
+                                <p class="text-xs font-medium tracking-[0.35em] text-white/50 uppercase mb-3">
+                                    Seabank
+                                </p>
+                                <p class="text-xl font-serif tracking-wide text-white mb-2">
+                                    901068692029
+                                </p>
+                                <p class="text-xs text-white/60 mb-6">
+                                    a.n Kadek Ayu Krisna Dewi
+                                </p>
+                                <button @click="copyText('901068692029')"
                                     class="py-3 px-8 bg-white/10 backdrop-blur-md border border-white/30 text-white text-[10px] font-medium tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all rounded-full cursor-pointer">
 
                                     {{ t("copyAcc") }}
@@ -909,7 +926,7 @@
                 <!-- FOOTER -->
                 <section class="relative w-full min-h-[100dvh] overflow-hidden flex flex-col text-center select-none">
                     <!-- BACKGROUND PHOTO -->
-                    <img src="https://assets.keevia.id/wedding-danan/IMG_3835.JPG" alt="Wedding Footer"
+                    <img src="https://assets.keevia.id/wedding-danan/IMG_3835.jpg" alt="Wedding Footer"
                         class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
 
                     <!-- CINEMATIC OVERLAY -->
@@ -971,16 +988,18 @@ const isLoading = ref(true)
 const loadingProgress = ref(0)
 
 const images = ref<string[]>([
-    'https://assets.keevia.id/wedding-danan/IMG_3796.JPG',
-    'https://assets.keevia.id/wedding-danan/IMG_3797.JPG',
-    'https://assets.keevia.id/wedding-danan/IMG_3802.JPG',
-    'https://assets.keevia.id/wedding-danan/IMG_3804.JPG',
-    'https://assets.keevia.id/wedding-danan/IMG_3807.JPG',
-    'https://assets.keevia.id/wedding-danan/IMG_3830.JPG',
+    'https://assets.keevia.id/wedding-danan/IMG_3796.jpg',
+    'https://assets.keevia.id/wedding-danan/IMG_3797.jpg',
+    'https://assets.keevia.id/wedding-danan/IMG_3802.jpg',
+    'https://assets.keevia.id/wedding-danan/IMG_3804.jpg',
+    'https://assets.keevia.id/wedding-danan/IMG_3807.jpg',
+    'https://assets.keevia.id/wedding-danan/IMG_3830.jpg',
     'https://assets.keevia.id/wedding-danan/IMG_3841.JPG',
     'https://assets.keevia.id/wedding-danan/IMG_3843.JPG',
     'https://assets.keevia.id/wedding-danan/IMG_3846.JPG',
     'https://assets.keevia.id/wedding-danan/IMG_3837.JPG',
+    'https://assets.keevia.id/wedding-danan/IMG_3842.JPG',
+    'https://assets.keevia.id/wedding-danan/IMG_3844.JPG',
 ])
 
 const current = ref(0)
@@ -1021,7 +1040,7 @@ watch(current, () => {
 const openLightbox = (src: string) => {
     const lb = document.createElement('div')
     lb.className = 'fixed inset-0 bg-black/95 z-[9999] flex flex-col items-center justify-center cursor-pointer backdrop-blur-sm opacity-0 transition-opacity duration-300'
-    lb.innerHTML = `<img src="${src}" class="max-h-[85vh] max-w-[90vw] rounded-xl shadow-2xl filter grayscale sepia-[0.2]" />
+    lb.innerHTML = `<img src="${src}" class="max-h-[85vh] max-w-[90vw] rounded-xl shadow-2xl filter sepia-[0.2]" />
                   <p class="text-white/50 text-[10px] tracking-[0.3em] font-medium uppercase mt-6">Ketuk di mana saja untuk menutup</p>`
 
     document.body.appendChild(lb)
