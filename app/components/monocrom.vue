@@ -474,7 +474,7 @@
                 <!-- COUNTDOWN / SAVE OUR DATE -->
                 <section class="py-24 px-6 relative w-full">
                     <!-- Soft dark overlay supaya text tetap terbaca -->
-                    <div class="absolute inset-0 bg-black/35"></div>
+                    <div class="absolute inset-0"></div>
 
                     <div
                         class="relative z-10 max-w-4xl mx-auto scroll-animate opacity-90 translate-y-8 transition-all duration-1000">
