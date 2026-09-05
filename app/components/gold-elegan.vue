@@ -2437,26 +2437,26 @@ const openInvitation = () => {
     isOpen.value = true
     document.body.classList.remove('overflow-hidden')
     nextTick(() => {
-     setTimeout(() => {
-    initScrollAnimations()
+        setTimeout(() => {
+            initScrollAnimations()
 
-    if (quoteSection.value) {
+            if (quoteSection.value) {
 
-        const scrollStep = () => {
+                const scrollStep = () => {
 
-            if (!quoteSection.value) return
+                    if (!quoteSection.value) return
 
-            quoteSection.value.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            })
-        }
+                    quoteSection.value.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                }
 
-        // Sedikit delay agar layout sudah benar-benar selesai
-        setTimeout(scrollStep, 550)
+                // Sedikit delay agar layout sudah benar-benar selesai
+                setTimeout(scrollStep, 550)
 
-    }
-}, 100)
+            }
+        }, 100)
         if (audioControl && typeof audioControl.setMusicId === 'function') {
             audioControl.setMusicId('-BR872_MnuQ')
         }
