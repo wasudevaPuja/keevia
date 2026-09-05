@@ -759,24 +759,12 @@
                         </div>
 
                         <!-- Om Swastyastu -->
-                        <p class="font-serif text-lg md:text-xl text-[#6B5328] tracking-wide mb-12">
+                        <p class="font-serif text-lg md:text-xl text-[#6B5328] tracking-wide mb-8 font-semibold">
                             Om Swastyastu
                         </p>
 
                         <!-- Main Text -->
                         <div class="max-w-lg space-y-6">
-
-                            <p class="
-        font-mepandes-sans
-        text-[10px]
-        md:text-xs
-        tracking-[0.35em]
-        uppercase
-        text-[#B38E46]
-        font-semibold
-    ">
-                                Upacara Manusa Yadnya
-                            </p>
 
                             <p class="
         font-mepandes-sans
@@ -828,7 +816,6 @@
         ">
                                     Putra
                                 </p>
-
 
                                 <!-- Names -->
                                 <div class="
@@ -925,7 +912,6 @@
                                     Putri
                                 </p>
 
-
                                 <!-- Names -->
                                 <div class="
             flex
@@ -960,8 +946,11 @@
             ">
                                         I Gusti Ayu Cahya Pratiwi
                                     </p>
+
                                 </div>
+
                             </div>
+
                         </div>
 
                         <!-- Flower Ornament -->
@@ -984,10 +973,10 @@
                 <section class="relative w-full bg-[#FAF6EE]">
 
                     <!-- Header Ornament -->
-                    <div class="flex flex-col items-center text-center py-20 px-6">
+                    <div class="flex flex-col items-center text-center py-6 px-6">
 
                         <!-- Elegant Divider -->
-                        <div class="flex items-center gap-5 mb-7">
+                        <div class="flex items-center gap-5 mb-4">
                             <div class="w-14 h-px bg-gradient-to-r from-transparent to-[#B38E46]/40"></div>
 
                             <!-- Diamond -->
@@ -998,7 +987,7 @@
 
                         <!-- Small Vertical Ornament -->
                         <div class="flex flex-col items-center gap-2">
-                            <div class="w-px h-8 bg-gradient-to-b from-[#B38E46]/50 to-transparent"></div>
+                            <div class="w-px h-5 bg-gradient-to-b from-[#B38E46]/50 to-transparent"></div>
 
                             <div class="w-1 h-1 rounded-full bg-[#B38E46]/50"></div>
                         </div>
@@ -1008,256 +997,13 @@
                 </section>
 
 
-                <!-- COUNTDOWN / SAVE OUR DATE -->
-                <section class="relative w-full px-6 py-20 md:py-24 bg-[#FAF6EE]">
-
-                    <!-- Subtle Background Decoration -->
-                    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-
-                        <!-- Watermark -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt=""
-                                class="w-[70%] max-w-sm object-contain opacity-[0.035]" />
-                        </div>
-
-                        <!-- Soft Gold Glow -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-[#B38E46]/[0.025] via-transparent to-[#E8DFD1]/25">
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="relative z-10 max-w-3xl mx-auto scroll-animate opacity-90 translate-y-8 transition-all duration-1000">
-
-                        <!-- Main Container -->
-                        <div class="
-                relative
-                bg-white/60
-                backdrop-blur-sm
-                border border-[#B38E46]/20
-                rounded-2xl
-                p-7 md:p-12
-                shadow-[0_15px_45px_rgba(107,83,40,0.06)]
-            ">
-
-                            <!-- Inner Border -->
-                            <div
-                                class="absolute inset-3 md:inset-4 border border-[#B38E46]/[0.08] rounded-xl pointer-events-none">
-                            </div>
-
-
-                            <!-- Header -->
-                            <div class="relative flex flex-col items-center text-center mb-10">
-
-                                <!-- Top Ornament -->
-                                <div class="flex items-center gap-4 mb-7">
-
-                                    <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#B38E46]/35"></div>
-
-                                    <!-- Diamond -->
-                                    <div class="w-1.5 h-1.5 rotate-45 bg-[#B38E46]/60"></div>
-
-                                    <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#B38E46]/35"></div>
-
-                                </div>
-
-
-                                <!-- Label -->
-                                <p class="
-                        text-[9px]
-                        md:text-[10px]
-                        font-semibold
-                        tracking-[0.45em]
-                        uppercase
-                        text-[#B38E46]
-                        mb-4
-                    ">
-                                    {{ t("saveOurDate") }}
-                                </p>
-
-
-                                <!-- Date -->
-                                <h2 class="
-                        font-mepandes
-                        text-2xl
-                        md:text-4xl
-                        text-[#6B5328]
-                        tracking-wide
-                        leading-relaxed
-                        mb-5
-                    ">
-                                    {{ t("dateMain") }}
-                                </h2>
-
-
-                                <!-- Minimal Divider -->
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-px bg-[#B38E46]/30"></div>
-
-                                    <div class="w-1 h-1 rounded-full bg-[#B38E46]/50"></div>
-
-                                    <div class="w-8 h-px bg-[#B38E46]/30"></div>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Countdown -->
-                            <div class="
-                    grid grid-cols-4
-                    gap-2 md:gap-4
-                    max-w-lg
-                    mx-auto
-                    mb-10
-                ">
-
-                                <!-- Days -->
-                                <div class="
-                        flex flex-col items-center justify-center
-                        rounded-xl
-                        bg-[#FAF6EE]/80
-                        border border-[#B38E46]/15
-                        py-4 px-2
-                        min-h-[82px]
-                    ">
-                                    <span
-                                        class="block font-mepandes text-2xl md:text-3xl text-[#6B5328] leading-none mb-2">
-                                        {{ countdown.days }}
-                                    </span>
-
-                                    <span class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-[#6B5328]/50">
-                                        {{ t("days") }}
-                                    </span>
-                                </div>
-
-
-                                <!-- Hours -->
-                                <div class="
-                        flex flex-col items-center justify-center
-                        rounded-xl
-                        bg-[#FAF6EE]/80
-                        border border-[#B38E46]/15
-                        py-4 px-2
-                        min-h-[82px]
-                    ">
-                                    <span
-                                        class="block font-mepandes text-2xl md:text-3xl text-[#6B5328] leading-none mb-2">
-                                        {{ countdown.hours }}
-                                    </span>
-
-                                    <span class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-[#6B5328]/50">
-                                        {{ t("hours") }}
-                                    </span>
-                                </div>
-
-
-                                <!-- Minutes -->
-                                <div class="
-                        flex flex-col items-center justify-center
-                        rounded-xl
-                        bg-[#FAF6EE]/80
-                        border border-[#B38E46]/15
-                        py-4 px-2
-                        min-h-[82px]
-                    ">
-                                    <span
-                                        class="block font-mepandes text-2xl md:text-3xl text-[#6B5328] leading-none mb-2">
-                                        {{ countdown.minutes }}
-                                    </span>
-
-                                    <span class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-[#6B5328]/50">
-                                        {{ t("minutes") }}
-                                    </span>
-                                </div>
-
-
-                                <!-- Seconds -->
-                                <div class="
-                        flex flex-col items-center justify-center
-                        rounded-xl
-                        bg-[#FAF6EE]/80
-                        border border-[#B38E46]/15
-                        py-4 px-2
-                        min-h-[82px]
-                    ">
-                                    <span
-                                        class="block font-mepandes text-2xl md:text-3xl text-[#6B5328] leading-none mb-2">
-                                        {{ countdown.seconds }}
-                                    </span>
-
-                                    <span class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-[#6B5328]/50">
-                                        {{ t("seconds") }}
-                                    </span>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Save To Calendar -->
-                            <div class="flex justify-center w-full">
-
-                                <a :href="isAndroid ? googleCalendarLink : '/save-the-date-mepandes.ics'"
-                                    :target="isAndroid ? '_blank' : undefined"
-                                    :download="!isAndroid ? 'save-the-date-mepandes.ics' : undefined" class="
-                        inline-flex
-                        items-center
-                        justify-center
-                        gap-3
-                        py-3
-                        px-7
-                        md:px-8
-                        bg-[#B38E46]
-                        text-white
-                        text-[9px]
-                        md:text-[10px]
-                        font-semibold
-                        tracking-[0.25em]
-                        uppercase
-                        rounded-full
-                        shadow-sm
-                        hover:bg-[#6B5328]
-                        transition-all
-                        duration-300
-                    ">
-                                    <UIcon name="mdi:calendar-heart" class="w-4 h-4" />
-
-                                    {{ t("saveToCal") }}
-                                </a>
-
-                            </div>
-
-
-                            <!-- Bottom Ornament -->
-                            <div class="flex items-center justify-center mt-10">
-
-                                <div class="flex items-center gap-3">
-
-                                    <div class="w-8 h-px bg-[#B38E46]/25"></div>
-
-                                    <!-- Center Diamond -->
-                                    <div class="w-1.5 h-1.5 rotate-45 border border-[#B38E46]/50"></div>
-
-                                    <div class="w-8 h-px bg-[#B38E46]/25"></div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-                <!-- EVENT -->
-                <section class="py-16 md:py-20 px-6 relative w-full bg-[#FAF6EE]">
+                <!-- EVENT + COUNTDOWN -->
+                <section class="py-6 md:py-8 px-6 relative w-full bg-[#FAF6EE]">
 
                     <!-- Background Decoration -->
                     <div class="absolute inset-0 pointer-events-none overflow-hidden">
 
-                        <!-- Subtle Watermark -->
+                        <!-- Watermark -->
                         <div class="absolute inset-0 flex items-center justify-center">
                             <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt=""
                                 class="w-[65%] max-w-sm object-contain opacity-[0.025]" />
@@ -1271,184 +1017,162 @@
                     </div>
 
 
-                    <div class="max-w-5xl mx-auto relative z-10">
+                    <div class="max-w-3xl mx-auto relative z-10">
 
-                        <!-- SECTION DIVIDER -->
-                        <div class="flex flex-col items-center mb-10">
-
-                            <div class="w-px h-16 bg-gradient-to-b from-transparent via-[#B38E46]/30 to-[#B38E46]/50">
-                            </div>
-
-                            <div class="w-1.5 h-1.5 rotate-45 bg-[#B38E46]/55 mt-2"></div>
-
-                        </div>
-
-
-                        <!-- HEADER -->
+                        <!-- SECTION HEADER -->
                         <div class="
-                flex flex-col items-center text-center
-                mb-9
-                scroll-animate
-                opacity-90
-                translate-y-8
-                transition-all
-                duration-1000
-            ">
+            flex flex-col items-center text-center
+            mb-10
+            scroll-animate
+            opacity-90
+            translate-y-8
+            transition-all
+            duration-1000
+        ">
 
                             <!-- Ornament -->
-                            <div class="flex items-center gap-4 mb-7">
+                            <div class="flex items-center gap-4 mb-4">
 
-                                <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#B38E46]/35">
-                                </div>
+                                <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#B38E46]/35"></div>
 
                                 <div class="w-1.5 h-1.5 rotate-45 border border-[#B38E46]/60"></div>
 
-                                <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#B38E46]/35">
-                                </div>
+                                <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#B38E46]/35"></div>
 
                             </div>
 
 
                             <!-- Label -->
                             <p class="
-                    text-[9px]
-                    md:text-[10px]
-                    font-semibold
-                    tracking-[0.45em]
-                    text-[#B38E46]
-                    uppercase
-                    mb-4
-                ">
-                                Upacara
+                text-[9px]
+                md:text-[10px]
+                font-semibold
+                tracking-[0.45em]
+                text-[#B38E46]
+                uppercase
+                mb-4
+            ">
+                                Info Acara
                             </p>
 
 
                             <!-- Title -->
                             <h2 class="
-                    font-mepandes
-                    text-3xl
-                    md:text-4xl
-                    text-[#6B5328]
-                    tracking-wide
-                    leading-relaxed
-                    mb-5
-                ">
+                font-mepandes
+                text-3xl
+                md:text-4xl
+                text-[#6B5328]
+                tracking-wide
+                leading-relaxed
+            ">
                                 {{ t("resepsiTitle") }}
                             </h2>
-
-
-                            <!-- Divider -->
-                            <div class="flex items-center gap-3">
-
-                                <div class="w-8 h-px bg-[#B38E46]/30"></div>
-
-                                <div class="w-1 h-1 rounded-full bg-[#B38E46]/50"></div>
-
-                                <div class="w-8 h-px bg-[#B38E46]/30"></div>
-
-                            </div>
 
                         </div>
 
 
+                        <!-- ==================== -->
                         <!-- EVENT CARD -->
-                        <div class="grid grid-cols-1 gap-8">
+                        <!-- ==================== -->
 
+                        <div class="
+            relative
+            bg-white/65
+            backdrop-blur-sm
+            border border-[#B38E46]/20
+            rounded-2xl
+            overflow-hidden
+            shadow-[0_15px_45px_rgba(107,83,40,0.06)]
+            scroll-animate
+            opacity-0
+            translate-y-8
+            transition-all
+            duration-1000
+            delay-200
+        ">
+
+                            <!-- Inner Border -->
                             <div class="
+                absolute
+                inset-3
+                md:inset-4
+                border
+                border-[#B38E46]/[0.08]
+                rounded-xl
+                pointer-events-none
+                z-20
+            "></div>
+
+
+                            <!-- EVENT CONTENT -->
+                            <div class="relative p-8 md:p-12 text-center">
+
+                                <!-- Icon -->
+                                <div class="
                     relative
-                    max-w-2xl
+                    w-14
+                    h-14
                     mx-auto
-                    w-full
-                    bg-white/65
-                    backdrop-blur-sm
+                    rounded-full
+                    bg-[#FAF6EE]
                     border border-[#B38E46]/20
-                    rounded-2xl
-                    p-8
-                    md:p-12
-                    text-center
-                    shadow-[0_15px_45px_rgba(107,83,40,0.06)]
-                    scroll-animate
-                    opacity-0
-                    translate-y-8
-                    transition-all
-                    duration-1000
-                    delay-200
+                    flex items-center
+                    justify-center
+                    mb-7
                 ">
-
-                                <!-- Inner Border -->
-                                <div class="
-                        absolute
-                        inset-3
-                        md:inset-4
-                        border
-                        border-[#B38E46]/[0.08]
-                        rounded-xl
-                        pointer-events-none
-                    "></div>
-
-
-                                <!-- ICON -->
-                                <div class="
-                        relative
-                        w-14
-                        h-14
-                        mx-auto
-                        rounded-full
-                        bg-[#FAF6EE]
-                        border
-                        border-[#B38E46]/20
-                        flex
-                        items-center
-                        justify-center
-                        mb-7
-                    ">
 
                                     <UIcon name="mdi:temple-hindu-outline" class="w-6 h-6 text-[#B38E46]/70" />
 
                                 </div>
 
 
-                                <!-- TITLE -->
+                                <!-- Event Title -->
                                 <h3 class="
-                        relative
-                        font-mepandes
-                        text-2xl
-                        md:text-3xl
-                        text-[#6B5328]
-                        mb-5
-                        tracking-wide
-                    ">
+                    relative
+                    font-mepandes
+                    text-2xl
+                    md:text-3xl
+                    text-[#6B5328]
+                    mb-5
+                    tracking-wide
+                ">
                                     {{ t("resepsiTitle") }}
                                 </h3>
 
 
-                                <!-- DATE -->
+                                <!-- Date -->
                                 <p class="
-                        text-xs
-                        md:text-sm
-                        text-[#6B5328]/65
-                        mb-2
-                        tracking-wide
-                    ">
+                    text-xs
+                    md:text-sm
+                    text-[#6B5328]/65
+                    mb-2
+                    tracking-wide
+                ">
                                     {{ t("dateFull") }}
                                 </p>
 
 
-                                <!-- TIME -->
+                                <!-- Time -->
                                 <p class="
-                        text-xs
-                        md:text-sm
-                        text-[#6B5328]
-                        font-semibold
-                        mb-7
-                        tracking-wide
-                    ">
+                    text-xs
+                    md:text-sm
+                    text-[#6B5328]
+                    font-semibold
+                    mb-7
+                    tracking-wide
+                ">
                                     Pukul {{ resepsiTime }}
                                 </p>
 
 
-                                <!-- DIVIDER -->
-                                <div class="flex items-center justify-center gap-3 mb-7">
+                                <!-- Divider -->
+                                <div class="
+                    flex
+                    items-center
+                    justify-center
+                    gap-3
+                    mb-7
+                ">
 
                                     <div class="w-8 h-px bg-[#B38E46]/25"></div>
 
@@ -1459,22 +1183,22 @@
                                 </div>
 
 
-                                <!-- LOCATION -->
+                                <!-- Location -->
                                 <p class="
-                        text-xs
-                        md:text-sm
-                        leading-relaxed
-                        text-[#6B5328]/60
-                        font-light
-                        mb-9
-                        max-w-sm
-                        mx-auto
-                    ">
+                    text-xs
+                    md:text-sm
+                    leading-relaxed
+                    text-[#6B5328]/60
+                    font-light
+                    mb-8
+                    max-w-sm
+                    mx-auto
+                ">
                                     {{ t("resepsiLocation") }}
                                 </p>
 
 
-                                <!-- MAP BUTTON -->
+                                <!-- Map -->
                                 <a href="https://maps.app.goo.gl/ZEBBtygPWA8bNZxZ7" target="_blank"
                                     rel="noopener noreferrer" class="
                         inline-flex
@@ -1507,511 +1231,927 @@
 
                         </div>
 
+                        <!-- ==================== -->
+                        <!-- COUNTDOWN -->
+                        <!-- ==================== -->
+
+                        <div class="
+    relative
+     mt-6
+    md:mt-8
+    text-center
+    scroll-animate
+    opacity-0
+    translate-y-8
+    transition-all
+    duration-1000
+    delay-300
+">
+
+                            <!-- Countdown -->
+                            <div class="
+        grid
+        grid-cols-4
+        gap-2
+        md:gap-4
+        max-w-lg
+        mx-auto
+        mb-8
+    ">
+
+                                <!-- Days -->
+                                <div class="
+            flex flex-col items-center justify-center
+            py-4 px-2
+            min-h-[82px]
+            border-t
+            border-b
+            border-[#B38E46]/15
+        ">
+
+                                    <span class="
+                block
+                font-mepandes
+                text-2xl
+                md:text-3xl
+                text-[#6B5328]
+                leading-none
+                mb-2
+            ">
+                                        {{ countdown.days }}
+                                    </span>
+
+                                    <span class="
+                text-[8px]
+                md:text-[9px]
+                uppercase
+                tracking-[0.2em]
+                text-[#6B5328]/50
+            ">
+                                        {{ t("days") }}
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Hours -->
+                                <div class="
+            flex flex-col items-center justify-center
+            py-4 px-2
+            min-h-[82px]
+            border-t
+            border-b
+            border-[#B38E46]/15
+        ">
+
+                                    <span class="
+                block
+                font-mepandes
+                text-2xl
+                md:text-3xl
+                text-[#6B5328]
+                leading-none
+                mb-2
+            ">
+                                        {{ countdown.hours }}
+                                    </span>
+
+                                    <span class="
+                text-[8px]
+                md:text-[9px]
+                uppercase
+                tracking-[0.2em]
+                text-[#6B5328]/50
+            ">
+                                        {{ t("hours") }}
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Minutes -->
+                                <div class="
+            flex flex-col items-center justify-center
+            py-4 px-2
+            min-h-[82px]
+            border-t
+            border-b
+            border-[#B38E46]/15
+        ">
+
+                                    <span class="
+                block
+                font-mepandes
+                text-2xl
+                md:text-3xl
+                text-[#6B5328]
+                leading-none
+                mb-2
+            ">
+                                        {{ countdown.minutes }}
+                                    </span>
+
+                                    <span class="
+                text-[8px]
+                md:text-[9px]
+                uppercase
+                tracking-[0.2em]
+                text-[#6B5328]/50
+            ">
+                                        {{ t("minutes") }}
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Seconds -->
+                                <div class="
+            flex flex-col items-center justify-center
+            py-4 px-2
+            min-h-[82px]
+            border-t
+            border-b
+            border-[#B38E46]/15
+        ">
+
+                                    <span class="
+                block
+                font-mepandes
+                text-2xl
+                md:text-3xl
+                text-[#6B5328]
+                leading-none
+                mb-2
+            ">
+                                        {{ countdown.seconds }}
+                                    </span>
+
+                                    <span class="
+                text-[8px]
+                md:text-[9px]
+                uppercase
+                tracking-[0.2em]
+                text-[#6B5328]/50
+            ">
+                                        {{ t("seconds") }}
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Save To Calendar -->
+                            <div class="flex justify-center w-full">
+
+                                <a :href="isAndroid ? googleCalendarLink : '/save-the-date-mepandes.ics'"
+                                    :target="isAndroid ? '_blank' : undefined"
+                                    :download="!isAndroid ? 'save-the-date-mepandes.ics' : undefined" class="
+                inline-flex
+                items-center
+                justify-center
+                gap-3
+                py-3
+                px-7
+                md:px-8
+                bg-[#B38E46]
+                text-white
+                text-[9px]
+                md:text-[10px]
+                font-semibold
+                tracking-[0.25em]
+                uppercase
+                rounded-full
+                shadow-sm
+                hover:bg-[#6B5328]
+                transition-all
+                duration-300
+            ">
+
+                                    <UIcon name="mdi:calendar-heart" class="w-4 h-4" />
+
+                                    {{ t("saveToCal") }}
+
+                                </a>
+
+                            </div>
+
+
+                            <!-- Bottom Ornament -->
+                            <div class="
+        flex
+        items-center
+        justify-center
+        mt-7
+    ">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div class="w-10 h-px bg-[#B38E46]/20"></div>
+
+                                    <div class="
+                w-1.5
+                h-1.5
+                rotate-45
+                border
+                border-[#B38E46]/40
+            "></div>
+
+                                    <div class="w-10 h-px bg-[#B38E46]/20"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </section>
 
-                <!-- RSVP & UCAPAN -->
-                <section class="py-14 md:py-16 px-6 max-w-5xl mx-auto w-full relative bg-[#FAF6EE]">
+                <!-- RSVP, UCAPAN & FOOTER -->
+                <section class="
+    relative
+    w-full
+    bg-[#FAF6EE]
+    overflow-hidden
+">
 
+                    <!-- ==================== -->
                     <!-- BACKGROUND DECORATION -->
-                    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                    <!-- ==================== -->
 
-                        <!-- Watermark -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt=""
-                                class="w-[70%] max-w-md object-contain opacity-[0.025]" />
+                    <div class="
+        absolute
+        inset-0
+        pointer-events-none
+        overflow-hidden
+    ">
+
+                        <!-- Main Watermark -->
+                        <div class="
+            absolute
+            inset-0
+            flex
+            items-center
+            justify-center
+        ">
+                            <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt="" class="
+                    w-[70%]
+                    max-w-md
+                    object-contain
+                    opacity-[0.025]
+                " />
                         </div>
 
                         <!-- Soft Gold Gradient -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-b from-transparent via-[#B38E46]/[0.02] to-[#E8DFD1]/20">
-                        </div>
+                        <div class="
+            absolute
+            inset-0
+            bg-gradient-to-b
+            from-transparent
+            via-[#B38E46]/[0.02]
+            to-[#E8DFD1]/30
+        "></div>
 
                     </div>
 
 
-                    <div class="relative z-10">
+                    <!-- ==================== -->
+                    <!-- RSVP CONTENT -->
+                    <!-- ==================== -->
 
+                    <div class="
+        relative
+         z-10
+        py-8
+        md:py-10
+        px-6
+        max-w-3xl
+        mx-auto
+    ">
+
+                        <!-- ==================== -->
                         <!-- HEADER -->
+                        <!-- ==================== -->
+
                         <div class="
-                flex flex-col items-center text-center
-                mb-10
-                scroll-animate
-                opacity-90
-                translate-y-8
-                transition-all
-                duration-1000
-            ">
+            flex
+            flex-col
+            items-center
+            text-center
+            mb-10
+            scroll-animate
+            opacity-90
+            translate-y-8
+            transition-all
+            duration-1000
+        ">
 
                             <!-- Top Ornament -->
-                            <div class="flex items-center gap-4 mb-7">
-                                <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#B38E46]/35">
-                                </div>
+                            <div class="
+                flex
+                items-center
+                gap-4
+                mb-7
+            ">
 
-                                <div class="w-1.5 h-1.5 rotate-45 border border-[#B38E46]/60"></div>
+                                <div class="
+                    w-12
+                    h-px
+                    bg-gradient-to-r
+                    from-transparent
+                    to-[#B38E46]/35
+                "></div>
 
-                                <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#B38E46]/35">
-                                </div>
+                                <div class="
+                    w-1.5
+                    h-1.5
+                    rotate-45
+                    border
+                    border-[#B38E46]/60
+                "></div>
+
+                                <div class="
+                    w-12
+                    h-px
+                    bg-gradient-to-l
+                    from-transparent
+                    to-[#B38E46]/35
+                "></div>
+
                             </div>
+
 
                             <!-- Label -->
                             <p class="
-                    text-[9px]
-                    md:text-[10px]
-                    font-semibold
-                    tracking-[0.45em]
-                    uppercase
-                    mb-4
-                    text-[#B38E46]
-                ">
+                text-[9px]
+                md:text-[10px]
+                font-semibold
+                tracking-[0.45em]
+                uppercase
+                mb-4
+                text-[#B38E46]
+            ">
                                 {{ t("rsvpSub") }}
                             </p>
 
+
                             <!-- Title -->
                             <h2 class="
-                    font-mepandes
-                    text-3xl
-                    md:text-4xl
-                    text-[#6B5328]
-                    tracking-wide
-                    leading-relaxed
-                    mb-5
-                ">
+                font-mepandes
+                text-3xl
+                md:text-4xl
+                text-[#6B5328]
+                tracking-wide
+                leading-relaxed
+                mb-5
+            ">
                                 {{ t("rsvpTitle") }}
                             </h2>
 
+
                             <!-- Divider -->
-                            <div class="flex items-center gap-3">
-                                <div class="w-8 h-px bg-[#B38E46]/30"></div>
-                                <div class="w-1 h-1 rounded-full bg-[#B38E46]/50"></div>
-                                <div class="w-8 h-px bg-[#B38E46]/30"></div>
+                            <div class="
+                flex
+                items-center
+                gap-3
+            ">
+
+                                <div class="
+                    w-8
+                    h-px
+                    bg-[#B38E46]/30
+                "></div>
+
+                                <div class="
+                    w-1
+                    h-1
+                    rounded-full
+                    bg-[#B38E46]/50
+                "></div>
+
+                                <div class="
+                    w-8
+                    h-px
+                    bg-[#B38E46]/30
+                "></div>
+
                             </div>
 
                         </div>
 
 
-                        <!-- CONTENT -->
-                        <div class="grid grid-cols-1 gap-10 items-start">
+                        <!-- ==================== -->
+                        <!-- MAIN RSVP CARD -->
+                        <!-- ==================== -->
 
-                            <!-- FORM -->
+                        <div class="
+            relative
+            bg-white/65
+            backdrop-blur-sm
+            border
+            border-[#B38E46]/20
+            rounded-2xl
+            overflow-hidden
+            shadow-[0_15px_45px_rgba(107,83,40,0.06)]
+            scroll-animate
+            opacity-90
+            translate-y-8
+            transition-all
+            duration-1000
+            delay-100
+        ">
+
+                            <!-- Inner Border -->
                             <div class="
-                    relative
-                    bg-white/65
-                    backdrop-blur-sm
-                    border border-[#B38E46]/20
-                    p-8
-                    md:p-10
-                    rounded-2xl
-                    shadow-[0_15px_45px_rgba(107,83,40,0.06)]
-                    scroll-animate
-                    opacity-90
-                    translate-y-8
-                    transition-all
-                    duration-1000
-                    delay-100
+                absolute
+                inset-3
+                md:inset-4
+                border
+                border-[#B38E46]/[0.08]
+                rounded-xl
+                pointer-events-none
+                z-20
+            "></div>
+
+
+                            <!-- ==================== -->
+                            <!-- RSVP FORM -->
+                            <!-- ==================== -->
+
+                            <div class="
+                relative
+                p-8
+                md:p-10
+            ">
+
+                                <!-- Form Title -->
+                                <h3 class="
+                    font-mepandes
+                    text-xl
+                    md:text-2xl
+                    mb-8
+                    text-[#6B5328]
+                    tracking-wide
                 ">
-
-                                <!-- Inner Border -->
-                                <div class="
-                        absolute
-                        inset-3
-                        md:inset-4
-                        border
-                        border-[#B38E46]/[0.08]
-                        rounded-xl
-                        pointer-events-none
-                    "></div>
+                                    {{ t("confirmAttendance") }}
+                                </h3>
 
 
-                                <!-- FORM CONTENT -->
-                                <div class="relative">
+                                <form @submit.prevent="submitRSVP" class="space-y-7">
 
-                                    <h3 class="
-                            font-mepandes
-                            text-xl
-                            md:text-2xl
-                            mb-8
-                            text-[#6B5328]
-                            tracking-wide
-                        ">
-                                        {{ t("confirmAttendance") }}
-                                    </h3>
+                                    <!-- NAME -->
+                                    <div>
 
-
-                                    <form @submit.prevent="submitRSVP" class="space-y-7">
-
-                                        <!-- NAME -->
-                                        <div>
-                                            <input type="text" v-model="nama" :placeholder="t('fullNamePlaceholder')"
-                                                class="
-                                    w-full
-                                    pb-3
-                                    border-b
-                                    border-[#B38E46]/20
-                                    bg-transparent
-                                    text-sm
-                                    text-[#6B5328]
-                                    focus:outline-none
-                                    focus:border-[#B38E46]
-                                    transition
-                                    placeholder:text-[#6B5328]/35
-                                    font-light
-                                " required />
-                                        </div>
-
-
-                                        <!-- ATTENDANCE -->
-                                        <div>
-
-                                            <p class="
-                                    text-[9px]
-                                    md:text-[10px]
-                                    tracking-[0.35em]
-                                    text-[#B38E46]
-                                    uppercase
-                                    font-semibold
-                                    mb-3
-                                ">
-                                                {{ t("confirmAttendance") }}
-                                            </p>
-
-
-                                            <div class="flex gap-3">
-
-                                                <!-- HADIR -->
-                                                <label class="cursor-pointer flex-1">
-
-                                                    <input type="radio" v-model="kehadiran" value="Hadir" name="hadir"
-                                                        class="peer sr-only" required>
-
-                                                    <div class="
-                                            py-3
-                                            text-center
-                                            border
-                                            border-[#B38E46]/20
-                                            bg-[#FAF6EE]/70
-                                            text-[#6B5328]/60
-                                            text-[10px]
-                                            uppercase
-                                            tracking-[0.2em]
-                                            peer-checked:bg-[#B38E46]
-                                            peer-checked:text-white
-                                            peer-checked:border-[#B38E46]
-                                            transition-all
-                                            rounded-full
-                                        ">
-                                                        {{ t("attendYes") }}
-                                                    </div>
-
-                                                </label>
-
-
-                                                <!-- TIDAK HADIR -->
-                                                <label class="cursor-pointer flex-1">
-
-                                                    <input type="radio" v-model="kehadiran" value="Tidak Hadir"
-                                                        name="hadir" class="peer sr-only">
-
-                                                    <div class="
-                                            py-3
-                                            text-center
-                                            border
-                                            border-[#B38E46]/20
-                                            bg-[#FAF6EE]/70
-                                            text-[#6B5328]/60
-                                            text-[10px]
-                                            uppercase
-                                            tracking-[0.2em]
-                                            peer-checked:bg-[#E8DFD1]
-                                            peer-checked:text-[#6B5328]
-                                            peer-checked:border-[#B38E46]/30
-                                            transition-all
-                                            rounded-full
-                                        ">
-                                                        {{ t("attendNo") }}
-                                                    </div>
-
-                                                </label>
-
-                                            </div>
-
-                                        </div>
-
-
-                                        <!-- MESSAGE -->
-                                        <div>
-
-                                            <textarea v-model="ucapan" rows="4" :placeholder="t('wishesPlaceholder')"
-                                                class="
-                                    w-full
-                                    p-4
-                                    border
-                                    border-[#B38E46]/20
-                                    bg-[#FAF6EE]/60
-                                    text-sm
-                                    text-[#6B5328]
-                                    focus:outline-none
-                                    focus:border-[#B38E46]/60
-                                    placeholder:text-[#6B5328]/35
-                                    font-light
-                                    rounded-xl
-                                    resize-none
-                                    transition
-                                " required></textarea>
-
-                                        </div>
-
-
-                                        <!-- BUTTON -->
-                                        <button :disabled="isSubmitting" class="
+                                        <input type="text" v-model="nama" :placeholder="t('fullNamePlaceholder')" class="
                                 w-full
-                                py-4
-                                bg-[#B38E46]
-                                text-white
-                                text-[10px]
-                                font-semibold
-                                tracking-[0.25em]
-                                uppercase
-                                hover:bg-[#6B5328]
-                                transition-all
-                                rounded-full
-                                cursor-pointer
-                                disabled:opacity-50
-                            ">
-
-                                            <span v-if="isSubmitting">
-                                                {{ t("sending") }}
-                                            </span>
-
-                                            <span v-else-if="submitSuccess === true">
-                                                {{ t("sentSuccess") }}
-                                            </span>
-
-                                            <span v-else-if="submitSuccess === false">
-                                                {{ t("sentFailed") }}
-                                            </span>
-
-                                            <span v-else>
-                                                {{ t("sendBtn") }}
-                                            </span>
-
-                                        </button>
-
-                                    </form>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- MESSAGE LIST -->
-                            <div class="
-                    relative
-                    bg-white/65
-                    backdrop-blur-sm
-                    border border-[#B38E46]/20
-                    p-8
-                    md:p-10
-                    rounded-2xl
-                    shadow-[0_15px_45px_rgba(107,83,40,0.06)]
-                    h-full
-                    max-h-[550px]
-                    scroll-animate
-                    opacity-90
-                    translate-y-8
-                    transition-all
-                    duration-1000
-                    delay-200
-                ">
-
-                                <!-- Inner Border -->
-                                <div class="
-                        absolute
-                        inset-3
-                        md:inset-4
-                        border
-                        border-[#B38E46]/[0.08]
-                        rounded-xl
-                        pointer-events-none
-                    "></div>
-
-
-                                <div class="relative">
-
-                                    <!-- HEADER -->
-                                    <div class="
-                            mb-6
-                            border-b
-                            border-[#B38E46]/15
-                            pb-4
-                            flex
-                            items-center
-                            justify-between
-                            gap-4
-                        ">
-
-                                        <h3 class="
-                                font-mepandes
-                                text-2xl
+                                pb-3
+                                border-b
+                                border-[#B38E46]/20
+                                bg-transparent
+                                text-sm
                                 text-[#6B5328]
-                                tracking-wide
-                            ">
-                                            {{ t("wishesTitle") }}
-                                        </h3>
-
-
-                                        <span class="
-                                bg-[#FAF6EE]
-                                border
-                                border-[#B38E46]/15
-                                text-[#6B5328]/60
-                                text-[10px]
-                                px-3
-                                py-1
-                                rounded-full
-                                whitespace-nowrap
-                            ">
-                                            {{ totalMessages }} {{ t("messagesCount") }}
-                                        </span>
+                                focus:outline-none
+                                focus:border-[#B38E46]
+                                transition
+                                placeholder:text-[#6B5328]/35
+                                font-light
+                            " required />
 
                                     </div>
 
 
-                                    <!-- MESSAGES -->
-                                    <template v-if="guestMessages.length > 0">
+                                    <!-- ATTENDANCE -->
+                                    <div>
 
-                                        <div class="space-y-4 max-h-[420px] overflow-y-auto pr-1">
+                                        <p class="
+                            text-[9px]
+                            md:text-[10px]
+                            tracking-[0.35em]
+                            text-[#B38E46]
+                            uppercase
+                            font-semibold
+                            mb-3
+                        ">
+                                            {{ t("confirmAttendance") }}
+                                        </p>
 
-                                            <div v-for="(entry, index) in guestMessages" :key="index" class="
-                                    bg-[#FAF6EE]/70
-                                    backdrop-blur-sm
+
+                                        <div class="flex gap-3">
+
+                                            <!-- HADIR -->
+                                            <label class="
+                                cursor-pointer
+                                flex-1
+                            ">
+
+                                                <input type="radio" v-model="kehadiran" value="Hadir" name="hadir"
+                                                    class="peer sr-only" required>
+
+                                                <div class="
+                                    py-3
+                                    text-center
                                     border
-                                    border-[#B38E46]/10
-                                    p-4
-                                    rounded-xl
-                                    space-y-2
-                                    shadow-sm
+                                    border-[#B38E46]/20
+                                    bg-[#FAF6EE]/70
+                                    text-[#6B5328]/60
+                                    text-[10px]
+                                    uppercase
+                                    tracking-[0.2em]
+                                    peer-checked:bg-[#B38E46]
+                                    peer-checked:text-white
+                                    peer-checked:border-[#B38E46]
+                                    transition-all
+                                    rounded-full
                                 ">
-
-                                                <div class="flex justify-between items-start gap-4">
-
-                                                    <p class="
-                                            font-medium
-                                            text-[#6B5328]
-                                            text-sm
-                                        ">
-                                                        {{ entry.nama }}
-                                                    </p>
-
-
-                                                    <span class="
-                                            text-[9px]
-                                            uppercase
-                                            tracking-[0.15em]
-                                            px-2
-                                            py-1
-                                            rounded-full
-                                        " :class="entry.kehadiran === 'Hadir'
-                                            ? 'bg-[#B38E46] text-white'
-                                            : 'bg-[#E8DFD1] text-[#6B5328]/60'">
-                                                        {{ entry.kehadiran === 'Hadir' ? t('attendBadge') :
-                                                            t('absentBadge') }}
-                                                    </span>
-
+                                                    {{ t("attendYes") }}
                                                 </div>
 
-
-                                                <p class="
-                                        text-[#6B5328]/65
-                                        text-xs
-                                        font-light
-                                        leading-relaxed
-                                    ">
-                                                    "{{ entry.ucapan }}"
-                                                </p>
+                                            </label>
 
 
-                                                <p class="
-                                        text-[9px]
-                                        text-[#6B5328]/40
-                                    ">
-                                                    {{ formatDate(entry.tanggal) }}
-                                                </p>
+                                            <!-- TIDAK HADIR -->
+                                            <label class="
+                                cursor-pointer
+                                flex-1
+                            ">
 
-                                            </div>
+                                                <input type="radio" v-model="kehadiran" value="Tidak Hadir" name="hadir"
+                                                    class="peer sr-only">
 
+                                                <div class="
+                                    py-3
+                                    text-center
+                                    border
+                                    border-[#B38E46]/20
+                                    bg-[#FAF6EE]/70
+                                    text-[#6B5328]/60
+                                    text-[10px]
+                                    uppercase
+                                    tracking-[0.2em]
+                                    peer-checked:bg-[#E8DFD1]
+                                    peer-checked:text-[#6B5328]
+                                    peer-checked:border-[#B38E46]/30
+                                    transition-all
+                                    rounded-full
+                                ">
+                                                    {{ t("attendNo") }}
+                                                </div>
 
-                                            <!-- LOAD MORE -->
-                                            <div v-if="hasMore" class="pt-4 pb-2 flex justify-center w-full">
-
-                                                <button @click="loadMoreMessages" :disabled="isLoadingMore" class="
-                                        px-6
-                                        py-2
-                                        bg-[#FAF6EE]
-                                        border
-                                        border-[#B38E46]/20
-                                        text-[#6B5328]/70
-                                        text-[10px]
-                                        tracking-[0.2em]
-                                        uppercase
-                                        rounded-full
-                                        hover:bg-[#B38E46]
-                                        hover:text-white
-                                        transition-all
-                                        flex
-                                        items-center
-                                        gap-2
-                                        cursor-pointer
-                                    ">
-
-                                                    <span v-if="isLoadingMore" class="
-                                            animate-spin
-                                            border-2
-                                            border-[#B38E46]
-                                            border-t-transparent
-                                            rounded-full
-                                            w-4
-                                            h-4
-                                        ">
-                                                    </span>
-
-                                                    <span v-else>
-                                                        {{ t('loadMore') }}
-                                                    </span>
-
-                                                </button>
-
-                                            </div>
+                                            </label>
 
                                         </div>
 
-                                    </template>
+                                    </div>
 
 
-                                    <!-- EMPTY -->
-                                    <template v-else>
+                                    <!-- MESSAGE -->
+                                    <div>
 
-                                        <div class="
-                                flex
-                                flex-col
-                                items-center
-                                justify-center
-                                text-[#6B5328]/40
+                                        <textarea v-model="ucapan" rows="4" :placeholder="t('wishesPlaceholder')" class="
+                                w-full
+                                p-4
+                                border
+                                border-[#B38E46]/20
+                                bg-[#FAF6EE]/60
                                 text-sm
-                                py-16
+                                text-[#6B5328]
+                                focus:outline-none
+                                focus:border-[#B38E46]/60
+                                placeholder:text-[#6B5328]/35
+                                font-light
+                                rounded-xl
+                                resize-none
+                                transition
+                            " required></textarea>
+
+                                    </div>
+
+
+                                    <!-- BUTTON -->
+                                    <button :disabled="isSubmitting" class="
+                            w-full
+                            py-4
+                            bg-[#B38E46]
+                            text-white
+                            text-[10px]
+                            font-semibold
+                            tracking-[0.25em]
+                            uppercase
+                            hover:bg-[#6B5328]
+                            transition-all
+                            rounded-full
+                            cursor-pointer
+                            disabled:opacity-50
+                        ">
+
+                                        <span v-if="isSubmitting">
+                                            {{ t("sending") }}
+                                        </span>
+
+                                        <span v-else-if="submitSuccess === true">
+                                            {{ t("sentSuccess") }}
+                                        </span>
+
+                                        <span v-else-if="submitSuccess === false">
+                                            {{ t("sentFailed") }}
+                                        </span>
+
+                                        <span v-else>
+                                            {{ t("sendBtn") }}
+                                        </span>
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+
+                            <!-- ==================== -->
+                            <!-- DIVIDER -->
+                            <!-- ==================== -->
+
+                            <div class="
+                px-10
+                md:px-16
+            ">
+
+                                <div class="
+                    flex
+                    items-center
+                    justify-center
+                    gap-3
+                ">
+
+                                    <div class="
+                        flex-1
+                        h-px
+                        bg-[#B38E46]/15
+                    "></div>
+
+                                    <div class="
+                        w-1.5
+                        h-1.5
+                        rotate-45
+                        border
+                        border-[#B38E46]/45
+                    "></div>
+
+                                    <div class="
+                        flex-1
+                        h-px
+                        bg-[#B38E46]/15
+                    "></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ==================== -->
+                            <!-- MESSAGE LIST -->
+                            <!-- ==================== -->
+
+                            <div class="
+                relative
+                p-8
+                md:p-10
+            ">
+
+                                <!-- HEADER -->
+                                <div class="
+                    mb-6
+                    border-b
+                    border-[#B38E46]/15
+                    pb-4
+                    flex
+                    items-center
+                    justify-between
+                    gap-4
+                ">
+
+                                    <h3 class="
+                        font-mepandes
+                        text-2xl
+                        text-[#6B5328]
+                        tracking-wide
+                    ">
+                                        {{ t("wishesTitle") }}
+                                    </h3>
+
+
+                                    <span class="
+                        bg-[#FAF6EE]
+                        border
+                        border-[#B38E46]/15
+                        text-[#6B5328]/60
+                        text-[10px]
+                        px-3
+                        py-1
+                        rounded-full
+                        whitespace-nowrap
+                    ">
+                                        {{ totalMessages }} {{ t("messagesCount") }}
+                                    </span>
+
+                                </div>
+
+
+                                <!-- MESSAGES -->
+                                <template v-if="guestMessages.length > 0">
+
+                                    <div class="
+                        space-y-4
+                        max-h-[420px]
+                        overflow-y-auto
+                        pr-1
+                    ">
+
+                                        <div v-for="(entry, index) in guestMessages" :key="index" class="
+                                bg-[#FAF6EE]/70
+                                backdrop-blur-sm
+                                border
+                                border-[#B38E46]/10
+                                p-4
+                                rounded-xl
+                                space-y-2
+                                shadow-sm
                             ">
 
-                                            <UIcon name="mdi:message-outline"
-                                                class="w-8 h-8 mb-4 opacity-40 text-[#B38E46]" />
+                                            <div class="
+                                flex
+                                justify-between
+                                items-start
+                                gap-4
+                            ">
 
-                                            <p class="font-light">
-                                                {{ t("noWishes") }}
+                                                <p class="
+                                    font-medium
+                                    text-[#6B5328]
+                                    text-sm
+                                ">
+                                                    {{ entry.nama }}
+                                                </p>
+
+
+                                                <span class="
+                                        text-[9px]
+                                        uppercase
+                                        tracking-[0.15em]
+                                        px-2
+                                        py-1
+                                        rounded-full
+                                    " :class="entry.kehadiran === 'Hadir'
+                                        ? 'bg-[#B38E46] text-white'
+                                        : 'bg-[#E8DFD1] text-[#6B5328]/60'">
+                                                    {{
+                                                        entry.kehadiran === 'Hadir'
+                                                            ? t('attendBadge')
+                                                            : t('absentBadge')
+                                                    }}
+                                                </span>
+
+                                            </div>
+
+
+                                            <p class="
+                                text-[#6B5328]/65
+                                text-xs
+                                font-light
+                                leading-relaxed
+                            ">
+                                                "{{ entry.ucapan }}"
+                                            </p>
+
+
+                                            <p class="
+                                text-[9px]
+                                text-[#6B5328]/40
+                            ">
+                                                {{ formatDate(entry.tanggal) }}
                                             </p>
 
                                         </div>
 
-                                    </template>
+
+                                        <!-- LOAD MORE -->
+                                        <div v-if="hasMore" class="
+                                pt-4
+                                pb-2
+                                flex
+                                justify-center
+                                w-full
+                            ">
+
+                                            <button @click="loadMoreMessages" :disabled="isLoadingMore" class="
+                                    px-6
+                                    py-2
+                                    bg-[#FAF6EE]
+                                    border
+                                    border-[#B38E46]/20
+                                    text-[#6B5328]/70
+                                    text-[10px]
+                                    tracking-[0.2em]
+                                    uppercase
+                                    rounded-full
+                                    hover:bg-[#B38E46]
+                                    hover:text-white
+                                    transition-all
+                                    flex
+                                    items-center
+                                    gap-2
+                                    cursor-pointer
+                                ">
+
+                                                <span v-if="isLoadingMore" class="
+                                        animate-spin
+                                        border-2
+                                        border-[#B38E46]
+                                        border-t-transparent
+                                        rounded-full
+                                        w-4
+                                        h-4
+                                    "></span>
+
+                                                <span v-else>
+                                                    {{ t('loadMore') }}
+                                                </span>
+
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+
+                                </template>
+
+
+                                <!-- EMPTY -->
+                                <template v-else>
+
+                                    <div class="
+                        flex
+                        flex-col
+                        items-center
+                        justify-center
+                        text-[#6B5328]/40
+                        text-sm
+                        py-16
+                    ">
+
+                                        <UIcon name="mdi:message-outline" class="
+                                w-8
+                                h-5
+                                mb-4
+                                opacity-40
+                                text-[#B38E46]
+                            " />
+
+                                        <p class="font-light">
+                                            {{ t("noWishes") }}
+                                        </p>
+
+                                    </div>
+
+                                </template>
+
+                            </div>
+
+
+                            <!-- ==================== -->
+                            <!-- CARD BOTTOM ORNAMENT -->
+                            <!-- ==================== -->
+
+                            <div class="
+                flex
+                items-center
+                justify-center
+                pb-8
+            ">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div class="
+                        w-8
+                        h-px
+                        bg-[#B38E46]/20
+                    "></div>
+
+                                    <div class="
+                        w-1.5
+                        h-1.5
+                        rotate-45
+                        border
+                        border-[#B38E46]/40
+                    "></div>
+
+                                    <div class="
+                        w-8
+                        h-px
+                        bg-[#B38E46]/20
+                    "></div>
 
                                 </div>
 
@@ -2019,68 +2159,61 @@
 
                         </div>
 
-                    </div>
 
-                </section>
+                        <!-- ==================== -->
+                        <!-- CLOSING / FOOTER -->
+                        <!-- ==================== -->
 
-                <!-- FOOTER -->
-                <section class="
-        relative
-        w-full
-        min-h-[100dvh]
-        overflow-hidden
-        flex
-        flex-col
-        text-center
-        select-none
-        bg-[#FAF6EE]
-    ">
-
-                    <!-- BACKGROUND DECORATION -->
-                    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-
-                        <!-- Watermark -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt="" class="
-                    w-[75%]
-                    max-w-lg
-                    object-contain
-                    opacity-[0.20]
-                " />
-                        </div>
-
-                        <!-- Soft Gold Glow -->
                         <div class="
-                absolute
-                inset-0
-                bg-gradient-to-b
-                from-[#B38E46]/[0.02]
-                via-transparent
-                to-[#E8DFD1]/35
-            "></div>
-
-                    </div>
-
-
-                    <!-- CONTENT -->
-                    <div class="
             relative
-            z-10
-            min-h-[100dvh]
             flex
             flex-col
             items-center
-            px-6
-            py-16
+            text-center
+            mt-10
+            pb-8
+            overflow-hidden
         ">
 
-                        <!-- TOP -->
-                        <div class="flex flex-col items-center">
+                            <!-- FOOTER LOGO -->
+                            <div class="
+                absolute
+                inset-x-0
+                bottom-0
+                flex
+                items-center
+                justify-center
+                pointer-events-none
+            ">
 
-                            <!-- Ornament -->
-                            <div class="flex items-center gap-4 mb-8">
+                                <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt="" class="
+                        w-[75%]
+                        max-w-lg
+                        object-contain
+                        opacity-[0.12]
+                    " />
 
+                            </div>
+
+
+                            <!-- CLOSING CONTENT -->
+                            <div class="
+                relative
+                z-10
+                flex
+                flex-col
+                items-center
+            ">
+
+                                <!-- Ornament -->
                                 <div class="
+                    flex
+                    items-center
+                    gap-4
+                    mb-8
+                ">
+
+                                    <div class="
                         w-12
                         h-px
                         bg-gradient-to-r
@@ -2088,7 +2221,7 @@
                         to-[#B38E46]/40
                     "></div>
 
-                                <div class="
+                                    <div class="
                         w-1.5
                         h-1.5
                         rotate-45
@@ -2096,7 +2229,7 @@
                         border-[#B38E46]/60
                     "></div>
 
-                                <div class="
+                                    <div class="
                         w-12
                         h-px
                         bg-gradient-to-l
@@ -2104,50 +2237,48 @@
                         to-[#B38E46]/40
                     "></div>
 
-                            </div>
+                                </div>
 
 
-                            <!-- Closing Title -->
-                            <h2 class="
-        font-mepandes
-        text-3xl
-        md:text-5xl
-        font-medium
-        text-[#6B5328]
-        tracking-wide
-        leading-relaxed
-        mb-5
-    ">
-                                Matur Suksma
-                            </h2>
-
-                            <!-- Subtitle -->
-                            <p class="
-        max-w-md
-        text-[10px]
-        md:text-xs
-        leading-relaxed
-        tracking-wide
-        text-[#6B5328]/60
-        font-light
-    ">
-                                {{ t("thankYouSub") }}
-                            </p>
-
-                        </div>
+                                <!-- Closing Title -->
+                                <h2 class="
+                    font-mepandes
+                    text-3xl
+                    md:text-5xl
+                    font-medium
+                    text-[#6B5328]
+                    tracking-wide
+                    leading-relaxed
+                    mb-5
+                ">
+                                    Matur Suksma
+                                </h2>
 
 
-                        <!-- FLEXIBLE SPACE -->
-                        <div class="flex-1"></div>
+                                <!-- Subtitle -->
+                                <p class="
+                    max-w-md
+                    text-[10px]
+                    md:text-xs
+                    leading-relaxed
+                    tracking-wide
+                    text-[#6B5328]/60
+                    font-light
+                ">
+                                    {{ t("thankYouSub") }}
+                                </p>
 
 
-                        <!-- BOTTOM -->
-                        <div class="flex flex-col items-center">
-
-                            <!-- Vertical Ornament -->
-                            <div class="flex flex-col items-center mb-8">
-
+                                <!-- Vertical Ornament -->
                                 <div class="
+                    flex
+                    flex-col
+                    items-center
+                    mt-12
+                    mb-8
+                ">
+
+                                    <div class="
                         w-px
                         h-10
                         bg-gradient-to-b
@@ -2155,7 +2286,7 @@
                         to-[#B38E46]/40
                     "></div>
 
-                                <div class="
+                                    <div class="
                         w-1
                         h-1
                         rounded-full
@@ -2163,53 +2294,58 @@
                         mt-2
                     "></div>
 
-                            </div>
+                                </div>
 
 
-                            <!-- Keevia Instagram -->
-                            <a href="https://instagram.com/keevia.id" target="_blank" rel="noopener noreferrer" class="
-                    w-10
-                    h-10
-                    rounded-full
-                    border
-                    border-[#B38E46]/25
-                    bg-white/50
-                    backdrop-blur-sm
-                    flex
-                    items-center
-                    justify-center
-                    text-[#B38E46]/70
-                    hover:text-[#6B5328]
-                    hover:border-[#B38E46]/50
-                    hover:bg-white
-                    transition-all
-                    mb-5
-                ">
-                                <UIcon name="mdi:instagram" class="w-5 h-5" />
-                            </a>
+                                <!-- Keevia Instagram -->
+                                <a href="https://instagram.com/keevia.id" target="_blank" rel="noopener noreferrer"
+                                    class="
+                        w-10
+                        h-10
+                        rounded-full
+                        border
+                        border-[#B38E46]/25
+                        bg-white/50
+                        backdrop-blur-sm
+                        flex
+                        items-center
+                        justify-center
+                        text-[#B38E46]/70
+                        hover:text-[#6B5328]
+                        hover:border-[#B38E46]/50
+                        hover:bg-white
+                        transition-all
+                        mb-5
+                    ">
+
+                                    <UIcon name="mdi:instagram" class="w-5 h-5" />
+
+                                </a>
 
 
-                            <!-- Brand -->
-                            <p class="
+                                <!-- Brand -->
+                                <p class="
                     text-[10px]
                     tracking-[0.35em]
                     uppercase
                     text-[#6B5328]/55
                     mb-3
                 ">
-                                Keevia.id
-                            </p>
+                                    Keevia.id
+                                </p>
 
 
-                            <!-- Copyright -->
-                            <p class="
+                                <!-- Copyright -->
+                                <p class="
                     text-[9px]
                     tracking-widest
                     text-[#6B5328]/35
                     uppercase
                 ">
-                                &copy; 2026 Keevia.id. All Rights Reserved.
-                            </p>
+                                    &copy; 2026 Keevia.id. All Rights Reserved.
+                                </p>
+
+                            </div>
 
                         </div>
 
