@@ -2437,19 +2437,26 @@ const openInvitation = () => {
     isOpen.value = true
     document.body.classList.remove('overflow-hidden')
     nextTick(() => {
-        setTimeout(() => {
-            initScrollAnimations()
+     setTimeout(() => {
+    initScrollAnimations()
 
-            setTimeout(() => {
-                if (quoteSection.value) {
-                    quoteSection.value.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    })
-                }
-            }, 500)
+    if (quoteSection.value) {
 
-        }, 100)
+        const scrollStep = () => {
+
+            if (!quoteSection.value) return
+
+            quoteSection.value.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+
+        // Sedikit delay agar layout sudah benar-benar selesai
+        setTimeout(scrollStep, 550)
+
+    }
+}, 100)
         if (audioControl && typeof audioControl.setMusicId === 'function') {
             audioControl.setMusicId('-BR872_MnuQ')
         }
