@@ -9,10 +9,22 @@
             text-[#6B5328]
             flex flex-col
             items-center justify-center
-            font-sans
+            font-mepandes-sans
             tracking-wide
             overflow-hidden
         ">
+
+                <!-- Subtle Background Glow -->
+                <div class="
+                absolute
+                inset-0
+                pointer-events-none
+                bg-gradient-to-br
+                from-[#B38E46]/[0.04]
+                via-transparent
+                to-[#E8DFD1]/30
+            "></div>
+
 
                 <!-- Center Content -->
                 <div class="
@@ -25,49 +37,63 @@
                 px-6
             ">
 
-                    <!-- Small Label -->
+                    <!-- Top Ornament -->
                     <div class="flex items-center gap-4">
 
                         <div class="
                         w-10
                         md:w-14
                         h-px
-                        bg-[#B38E46]/60
+                        bg-gradient-to-r
+                        from-transparent
+                        to-[#B38E46]/60
                     "></div>
 
-                        <p class="
-                        text-[10px]
-                        md:text-xs
-                        uppercase
-                        tracking-[0.4em]
-                        text-[#B38E46]
-                        font-medium
-                    ">
-                            {{ t("weddingOf") }}
-                        </p>
+                        <div class="
+                        w-1.5
+                        h-1.5
+                        rotate-45
+                        border
+                        border-[#B38E46]/80
+                    "></div>
 
                         <div class="
                         w-10
                         md:w-14
                         h-px
-                        bg-[#B38E46]/60
+                        bg-gradient-to-l
+                        from-transparent
+                        to-[#B38E46]/60
                     "></div>
 
                     </div>
 
 
+                    <!-- Small Label -->
+                    <p class="
+                    text-[9px]
+                    md:text-[10px]
+                    uppercase
+                    tracking-[0.45em]
+                    text-[#B38E46]
+                    font-semibold
+                ">
+                        Upacara Manusa Yadnya
+                    </p>
+
+
                     <!-- Logo Frame -->
                     <div class="
                     relative
-                    w-56
-                    h-56
-                    md:w-64
-                    md:h-64
+                    w-52
+                    h-52
+                    md:w-60
+                    md:h-60
                     p-3
-                    bg-[#FAF6EE]
+                    bg-white/40
                     border
-                    border-[#B38E46]/40
-                    shadow-[0_15px_40px_rgba(107,83,40,0.12)]
+                    border-[#B38E46]/35
+                    shadow-[0_15px_45px_rgba(107,83,40,0.08)]
                 ">
 
                         <!-- Inner Border -->
@@ -75,7 +101,7 @@
                         absolute
                         inset-2
                         border
-                        border-[#B38E46]/20
+                        border-[#B38E46]/15
                         pointer-events-none
                     "></div>
 
@@ -85,8 +111,8 @@
                         absolute
                         top-0
                         left-0
-                        w-8
-                        h-8
+                        w-7
+                        h-7
                         border-t
                         border-l
                         border-[#B38E46]
@@ -97,8 +123,8 @@
                         absolute
                         top-0
                         right-0
-                        w-8
-                        h-8
+                        w-7
+                        h-7
                         border-t
                         border-r
                         border-[#B38E46]
@@ -109,8 +135,8 @@
                         absolute
                         bottom-0
                         left-0
-                        w-8
-                        h-8
+                        w-7
+                        h-7
                         border-b
                         border-l
                         border-[#B38E46]
@@ -121,8 +147,8 @@
                         absolute
                         bottom-0
                         right-0
-                        w-8
-                        h-8
+                        w-7
+                        h-7
                         border-b
                         border-r
                         border-[#B38E46]
@@ -149,28 +175,42 @@
 
 
                     <!-- Mepandes Title -->
-                    <div class="text-center space-y-2">
-
-                        <p class="
-                        text-[11px]
-                        md:text-xs
-                        uppercase
-                        tracking-[0.35em]
-                        text-[#B38E46]
-                        font-medium
-                    ">
-                            Upacara Manusa Yadnya
-                        </p>
+                    <div class="text-center">
 
                         <h1 class="
-                        text-2xl
-                        md:text-3xl
-                        font-serif
-                        tracking-[0.12em]
-                        text-[#B38E46]
+                        font-mepandes
+                        text-3xl
+                        md:text-4xl
+                        font-medium
+                        tracking-[0.16em]
+                        text-[#6B5328]
+                        leading-tight
                     ">
                             MEPANDES
                         </h1>
+
+                        <div class="flex items-center justify-center gap-3 mt-4">
+
+                            <div class="
+                            w-8
+                            h-px
+                            bg-[#B38E46]/50
+                        "></div>
+
+                            <div class="
+                            w-1
+                            h-1
+                            rotate-45
+                            bg-[#B38E46]/70
+                        "></div>
+
+                            <div class="
+                            w-8
+                            h-px
+                            bg-[#B38E46]/50
+                        "></div>
+
+                        </div>
 
                     </div>
 
@@ -192,6 +232,7 @@
                     uppercase
                     text-[#B38E46]/70
                     whitespace-nowrap
+                    font-mepandes-sans
                 ">
                         LOADING... {{ loadingProgress }}%
                     </p>
@@ -212,7 +253,7 @@
             </div>
         </transition>
 
-        <!-- LEFT PANEL (80% on Desktop, hidden on Mobile) -->
+        <!-- LEFT PANEL (75% on Desktop, hidden on Mobile) -->
         <div class="
         hidden md:flex
         md:w-[75%]
@@ -241,7 +282,6 @@
                 max-w-3xl
                 object-contain
                 opacity-[0.10]
-                [image-rendering:auto]
             " />
             </div>
 
@@ -269,7 +309,7 @@
         ">
 
                 <!-- Top Ornament -->
-                <div class="flex items-center gap-6 mb-10">
+                <div class="flex items-center gap-5 mb-8">
 
                     <div class="
                     w-20
@@ -300,16 +340,32 @@
 
                 <!-- Label -->
                 <p class="
-                text-[10px]
-                md:text-xs
-                tracking-[0.5em]
+                font-mepandes-sans
+                text-[9px]
+                md:text-[10px]
+                tracking-[0.45em]
                 uppercase
                 text-[#B38E46]
                 font-semibold
-                mb-6
+                mb-4
             ">
-                    {{ t("weddingOf") }}
+                    Upacara Manusa Yadnya
                 </p>
+
+
+                <!-- Main Title -->
+                <h2 class="
+                font-mepandes
+                text-3xl
+                lg:text-4xl
+                text-[#6B5328]
+                font-medium
+                tracking-wide
+                leading-tight
+                mb-7
+            ">
+                    Mepandes
+                </h2>
 
 
                 <!-- Names -->
@@ -317,7 +373,7 @@
 
                     <!-- Name 1 -->
                     <h1 class="
-                    font-serif
+                    font-mepandes
                     text-2xl
                     lg:text-3xl
                     text-[#6B5328]
@@ -356,7 +412,7 @@
 
                     <!-- Name 2 -->
                     <h1 class="
-                    font-serif
+                    font-mepandes
                     text-2xl
                     lg:text-3xl
                     text-[#6B5328]
@@ -395,7 +451,7 @@
 
                     <!-- Name 3 -->
                     <h1 class="
-                    font-serif
+                    font-mepandes
                     text-2xl
                     lg:text-3xl
                     text-[#6B5328]
@@ -434,7 +490,7 @@
 
                     <!-- Name 4 -->
                     <h1 class="
-                    font-serif
+                    font-mepandes
                     text-2xl
                     lg:text-3xl
                     text-[#6B5328]
@@ -448,22 +504,41 @@
                 </div>
 
 
-                <!-- Bottom Divider -->
-                <div class="
-                w-12
-                h-px
-                bg-[#B38E46]/60
-                my-7
-            "></div>
+                <!-- Bottom Ornament -->
+                <div class="flex items-center gap-3 my-7">
+
+                    <div class="
+                    w-10
+                    h-px
+                    bg-[#B38E46]/50
+                "></div>
+
+                    <div class="
+                    w-1.5
+                    h-1.5
+                    rotate-45
+                    border
+                    border-[#B38E46]/70
+                "></div>
+
+                    <div class="
+                    w-10
+                    h-px
+                    bg-[#B38E46]/50
+                "></div>
+
+                </div>
 
 
                 <!-- Date -->
                 <p class="
-                text-xs
-                tracking-[0.35em]
+                font-mepandes-sans
+                text-[12px]
+                md:text-sm
+                tracking-[0.2em]
                 uppercase
-                text-[#6B5328]/80
-                font-medium
+                text-[#6B5328]
+                font-semibold
             ">
                     {{ t("dateFull") }}
                 </p>
