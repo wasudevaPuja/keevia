@@ -4,173 +4,113 @@
         <!-- PRELOADER SPLASH SCREEN -->
         <transition name="fade">
             <div v-if="isLoading" class="
-            fixed inset-0 z-[100]
-            bg-[#FAF6EE]
-            text-[#6B5328]
-            flex flex-col
-            items-center justify-center
-            font-mepandes-sans
-            tracking-wide
-            overflow-hidden
-        ">
+        fixed inset-0 z-[100]
+        bg-[#FAF6EE]
+        text-[#6B5328]
+        flex flex-col
+        items-center justify-center
+        font-mepandes-sans
+        tracking-wide
+        overflow-hidden
+    ">
 
                 <!-- Subtle Background Glow -->
                 <div class="
-                absolute
-                inset-0
-                pointer-events-none
-                bg-gradient-to-br
-                from-[#B38E46]/[0.04]
-                via-transparent
-                to-[#E8DFD1]/30
-            "></div>
+            absolute
+            inset-0
+            pointer-events-none
+            bg-gradient-to-br
+            from-[#B38E46]/[0.04]
+            via-transparent
+            to-[#E8DFD1]/30
+        "></div>
 
 
                 <!-- Center Content -->
                 <div class="
-                relative
-                z-10
-                flex
-                flex-col
-                items-center
-                space-y-7
-                px-6
-            ">
+            relative
+            z-10
+            flex
+            flex-col
+            items-center
+            space-y-7
+            px-6
+        ">
 
                     <!-- Top Ornament -->
                     <div class="flex items-center gap-4">
 
                         <div class="
-                        w-10
-                        md:w-14
-                        h-px
-                        bg-gradient-to-r
-                        from-transparent
-                        to-[#B38E46]/60
-                    "></div>
+                    w-10
+                    md:w-14
+                    h-px
+                    bg-gradient-to-r
+                    from-transparent
+                    to-[#B38E46]/60
+                "></div>
 
                         <div class="
-                        w-1.5
-                        h-1.5
-                        rotate-45
-                        border
-                        border-[#B38E46]/80
-                    "></div>
+                    w-1.5
+                    h-1.5
+                    rotate-45
+                    border
+                    border-[#B38E46]/80
+                "></div>
 
                         <div class="
-                        w-10
-                        md:w-14
-                        h-px
-                        bg-gradient-to-l
-                        from-transparent
-                        to-[#B38E46]/60
-                    "></div>
+                    w-10
+                    md:w-14
+                    h-px
+                    bg-gradient-to-l
+                    from-transparent
+                    to-[#B38E46]/60
+                "></div>
 
                     </div>
 
 
                     <!-- Small Label -->
                     <p class="
-                    text-[9px]
-                    md:text-[10px]
-                    uppercase
-                    tracking-[0.45em]
-                    text-[#B38E46]
-                    font-semibold
-                ">
+                text-[9px]
+                md:text-[10px]
+                uppercase
+                tracking-[0.45em]
+                text-[#B38E46]
+                font-semibold
+            ">
                         Upacara Manusa Yadnya
                     </p>
 
 
-                    <!-- Logo Frame -->
+                    <!-- LOGO -->
                     <div class="
-                    relative
-                    w-52
-                    h-52
-                    md:w-60
-                    md:h-60
-                    p-3
-                    bg-white/40
-                    border
-                    border-[#B38E46]/35
-                    shadow-[0_15px_45px_rgba(107,83,40,0.08)]
-                ">
+                relative
+                flex
+                items-center
+                justify-center
+                w-48
+                h-48
+                md:w-56
+                md:h-56
+            ">
 
-                        <!-- Inner Border -->
+                        <!-- Soft Glow Behind Logo -->
                         <div class="
-                        absolute
-                        inset-2
-                        border
-                        border-[#B38E46]/15
-                        pointer-events-none
-                    "></div>
+                    absolute
+                    inset-4
+                    rounded-full
+                    bg-[#B38E46]/[0.06]
+                    blur-3xl
+                "></div>
 
-
-                        <!-- Gold Corner Decoration -->
-                        <div class="
-                        absolute
-                        top-0
-                        left-0
-                        w-7
-                        h-7
-                        border-t
-                        border-l
-                        border-[#B38E46]
+                        <!-- Logo -->
+                        <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt="Logo Mepandes" class="
+                        relative
                         z-10
-                    "></div>
-
-                        <div class="
-                        absolute
-                        top-0
-                        right-0
-                        w-7
-                        h-7
-                        border-t
-                        border-r
-                        border-[#B38E46]
-                        z-10
-                    "></div>
-
-                        <div class="
-                        absolute
-                        bottom-0
-                        left-0
-                        w-7
-                        h-7
-                        border-b
-                        border-l
-                        border-[#B38E46]
-                        z-10
-                    "></div>
-
-                        <div class="
-                        absolute
-                        bottom-0
-                        right-0
-                        w-7
-                        h-7
-                        border-b
-                        border-r
-                        border-[#B38E46]
-                        z-10
-                    "></div>
-
-
-                        <!-- Logo Utama -->
-                        <div class="
                         w-full
                         h-full
-                        flex
-                        items-center
-                        justify-center
-                    ">
-                            <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt="Logo Mepandes"
-                                class="
-                            w-full
-                            h-full
-                            object-contain
-                        " />
-                        </div>
+                        object-contain
+                    " />
 
                     </div>
 
@@ -179,37 +119,43 @@
                     <div class="text-center">
 
                         <h1 class="
-                        font-mepandes
-                        text-3xl
-                        md:text-4xl
-                        font-medium
-                        tracking-[0.16em]
-                        text-[#6B5328]
-                        leading-tight
-                    ">
+                    font-mepandes
+                    text-3xl
+                    md:text-4xl
+                    font-medium
+                    tracking-[0.16em]
+                    text-[#6B5328]
+                    leading-tight
+                ">
                             MEPANDES
                         </h1>
 
+
+                        <!-- Bottom Ornament -->
                         <div class="flex items-center justify-center gap-3 mt-4">
 
                             <div class="
-                            w-8
-                            h-px
-                            bg-[#B38E46]/50
-                        "></div>
+                        w-8
+                        h-px
+                        bg-gradient-to-r
+                        from-transparent
+                        to-[#B38E46]/50
+                    "></div>
 
                             <div class="
-                            w-1
-                            h-1
-                            rotate-45
-                            bg-[#B38E46]/70
-                        "></div>
+                        w-1
+                        h-1
+                        rotate-45
+                        bg-[#B38E46]/70
+                    "></div>
 
                             <div class="
-                            w-8
-                            h-px
-                            bg-[#B38E46]/50
-                        "></div>
+                        w-8
+                        h-px
+                        bg-gradient-to-l
+                        from-transparent
+                        to-[#B38E46]/50
+                    "></div>
 
                         </div>
 
@@ -220,36 +166,38 @@
 
                 <!-- Loading Progress -->
                 <div class="
-                absolute
-                bottom-8
-                left-1/2
-                -translate-x-1/2
-                z-10
-            ">
+            absolute
+            bottom-8
+            left-1/2
+            -translate-x-1/2
+            z-10
+        ">
+
                     <p class="
-                    text-[9px]
-                    md:text-[10px]
-                    tracking-[0.3em]
-                    uppercase
-                    text-[#B38E46]/70
-                    whitespace-nowrap
-                    font-mepandes-sans
-                ">
+                text-[9px]
+                md:text-[10px]
+                tracking-[0.3em]
+                uppercase
+                text-[#B38E46]/70
+                whitespace-nowrap
+                font-mepandes-sans
+            ">
                         LOADING... {{ loadingProgress }}%
                     </p>
+
                 </div>
 
 
                 <!-- Bottom Decorative Line -->
                 <div class="
-                absolute
-                bottom-0
-                left-1/2
-                -translate-x-1/2
-                w-24
-                h-px
-                bg-[#B38E46]/40
-            "></div>
+            absolute
+            bottom-0
+            left-1/2
+            -translate-x-1/2
+            w-24
+            h-px
+            bg-[#B38E46]/40
+        "></div>
 
             </div>
         </transition>
@@ -369,142 +317,6 @@
                 </h2>
 
 
-                <!-- Names -->
-                <div class="text-center">
-
-                    <!-- Name 1 -->
-                    <h1 class="
-                    font-mepandes
-                    text-2xl
-                    lg:text-3xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                        I Gusti A. Ayu Galuh Parwati
-                    </h1>
-
-
-                    <!-- Separator -->
-                    <div class="flex items-center justify-center gap-3 my-3">
-
-                        <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/40
-                    "></div>
-
-                        <div class="
-                        w-1
-                        h-1
-                        rotate-45
-                        bg-[#B38E46]/70
-                    "></div>
-
-                        <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/40
-                    "></div>
-
-                    </div>
-
-
-                    <!-- Name 2 -->
-                    <h1 class="
-                    font-mepandes
-                    text-2xl
-                    lg:text-3xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                        I Gusti Ayu Cahya Pratiwi
-                    </h1>
-
-
-                    <!-- Separator -->
-                    <div class="flex items-center justify-center gap-3 my-3">
-
-                        <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/40
-                    "></div>
-
-                        <div class="
-                        w-1
-                        h-1
-                        rotate-45
-                        bg-[#B38E46]/70
-                    "></div>
-
-                        <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/40
-                    "></div>
-
-                    </div>
-
-
-                    <!-- Name 3 -->
-                    <h1 class="
-                    font-mepandes
-                    text-2xl
-                    lg:text-3xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                        I Gusti Ngurah Agung Alit Arya Wibawa
-                    </h1>
-
-
-                    <!-- Separator -->
-                    <div class="flex items-center justify-center gap-3 my-3">
-
-                        <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/40
-                    "></div>
-
-                        <div class="
-                        w-1
-                        h-1
-                        rotate-45
-                        bg-[#B38E46]/70
-                    "></div>
-
-                        <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/40
-                    "></div>
-
-                    </div>
-
-
-                    <!-- Name 4 -->
-                    <h1 class="
-                    font-mepandes
-                    text-2xl
-                    lg:text-3xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                        I Gusti Agung Ngurah Bratha Prasetya
-                    </h1>
-
-                </div>
-
-
                 <!-- Bottom Ornament -->
                 <div class="flex items-center gap-3 my-7">
 
@@ -616,284 +428,139 @@
             ]">
 
                 <!-- TOP CONTENT -->
-                <div class="flex flex-col items-center w-full shrink-0">
+                <div class="
+    flex
+    flex-col
+    items-center
+    w-full
+    shrink-0
+    text-center
+">
 
                     <!-- TOP ORNAMENT -->
-                    <div class="flex items-center gap-4 mb-5">
+                    <div class="flex items-center gap-4 mb-6">
 
                         <div class="
-                    w-8
-                    h-px
-                    bg-gradient-to-r
-                    from-transparent
-                    to-[#B38E46]/45
-                "></div>
+            w-10
+            h-px
+            bg-gradient-to-r
+            from-transparent
+            to-[#B38E46]/45
+        "></div>
 
                         <div class="
-                    w-1.5
-                    h-1.5
-                    rotate-45
-                    border
-                    border-[#B38E46]/65
-                "></div>
+            w-1.5
+            h-1.5
+            rotate-45
+            border
+            border-[#B38E46]/65
+        "></div>
 
                         <div class="
-                    w-8
-                    h-px
-                    bg-gradient-to-l
-                    from-transparent
-                    to-[#B38E46]/45
-                "></div>
+            w-10
+            h-px
+            bg-gradient-to-l
+            from-transparent
+            to-[#B38E46]/45
+        "></div>
 
                     </div>
 
 
                     <!-- CEREMONY LABEL -->
                     <p class="
-                font-mepandes-sans
-                text-[8px]
-                md:text-[9px]
-                tracking-[0.45em]
-                uppercase
-                text-[#B38E46]
-                font-semibold
-                mb-2
-            ">
+        font-mepandes-sans
+        text-[8px]
+        md:text-[9px]
+        tracking-[0.45em]
+        uppercase
+        text-[#B38E46]
+        font-semibold
+        mb-3
+    ">
                         Upacara Manusa Yadnya
                     </p>
 
 
                     <!-- MAIN HEADING -->
                     <h2 class="
-                font-mepandes
-                text-2xl
-                md:text-4xl
-                text-[#6B5328]
-                font-medium
-                tracking-wide
-                leading-tight
-                mb-2
-            ">
+        font-mepandes
+        text-3xl
+        md:text-4xl
+        text-[#6B5328]
+        font-medium
+        tracking-wide
+        leading-tight
+        mb-4
+    ">
                         Mepandes
                     </h2>
-
-
-                    <!-- DECORATIVE DIVIDER -->
-                    <div class="flex items-center gap-3 mb-5">
-
-                        <div class="
-                    w-10
-                    h-px
-                    bg-[#B38E46]/25
-                "></div>
+                    <!-- ELEGANT DIVIDER -->
+                    <div class="
+        flex
+        items-center
+        justify-center
+        gap-3
+        mb-6
+    ">
 
                         <div class="
-                    w-1
-                    h-1
-                    rounded-full
-                    bg-[#B38E46]/50
-                "></div>
+            w-12
+            h-px
+            bg-gradient-to-r
+            from-transparent
+            to-[#B38E46]/35
+        "></div>
 
                         <div class="
-                    w-10
-                    h-px
-                    bg-[#B38E46]/25
-                "></div>
+            w-1.5
+            h-1.5
+            rotate-45
+            bg-[#B38E46]/55
+        "></div>
 
-                    </div>
-
-
-                    <!-- NAMES -->
-                    <div class="text-center w-full max-w-xl shrink-0">
-
-                        <!-- NAME 1 -->
-                        <h1 class="
-                    font-mepandes
-                    text-lg
-                    md:text-2xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                            I Gusti A. Ayu Galuh Parwati
-                        </h1>
-
-                        <p class="
-                    font-mepandes-sans
-                    text-[7px]
-                    uppercase
-                    tracking-[0.35em]
-                    text-[#B38E46]/65
-                    mt-0.5
-                ">
-                            Putri
-                        </p>
-
-
-                        <!-- SEPARATOR -->
-                        <div class="flex items-center justify-center gap-3 my-2.5">
-
-                            <div class="w-5 h-px bg-[#B38E46]/25"></div>
-
-                            <div class="
-                        w-1
-                        h-1
-                        rotate-45
-                        bg-[#B38E46]/50
-                    "></div>
-
-                            <div class="w-5 h-px bg-[#B38E46]/25"></div>
-
-                        </div>
-
-
-                        <!-- NAME 2 -->
-                        <h1 class="
-                    font-mepandes
-                    text-lg
-                    md:text-2xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                            I Gusti Ayu Cahya Pratiwi
-                        </h1>
-
-                        <p class="
-                    font-mepandes-sans
-                    text-[7px]
-                    uppercase
-                    tracking-[0.35em]
-                    text-[#B38E46]/65
-                    mt-0.5
-                ">
-                            Putri
-                        </p>
-
-
-                        <!-- SEPARATOR -->
-                        <div class="flex items-center justify-center gap-3 my-2.5">
-
-                            <div class="w-5 h-px bg-[#B38E46]/25"></div>
-
-                            <div class="
-                        w-1
-                        h-1
-                        rotate-45
-                        bg-[#B38E46]/50
-                    "></div>
-
-                            <div class="w-5 h-px bg-[#B38E46]/25"></div>
-
-                        </div>
-
-
-                        <!-- NAME 3 -->
-                        <h1 class="
-                    font-mepandes
-                    text-lg
-                    md:text-2xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                            I Gusti Ngurah Agung Alit Arya Wibawa
-                        </h1>
-
-                        <p class="
-                    font-mepandes-sans
-                    text-[7px]
-                    uppercase
-                    tracking-[0.35em]
-                    text-[#B38E46]/65
-                    mt-0.5
-                ">
-                            Putra
-                        </p>
-
-
-                        <!-- SEPARATOR -->
-                        <div class="flex items-center justify-center gap-3 my-2.5">
-
-                            <div class="w-5 h-px bg-[#B38E46]/25"></div>
-
-                            <div class="
-                        w-1
-                        h-1
-                        rotate-45
-                        bg-[#B38E46]/50
-                    "></div>
-
-                            <div class="w-5 h-px bg-[#B38E46]/25"></div>
-
-                        </div>
-
-
-                        <!-- NAME 4 -->
-                        <h1 class="
-                    font-mepandes
-                    text-lg
-                    md:text-2xl
-                    text-[#6B5328]
-                    font-medium
-                    tracking-wide
-                    leading-relaxed
-                ">
-                            I Gusti Agung Ngurah Bratha Prasetya
-                        </h1>
-
-                        <p class="
-                    font-mepandes-sans
-                    text-[7px]
-                    uppercase
-                    tracking-[0.35em]
-                    text-[#B38E46]/65
-                    mt-0.5
-                ">
-                            Putra
-                        </p>
+                        <div class="
+            w-12
+            h-px
+            bg-gradient-to-l
+            from-transparent
+            to-[#B38E46]/35
+        "></div>
 
                     </div>
 
 
                     <!-- DATE -->
-                    <div class="flex flex-col items-center mt-5 shrink-0">
+                    <div class="
+        flex
+        flex-col
+        items-center
+        shrink-0
+    ">
 
-                        <div class="flex items-center gap-3 mb-3">
-
-                            <div class="
-                        w-7
-                        h-px
-                        bg-[#B38E46]/25
-                    "></div>
-
-                            <div class="
-                        w-1
-                        h-1
-                        rounded-full
-                        bg-[#B38E46]/50
-                    "></div>
-
-                            <div class="
-                        w-7
-                        h-px
-                        bg-[#B38E46]/25
-                    "></div>
-
-                        </div>
-
+                        <!-- Date Label -->
                         <p class="
-                    font-mepandes-sans
-                    text-[12px]
-                    md:text-sm
-                    tracking-[0.2em]
-                    uppercase
-                    text-[#6B5328]
-                    font-semibold
-                ">
+            font-mepandes-sans
+            text-[8px]
+            tracking-[0.35em]
+            uppercase
+            text-[#B38E46]/70
+            mb-2
+        ">
+                            Save The Date
+                        </p>
+
+
+                        <!-- Date -->
+                        <p class="
+            font-mepandes-sans
+            text-[12px]
+            md:text-sm
+            tracking-[0.18em]
+            uppercase
+            text-[#6B5328]
+            font-semibold
+        ">
                             {{ t("dateFull") }}
                         </p>
 
@@ -903,95 +570,121 @@
 
 
                 <!-- FLEXIBLE SPACER -->
-                <div class="flex-1 min-h-4"></div>
+                <div class="flex-1 min-h-6"></div>
 
 
                 <!-- GUEST CARD -->
                 <div v-if="!isOpen" class="
-            flex
-            flex-col
-            items-center
-            w-full
-            shrink-0
-            pb-2
-        ">
+        flex
+        flex-col
+        items-center
+        w-full
+        shrink-0
+        pb-2
+    ">
 
                     <div class="
-                w-full
-                max-w-sm
-                bg-white/80
-                backdrop-blur-md
-                border
-                border-[#B38E46]/20
-                px-6
-                py-5
-                md:p-8
-                rounded-2xl
-                shadow-[0_20px_60px_rgba(107,83,40,.08)]
-            ">
+        relative
+        w-full
+        max-w-sm
+        bg-white/80
+        backdrop-blur-md
+        border
+        border-[#B38E46]/20
+        px-6
+        py-6
+        md:p-8
+        rounded-2xl
+        shadow-[0_20px_60px_rgba(107,83,40,.08)]
+    ">
+
+                        <!-- Subtle Top Ornament -->
+                        <div class="
+            flex
+            items-center
+            justify-center
+            gap-3
+            mb-5
+        ">
+
+                            <div class="w-6 h-px bg-[#B38E46]/20"></div>
+
+                            <div class="
+                w-1
+                h-1
+                rounded-full
+                bg-[#B38E46]/50
+            "></div>
+
+                            <div class="w-6 h-px bg-[#B38E46]/20"></div>
+
+                        </div>
+
 
                         <!-- Recipient -->
                         <p class="
-                    font-mepandes-sans
-                    text-[8px]
-                    tracking-[0.4em]
-                    uppercase
-                    mb-2
-                    text-[#B38E46]
-                    font-semibold
-                ">
+            font-mepandes-sans
+            text-[8px]
+            tracking-[0.4em]
+            uppercase
+            mb-2
+            text-[#B38E46]
+            font-semibold
+        ">
                             {{ t("toYth") }}
                         </p>
 
 
                         <!-- Guest Name -->
                         <p class="
-                    font-mepandes
-                    text-xl
-                    md:text-2xl
-                    mb-3
-                    text-[#6B5328]
-                    tracking-wide
-                    font-medium
-                    leading-relaxed
-                ">
+            font-mepandes
+            text-xl
+            md:text-2xl
+            mb-4
+            text-[#6B5328]
+            tracking-wide
+            font-medium
+            leading-relaxed
+        ">
                             {{ guestName }}
                         </p>
 
 
                         <!-- Opening Message -->
                         <p class="
-                    font-mepandes-sans
-                    text-[10px]
-                    md:text-xs
-                    text-[#6B5328]/65
-                    leading-relaxed
-                    mb-5
-                    font-light
-                ">
+            font-mepandes-sans
+            text-[10px]
+            md:text-xs
+            text-[#6B5328]/65
+            leading-relaxed
+            mb-6
+            font-light
+            max-w-xs
+            mx-auto
+        ">
                             {{ t("openingMsg") }}
                         </p>
 
 
                         <!-- Open Button -->
                         <button type="button" class="
-                    w-full
-                    py-3.5
-                    rounded-full
-                    text-[9px]
-                    tracking-[0.35em]
-                    uppercase
-                    font-mepandes-sans
-                    font-semibold
-                    bg-[#B38E46]
-                    text-white
-                    hover:bg-[#6B5328]
-                    active:scale-[0.98]
-                    transition-all
-                    duration-300
-                    shadow-[0_8px_30px_rgba(179,142,70,.18)]
-                    cursor-pointer
-                " @click="openInvitation">
+                w-full
+                py-3.5
+                rounded-full
+                text-[9px]
+                tracking-[0.35em]
+                uppercase
+                font-mepandes-sans
+                font-semibold
+                bg-[#B38E46]
+                text-white
+                hover:bg-[#6B5328]
+                active:scale-[0.98]
+                transition-all
+                duration-300
+                shadow-[0_8px_30px_rgba(179,142,70,.18)]
+                cursor-pointer
+            " @click="openInvitation">
                             {{ t("openBtn") }}
                         </button>
 
@@ -1073,11 +766,25 @@
                         <!-- Main Text -->
                         <div class="max-w-lg space-y-6">
 
-                            <p class="text-[10px] md:text-xs tracking-[0.35em] uppercase text-[#B38E46] font-semibold">
+                            <p class="
+        font-mepandes-sans
+        text-[10px]
+        md:text-xs
+        tracking-[0.35em]
+        uppercase
+        text-[#B38E46]
+        font-semibold
+    ">
                                 Upacara Manusa Yadnya
                             </p>
 
-                            <p class="font-mepandes-sans text-xs md:text-sm leading-loose text-[#6B5328]/80">
+                            <p class="
+        font-mepandes-sans
+        text-xs
+        md:text-sm
+        leading-loose
+        text-[#6B5328]/80
+    ">
                                 Atas asung kertha wara nugraha Ida Sang Hyang Widhi Wasa /
                                 Tuhan Yang Maha Esa, kami bermaksud mengundang
                                 Bapak/Ibu/Saudara/i untuk hadir pada
@@ -1089,13 +796,172 @@
 
                         </div>
 
-                        <!-- Divider -->
-                        <div class="flex items-center justify-center gap-3 mt-10">
-                            <div class="w-10 h-px bg-[#B38E46]/30"></div>
+                        <!-- PARTICIPANTS -->
+                        <div class="
+    w-full
+    max-w-md
+    mt-8
+    flex
+    flex-col
+    items-center
+    text-center
+">
 
-                            <div class="w-1 h-1 rotate-45 bg-[#B38E46]/60"></div>
+                            <!-- PUTRA -->
+                            <div class="
+        flex
+        flex-col
+        items-center
+        w-full
+    ">
 
-                            <div class="w-10 h-px bg-[#B38E46]/30"></div>
+                                <!-- Label -->
+                                <p class="
+            font-mepandes-sans
+            text-[8px]
+            md:text-[9px]
+            tracking-[0.4em]
+            uppercase
+            text-[#B38E46]
+            font-semibold
+            mb-3
+        ">
+                                    Putra
+                                </p>
+
+
+                                <!-- Names -->
+                                <div class="
+            flex
+            flex-col
+            items-center
+            gap-1.5
+            w-full
+        ">
+
+                                    <p class="
+                font-mepandes
+                text-[15px]
+                md:text-base
+                text-[#6B5328]
+                font-medium
+                tracking-wide
+                leading-relaxed
+                px-4
+            ">
+                                        I Gusti Ngurah Agung Alit Arya Wibawa
+                                    </p>
+
+                                    <p class="
+                font-mepandes
+                text-[15px]
+                md:text-base
+                text-[#6B5328]
+                font-medium
+                tracking-wide
+                leading-relaxed
+                px-4
+            ">
+                                        I Gusti Agung Ngurah Bratha Prasetya
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Elegant Divider -->
+                            <div class="
+        flex
+        items-center
+        justify-center
+        gap-3
+        my-6
+    ">
+
+                                <div class="
+            w-8
+            md:w-10
+            h-px
+            bg-[#B38E46]/25
+        "></div>
+
+                                <div class="
+            w-1
+            h-1
+            rotate-45
+            bg-[#B38E46]/55
+        "></div>
+
+                                <div class="
+            w-8
+            md:w-10
+            h-px
+            bg-[#B38E46]/25
+        "></div>
+
+                            </div>
+
+
+                            <!-- PUTRI -->
+                            <div class="
+        flex
+        flex-col
+        items-center
+        w-full
+    ">
+
+                                <!-- Label -->
+                                <p class="
+            font-mepandes-sans
+            text-[8px]
+            md:text-[9px]
+            tracking-[0.4em]
+            uppercase
+            text-[#B38E46]
+            font-semibold
+            mb-3
+        ">
+                                    Putri
+                                </p>
+
+
+                                <!-- Names -->
+                                <div class="
+            flex
+            flex-col
+            items-center
+            gap-1.5
+            w-full
+        ">
+
+                                    <p class="
+                font-mepandes
+                text-[15px]
+                md:text-base
+                text-[#6B5328]
+                font-medium
+                tracking-wide
+                leading-relaxed
+                px-4
+            ">
+                                        I Gusti A. Ayu Galuh Parwati
+                                    </p>
+
+                                    <p class="
+                font-mepandes
+                text-[15px]
+                md:text-base
+                text-[#6B5328]
+                font-medium
+                tracking-wide
+                leading-relaxed
+                px-4
+            ">
+                                        I Gusti Ayu Cahya Pratiwi
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Flower Ornament -->
@@ -1386,7 +1252,7 @@
                 </section>
 
                 <!-- EVENT -->
-                <section class="py-24 px-6 relative w-full bg-[#FAF6EE]">
+                <section class="py-16 md:py-20 px-6 relative w-full bg-[#FAF6EE]">
 
                     <!-- Background Decoration -->
                     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -1408,7 +1274,7 @@
                     <div class="max-w-5xl mx-auto relative z-10">
 
                         <!-- SECTION DIVIDER -->
-                        <div class="flex flex-col items-center mb-16">
+                        <div class="flex flex-col items-center mb-10">
 
                             <div class="w-px h-16 bg-gradient-to-b from-transparent via-[#B38E46]/30 to-[#B38E46]/50">
                             </div>
@@ -1421,7 +1287,7 @@
                         <!-- HEADER -->
                         <div class="
                 flex flex-col items-center text-center
-                mb-14
+                mb-9
                 scroll-animate
                 opacity-90
                 translate-y-8
@@ -1646,7 +1512,7 @@
                 </section>
 
                 <!-- RSVP & UCAPAN -->
-                <section class="py-20 px-6 max-w-5xl mx-auto w-full relative bg-[#FAF6EE]">
+                <section class="py-14 md:py-16 px-6 max-w-5xl mx-auto w-full relative bg-[#FAF6EE]">
 
                     <!-- BACKGROUND DECORATION -->
                     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -1670,7 +1536,7 @@
                         <!-- HEADER -->
                         <div class="
                 flex flex-col items-center text-center
-                mb-16
+                mb-10
                 scroll-animate
                 opacity-90
                 translate-y-8
@@ -1763,8 +1629,8 @@
 
                                     <h3 class="
                             font-mepandes
-                            text-2xl
-                            md:text-3xl
+                            text-xl
+                            md:text-2xl
                             mb-8
                             text-[#6B5328]
                             tracking-wide
@@ -2425,7 +2291,7 @@ const route = useRoute()
 const dict = {
     id: {
         weddingOf: "Mepandes",
-        dateFull: "Jumat, 16 Oktober 2026",
+        dateFull: "Kamis, 15 Oktober 2026",
         toYth: "Kepada Yth.",
         openingMsg: "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu dalam rangkaian upacara Manusa Yadnya Mepandes kami.",
         openBtn: "BUKA UNDANGAN",
@@ -2438,7 +2304,7 @@ const dict = {
         daughterOf: "Putri Kedua dari",
         parentsBride: "Bapak Komang Sumada & Ibu Ketut Remiti",
         saveOurDate: "Upacara Mepandes",
-        dateMain: "Jumat, 16 Oktober 2026",
+        dateMain: "Kamis, 15 Oktober 2026",
         days: "Hari",
         hours: "Jam",
         minutes: "Menit",
@@ -2448,7 +2314,7 @@ const dict = {
         resepsiLocation: "Puri Agung Marga - Saren Kelod, Tabanan, Bali",
         openMap: "Lihat Lokasi",
         rsvpSub: "Your Presence",
-        rsvpTitle: "Konfirmasi Kehadiran & Ucapan",
+        rsvpTitle: "Kehadiran & Ucapan",
         rsvpDesc: "Langkah ini tidak akan terasa sempurna tanpa kehadiran serta iringan doa dari seluruh kerabat dan sahabat tercinta.",
         fullName: "Nama Lengkap",
         fullNamePlaceholder: "Tulis nama Anda",
@@ -2494,8 +2360,8 @@ const isAndroid = computed(() => {
 })
 
 const googleCalendarLink = computed(() => {
-    const start = '20261016T090000';
-    const end = '20261017T160000';
+    const start = '20261015T090000';
+    const end = '20261015T210000';
     const title = encodeURIComponent('Mepandes - I Gusti A. Ayu Galuh Parwati, I Gusti Ayu Cahya Pratiwi, I Gusti Ngurah Agung Alit Arya Wibawa, I Gusti Agung Ngurah Bratha Prasetya');
     const details = encodeURIComponent('Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu pada upacara Manusa Yadnya Mepandes kami.');
     const location = encodeURIComponent('Puri Agung Marga - Saren Kelod, Tabanan, Bali');
@@ -2594,7 +2460,7 @@ const countdown = ref({
     seconds: '00'
 })
 
-const saveOurDate = new Date('2026-10-16T08:00:00+08:00').getTime()
+const saveOurDate = new Date('2026-10-15T08:00:00+09:00').getTime()
 let countdownInterval: ReturnType<typeof setInterval>
 
 const startCountdown = () => {

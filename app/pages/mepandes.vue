@@ -4,7 +4,7 @@ import GoldElegan from '~/components/gold-elegan.vue';
 const formattedName = 'I Gusti A. Ayu Galuh Parwati & I Gusti Ayu Cahya Pratiwi & I Gusti Ngurah Agung Alit Arya Wibawa & I Gusti Agung Ngurah Bratha Prasetya'
 const slug = 'i-gusti-a-ayu-galuh-parwati-i-gusti-ayu-cahya-pratiwi-i-gusti-ngurah-agung-alit-arya-wibawa-i-gusti-agung-ngurah-bratha-prasetya'
 const domain = 'https://undangandigital.keevia.id'
-const previewImg = 'https://assets.keevia.id/mepandes/logo_jeroan.png'
+const previewImg = 'https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png'
 
 useSeoMeta({
   title: `Undangan Mepandes ${formattedName} | Keevia.id`,
