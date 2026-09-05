@@ -1445,21 +1445,7 @@
         mt-7
     ">
 
-                                <div class="flex items-center gap-3">
-
-                                    <div class="w-10 h-px bg-[#B38E46]/20"></div>
-
-                                    <div class="
-                w-1.5
-                h-1.5
-                rotate-45
-                border
-                border-[#B38E46]/40
-            "></div>
-
-                                    <div class="w-10 h-px bg-[#B38E46]/20"></div>
-
-                                </div>
+                                
 
                             </div>
 
@@ -2130,30 +2116,6 @@
                 justify-center
                 pb-8
             ">
-
-                                <div class="flex items-center gap-3">
-
-                                    <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/20
-                    "></div>
-
-                                    <div class="
-                        w-1.5
-                        h-1.5
-                        rotate-45
-                        border
-                        border-[#B38E46]/40
-                    "></div>
-
-                                    <div class="
-                        w-8
-                        h-px
-                        bg-[#B38E46]/20
-                    "></div>
-
-                                </div>
 
                             </div>
 
