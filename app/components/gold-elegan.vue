@@ -164,7 +164,8 @@
                         items-center
                         justify-center
                     ">
-                            <img src="https://assets.keevia.id/mepandes/logo_jeroan.png" alt="Logo Mepandes" class="
+                            <img src="https://assets.keevia.id/mepandes/logo_jeroan_no_bg.png" alt="Logo Mepandes"
+                                class="
                             w-full
                             h-full
                             object-contain
@@ -607,40 +608,49 @@
             </div>
 
             <!-- HERO / COVER SECTION -->
-            <section class="
-        relative
-        z-10
-        w-full
-        min-h-[100dvh]
-        flex
-        flex-col
-        px-6
-        pt-12
-        pb-8
-        text-center
-        shrink-0
-    ">
+            <section :class="[
+                'relative z-10 w-full min-h-[100dvh] flex flex-col px-6 pt-10 pb-8 text-center shrink-0 overflow-x-hidden',
+                !isOpen
+                    ? 'max-h-[100dvh] overflow-y-auto overscroll-contain'
+                    : 'overflow-visible'
+            ]">
 
                 <!-- TOP CONTENT -->
-                <div class="flex flex-col items-center w-full">
+                <div class="flex flex-col items-center w-full shrink-0">
 
                     <!-- TOP ORNAMENT -->
                     <div class="flex items-center gap-4 mb-5">
 
-                        <div class="w-8 h-px bg-gradient-to-r from-transparent to-[#B38E46]/45">
-                        </div>
+                        <div class="
+                    w-8
+                    h-px
+                    bg-gradient-to-r
+                    from-transparent
+                    to-[#B38E46]/45
+                "></div>
 
-                        <div class="w-1.5 h-1.5 rotate-45 border border-[#B38E46]/65">
-                        </div>
+                        <div class="
+                    w-1.5
+                    h-1.5
+                    rotate-45
+                    border
+                    border-[#B38E46]/65
+                "></div>
 
-                        <div class="w-8 h-px bg-gradient-to-l from-transparent to-[#B38E46]/45">
-                        </div>
+                        <div class="
+                    w-8
+                    h-px
+                    bg-gradient-to-l
+                    from-transparent
+                    to-[#B38E46]/45
+                "></div>
 
                     </div>
 
 
                     <!-- CEREMONY LABEL -->
                     <p class="
+                font-mepandes-sans
                 text-[8px]
                 md:text-[9px]
                 tracking-[0.45em]
@@ -671,17 +681,30 @@
                     <!-- DECORATIVE DIVIDER -->
                     <div class="flex items-center gap-3 mb-5">
 
-                        <div class="w-10 h-px bg-[#B38E46]/25"></div>
+                        <div class="
+                    w-10
+                    h-px
+                    bg-[#B38E46]/25
+                "></div>
 
-                        <div class="w-1 h-1 rounded-full bg-[#B38E46]/50"></div>
+                        <div class="
+                    w-1
+                    h-1
+                    rounded-full
+                    bg-[#B38E46]/50
+                "></div>
 
-                        <div class="w-10 h-px bg-[#B38E46]/25"></div>
+                        <div class="
+                    w-10
+                    h-px
+                    bg-[#B38E46]/25
+                "></div>
 
                     </div>
 
 
                     <!-- NAMES -->
-                    <div class="text-center w-full max-w-xl">
+                    <div class="text-center w-full max-w-xl shrink-0">
 
                         <!-- NAME 1 -->
                         <h1 class="
@@ -697,6 +720,7 @@
                         </h1>
 
                         <p class="
+                    font-mepandes-sans
                     text-[7px]
                     uppercase
                     tracking-[0.35em]
@@ -711,7 +735,14 @@
                         <div class="flex items-center justify-center gap-3 my-2.5">
 
                             <div class="w-5 h-px bg-[#B38E46]/25"></div>
-                            <div class="w-1 h-1 rotate-45 bg-[#B38E46]/50"></div>
+
+                            <div class="
+                        w-1
+                        h-1
+                        rotate-45
+                        bg-[#B38E46]/50
+                    "></div>
+
                             <div class="w-5 h-px bg-[#B38E46]/25"></div>
 
                         </div>
@@ -731,6 +762,7 @@
                         </h1>
 
                         <p class="
+                    font-mepandes-sans
                     text-[7px]
                     uppercase
                     tracking-[0.35em]
@@ -745,7 +777,14 @@
                         <div class="flex items-center justify-center gap-3 my-2.5">
 
                             <div class="w-5 h-px bg-[#B38E46]/25"></div>
-                            <div class="w-1 h-1 rotate-45 bg-[#B38E46]/50"></div>
+
+                            <div class="
+                        w-1
+                        h-1
+                        rotate-45
+                        bg-[#B38E46]/50
+                    "></div>
+
                             <div class="w-5 h-px bg-[#B38E46]/25"></div>
 
                         </div>
@@ -765,6 +804,7 @@
                         </h1>
 
                         <p class="
+                    font-mepandes-sans
                     text-[7px]
                     uppercase
                     tracking-[0.35em]
@@ -779,7 +819,14 @@
                         <div class="flex items-center justify-center gap-3 my-2.5">
 
                             <div class="w-5 h-px bg-[#B38E46]/25"></div>
-                            <div class="w-1 h-1 rotate-45 bg-[#B38E46]/50"></div>
+
+                            <div class="
+                        w-1
+                        h-1
+                        rotate-45
+                        bg-[#B38E46]/50
+                    "></div>
+
                             <div class="w-5 h-px bg-[#B38E46]/25"></div>
 
                         </div>
@@ -799,6 +846,7 @@
                         </h1>
 
                         <p class="
+                    font-mepandes-sans
                     text-[7px]
                     uppercase
                     tracking-[0.35em]
@@ -812,24 +860,40 @@
 
 
                     <!-- DATE -->
-                    <div class="flex flex-col items-center mt-5">
+                    <div class="flex flex-col items-center mt-5 shrink-0">
 
                         <div class="flex items-center gap-3 mb-3">
 
-                            <div class="w-7 h-px bg-[#B38E46]/25"></div>
-                            <div class="w-1 h-1 rounded-full bg-[#B38E46]/50"></div>
-                            <div class="w-7 h-px bg-[#B38E46]/25"></div>
+                            <div class="
+                        w-7
+                        h-px
+                        bg-[#B38E46]/25
+                    "></div>
+
+                            <div class="
+                        w-1
+                        h-1
+                        rounded-full
+                        bg-[#B38E46]/50
+                    "></div>
+
+                            <div class="
+                        w-7
+                        h-px
+                        bg-[#B38E46]/25
+                    "></div>
 
                         </div>
 
                         <p class="
-                            text-[12px]
-                            md:text-sm
-                            tracking-[0.2em]
-                            uppercase
-                            text-[#6B5328]
-                            font-semibold
-                        ">
+                    font-mepandes-sans
+                    text-[12px]
+                    md:text-sm
+                    tracking-[0.2em]
+                    uppercase
+                    text-[#6B5328]
+                    font-semibold
+                ">
                             {{ t("dateFull") }}
                         </p>
 
@@ -838,7 +902,7 @@
                 </div>
 
 
-                <!-- SPACER -->
+                <!-- FLEXIBLE SPACER -->
                 <div class="flex-1 min-h-4"></div>
 
 
@@ -848,6 +912,8 @@
             flex-col
             items-center
             w-full
+            shrink-0
+            pb-2
         ">
 
                     <div class="
@@ -857,7 +923,8 @@
                 backdrop-blur-md
                 border
                 border-[#B38E46]/20
-                p-6
+                px-6
+                py-5
                 md:p-8
                 rounded-2xl
                 shadow-[0_20px_60px_rgba(107,83,40,.08)]
@@ -865,6 +932,7 @@
 
                         <!-- Recipient -->
                         <p class="
+                    font-mepandes-sans
                     text-[8px]
                     tracking-[0.4em]
                     uppercase
@@ -878,13 +946,14 @@
 
                         <!-- Guest Name -->
                         <p class="
+                    font-mepandes
                     text-xl
                     md:text-2xl
-                    font-mepandes
-                    mb-4
+                    mb-3
                     text-[#6B5328]
                     tracking-wide
                     font-medium
+                    leading-relaxed
                 ">
                             {{ guestName }}
                         </p>
@@ -892,11 +961,12 @@
 
                         <!-- Opening Message -->
                         <p class="
+                    font-mepandes-sans
                     text-[10px]
                     md:text-xs
                     text-[#6B5328]/65
                     leading-relaxed
-                    mb-6
+                    mb-5
                     font-light
                 ">
                             {{ t("openingMsg") }}
@@ -904,17 +974,19 @@
 
 
                         <!-- Open Button -->
-                        <button class="
+                        <button type="button" class="
                     w-full
                     py-3.5
                     rounded-full
                     text-[9px]
                     tracking-[0.35em]
                     uppercase
+                    font-mepandes-sans
                     font-semibold
                     bg-[#B38E46]
                     text-white
                     hover:bg-[#6B5328]
+                    active:scale-[0.98]
                     transition-all
                     duration-300
                     shadow-[0_8px_30px_rgba(179,142,70,.18)]
@@ -938,9 +1010,11 @@
             animate-bounce
             mt-auto
             pt-6
+            shrink-0
         ">
 
                     <span class="
+                font-mepandes-sans
                 text-[8px]
                 tracking-[0.5em]
                 uppercase
@@ -949,7 +1023,11 @@
                         Scroll
                     </span>
 
-                    <UIcon name="mdi:chevron-down" class="w-5 h-5 text-[#B38E46]" />
+                    <UIcon name="mdi:chevron-down" class="
+                w-5
+                h-5
+                text-[#B38E46]
+            " />
 
                 </div>
 
