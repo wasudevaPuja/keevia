@@ -25,7 +25,9 @@
           :class="[
             !isPlaying ? 'opacity-70' : '',
             currentTheme === 'bali' && isPlaying ? 'text-amber-200' : '',
-            currentTheme === 'monocrom' && isPlaying ? 'text-gray-200' : ''
+            currentTheme === 'monocrom' && isPlaying ? 'text-gray-200' : '',
+            currentTheme === 'gold-elegan' && isPlaying ? 'text-[#6B5328]' : '',
+            currentTheme === 'gold-elegan' && !isPlaying ? 'text-[#B38E46]' : ''
           ]"
         />
       </span>

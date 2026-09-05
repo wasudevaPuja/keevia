@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Keevia//Mepandes//SaveTheDate//EN
+
+BEGIN:VEVENT
+UID:20260930@keevia.id
+DTSTAMP:20260804T000000Z
+SUMMARY:Mepandes - I Gusti A. Ayu Galuh Parwati, I Gusti Ayu Cahya Pratiwi, I Gusti Ngurah Agung Alit Arya Wibawa, I Gusti Agung Ngurah Bratha Prasetya
+LOCATION:Puri Agung Marga - Saren Kelod, Tabanan, Bali
+DESCRIPTION:Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu pada upacara Manusa Yadnya Mepandes kami.
+STATUS:CONFIRMED
+CLASS:PUBLIC
+
+DTSTART;TZID=Asia/Makassar:20261016T090000
+DTEND;TZID=Asia/Makassar:20261017T160000
+
+END:VEVENT
+
+END:VCALENDAR
