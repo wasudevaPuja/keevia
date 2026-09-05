@@ -421,7 +421,7 @@
 
             <!-- HERO / COVER SECTION -->
             <section :class="[
-                'relative z-10 w-full min-h-[100dvh] flex flex-col px-6 pt-10 pb-8 text-center shrink-0 overflow-x-hidden',
+                'relative z-10 w-full min-h-[100dvh] flex flex-col px-5 sm:px-6 pt-8 sm:pt-10 pb-6 sm:pb-8 text-center shrink-0 overflow-x-hidden',
                 !isOpen
                     ? 'max-h-[100dvh] overflow-y-auto overscroll-contain'
                     : 'overflow-visible'
@@ -429,138 +429,139 @@
 
                 <!-- TOP CONTENT -->
                 <div class="
-    flex
-    flex-col
-    items-center
-    w-full
-    shrink-0
-    text-center
-">
+        flex
+        flex-col
+        items-center
+        w-full
+        shrink-0
+        text-center
+    ">
 
                     <!-- TOP ORNAMENT -->
-                    <div class="flex items-center gap-4 mb-6">
+                    <div class="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
 
                         <div class="
-            w-10
-            h-px
-            bg-gradient-to-r
-            from-transparent
-            to-[#B38E46]/45
-        "></div>
+                w-8
+                sm:w-10
+                h-px
+                bg-gradient-to-r
+                from-transparent
+                to-[#B38E46]/45
+            "></div>
 
                         <div class="
-            w-1.5
-            h-1.5
-            rotate-45
-            border
-            border-[#B38E46]/65
-        "></div>
+                w-1.5
+                h-1.5
+                rotate-45
+                border
+                border-[#B38E46]/65
+            "></div>
 
                         <div class="
-            w-10
-            h-px
-            bg-gradient-to-l
-            from-transparent
-            to-[#B38E46]/45
-        "></div>
+                w-8
+                sm:w-10
+                h-px
+                bg-gradient-to-l
+                from-transparent
+                to-[#B38E46]/45
+            "></div>
 
                     </div>
 
 
                     <!-- CEREMONY LABEL -->
                     <p class="
-        font-mepandes-sans
-        text-[8px]
-        md:text-[9px]
-        tracking-[0.45em]
-        uppercase
-        text-[#B38E46]
-        font-semibold
-        mb-3
-    ">
+            font-mepandes-sans
+            text-[7px]
+            sm:text-[8px]
+            md:text-[9px]
+            tracking-[0.35em]
+            sm:tracking-[0.45em]
+            uppercase
+            text-[#B38E46]
+            font-semibold
+            mb-2
+            sm:mb-3
+        ">
                         Upacara Manusa Yadnya
                     </p>
 
 
                     <!-- MAIN HEADING -->
                     <h2 class="
-        font-mepandes
-        text-3xl
-        md:text-4xl
-        text-[#6B5328]
-        font-medium
-        tracking-wide
-        leading-tight
-        mb-4
-    ">
-                        Mepandes
+            font-mepandes
+            text-3xl
+            sm:text-4xl
+            md:text-5xl
+            text-[#6B5328]
+            font-medium
+            tracking-wide
+            leading-tight
+            mb-3
+            sm:mb-4
+        ">
+                        MEPANDES
                     </h2>
+
+
                     <!-- ELEGANT DIVIDER -->
                     <div class="
-        flex
-        items-center
-        justify-center
-        gap-3
-        mb-6
-    ">
+            flex
+            items-center
+            justify-center
+            gap-3
+            mb-5
+            sm:mb-6
+        ">
 
                         <div class="
-            w-12
-            h-px
-            bg-gradient-to-r
-            from-transparent
-            to-[#B38E46]/35
-        "></div>
+                w-10
+                sm:w-12
+                h-px
+                bg-gradient-to-r
+                from-transparent
+                to-[#B38E46]/35
+            "></div>
 
                         <div class="
-            w-1.5
-            h-1.5
-            rotate-45
-            bg-[#B38E46]/55
-        "></div>
+                w-1.5
+                h-1.5
+                rotate-45
+                bg-[#B38E46]/55
+            "></div>
 
                         <div class="
-            w-12
-            h-px
-            bg-gradient-to-l
-            from-transparent
-            to-[#B38E46]/35
-        "></div>
+                w-10
+                sm:w-12
+                h-px
+                bg-gradient-to-l
+                from-transparent
+                to-[#B38E46]/35
+            "></div>
 
                     </div>
 
 
                     <!-- DATE -->
                     <div class="
-        flex
-        flex-col
-        items-center
-        shrink-0
-    ">
-
-                        <!-- Date Label -->
-                        <p class="
-            font-mepandes-sans
-            text-[8px]
-            tracking-[0.35em]
-            uppercase
-            text-[#B38E46]/70
-            mb-2
+            flex
+            flex-col
+            items-center
+            shrink-0
         ">
-                            Save The Date
-                        </p>
-
 
                         <!-- Date -->
                         <p class="
-            font-mepandes-sans
-            text-[12px]
-            md:text-sm
-            tracking-[0.18em]
-            uppercase
-            text-[#6B5328]
-            font-semibold
-        ">
+                font-mepandes-sans
+                text-[10px]
+                sm:text-[12px]
+                md:text-sm
+                tracking-[0.12em]
+                sm:tracking-[0.18em]
+                uppercase
+                text-[#6B5328]
+                font-semibold
+            ">
                             {{ t("dateFull") }}
                         </p>
 
@@ -570,7 +571,7 @@
 
 
                 <!-- FLEXIBLE SPACER -->
-                <div class="flex-1 min-h-6"></div>
+                <div class="flex-1 min-h-[clamp(5rem,18vh,10rem)]"></div>
 
 
                 <!-- GUEST CARD -->
@@ -580,111 +581,134 @@
         items-center
         w-full
         shrink-0
-        pb-2
+        pb-1
     ">
 
                     <div class="
-        relative
-        w-full
-        max-w-sm
-        bg-white/80
-        backdrop-blur-md
-        border
-        border-[#B38E46]/20
-        px-6
-        py-6
-        md:p-8
-        rounded-2xl
-        shadow-[0_20px_60px_rgba(107,83,40,.08)]
-    ">
+            relative
+            w-full
+            max-w-sm
+            bg-white/80
+            backdrop-blur-md
+            border
+            border-[#B38E46]/20
+            px-5
+            py-5
+            sm:px-6
+            sm:py-6
+            md:p-8
+            rounded-2xl
+            shadow-[0_20px_60px_rgba(107,83,40,.08)]
+        ">
 
                         <!-- Subtle Top Ornament -->
                         <div class="
-            flex
-            items-center
-            justify-center
-            gap-3
-            mb-5
-        ">
-
-                            <div class="w-6 h-px bg-[#B38E46]/20"></div>
+                flex
+                items-center
+                justify-center
+                gap-3
+                mb-4
+                sm:mb-5
+            ">
 
                             <div class="
-                w-1
-                h-1
-                rounded-full
-                bg-[#B38E46]/50
-            "></div>
+                    w-5
+                    sm:w-6
+                    h-px
+                    bg-[#B38E46]/20
+                "></div>
 
-                            <div class="w-6 h-px bg-[#B38E46]/20"></div>
+                            <div class="
+                    w-1
+                    h-1
+                    rounded-full
+                    bg-[#B38E46]/50
+                "></div>
+
+                            <div class="
+                    w-5
+                    sm:w-6
+                    h-px
+                    bg-[#B38E46]/20
+                "></div>
 
                         </div>
 
 
                         <!-- Recipient -->
                         <p class="
-            font-mepandes-sans
-            text-[8px]
-            tracking-[0.4em]
-            uppercase
-            mb-2
-            text-[#B38E46]
-            font-semibold
-        ">
+                font-mepandes-sans
+                text-[7px]
+                sm:text-[8px]
+                tracking-[0.35em]
+                sm:tracking-[0.4em]
+                uppercase
+                mb-1.5
+                sm:mb-2
+                text-[#B38E46]
+                font-semibold
+            ">
                             {{ t("toYth") }}
                         </p>
 
 
                         <!-- Guest Name -->
                         <p class="
-            font-mepandes
-            text-xl
-            md:text-2xl
-            mb-4
-            text-[#6B5328]
-            tracking-wide
-            font-medium
-            leading-relaxed
-        ">
+                font-mepandes
+                text-lg
+                sm:text-xl
+                md:text-2xl
+                mb-3
+                sm:mb-4
+                text-[#6B5328]
+                tracking-wide
+                font-medium
+                leading-relaxed
+            ">
                             {{ guestName }}
                         </p>
 
 
                         <!-- Opening Message -->
                         <p class="
-            font-mepandes-sans
-            text-[10px]
-            md:text-xs
-            text-[#6B5328]/65
-            leading-relaxed
-            mb-6
-            font-light
-            max-w-xs
-            mx-auto
-        ">
+                font-mepandes-sans
+                text-[9px]
+                sm:text-[10px]
+                md:text-xs
+                text-[#6B5328]/65
+                leading-relaxed
+                mb-5
+                sm:mb-6
+                font-light
+                max-w-xs
+                mx-auto
+            ">
                             {{ t("openingMsg") }}
                         </p>
 
 
                         <!-- Open Button -->
                         <button type="button" class="
-                w-full
-                py-3.5
-                rounded-full
-                text-[9px]
-                tracking-[0.35em]
-                uppercase
-                font-mepandes-sans
-                font-semibold
-                bg-[#B38E46]
-                text-white
-                hover:bg-[#6B5328]
-                active:scale-[0.98]
-                transition-all
-                duration-300
-                shadow-[0_8px_30px_rgba(179,142,70,.18)]
-                cursor-pointer
-            " @click="openInvitation">
+                    w-full
+                    py-3
+                    sm:py-3.5
+                    rounded-full
+                    text-[8px]
+                    sm:text-[9px]
+                    tracking-[0.3em]
+                    sm:tracking-[0.35em]
+                    uppercase
+                    font-mepandes-sans
+                    font-semibold
+                    bg-[#B38E46]
+                    text-white
+                    hover:bg-[#6B5328]
+                    active:scale-[0.98]
+                    transition-all
+                    duration-300
+                    shadow-[0_8px_30px_rgba(179,142,70,.18)]
+                    cursor-pointer
+                " @click="openInvitation">
                             {{ t("openBtn") }}
                         </button>
 
@@ -695,30 +719,35 @@
 
                 <!-- SCROLL INDICATOR -->
                 <div v-if="isOpen" class="
-            flex
-            flex-col
-            items-center
-            gap-2
-            text-[#6B5328]/45
-            animate-bounce
-            mt-auto
-            pt-6
-            shrink-0
-        ">
+        flex
+        flex-col
+        items-center
+        gap-2
+        text-[#6B5328]/45
+        animate-bounce
+        mt-auto
+        pt-4
+        sm:pt-6
+        shrink-0
+    ">
 
                     <span class="
-                font-mepandes-sans
-                text-[8px]
-                tracking-[0.5em]
-                uppercase
-                font-medium
-            ">
+            font-mepandes-sans
+            text-[7px]
+            sm:text-[8px]
+            tracking-[0.4em]
+            sm:tracking-[0.5em]
+            uppercase
+            font-medium
+        ">
                         Scroll
                     </span>
 
                     <UIcon name="mdi:chevron-down" class="
-                w-5
-                h-5
+                w-4
+                h-4
+                sm:w-5
+                sm:h-5
                 text-[#B38E46]
             " />
 
@@ -729,7 +758,7 @@
             <div v-if="isOpen" class="relative z-10 flex-1 flex flex-col w-full">
 
                 <!-- QUOTE SECTION -->
-                <section class="relative w-full min-h-[100dvh] overflow-hidden bg-[#FAF6EE]">
+                <section ref="quoteSection" class="relative w-full min-h-[100dvh] overflow-hidden bg-[#FAF6EE]">
 
                     <!-- SUBTLE WATERMARK -->
                     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -998,7 +1027,7 @@
 
 
                 <!-- EVENT + COUNTDOWN -->
-                <section class="py-6 md:py-8 px-6 relative w-full bg-[#FAF6EE]">
+                <section class="py-2 md:py-8 px-6 relative w-full bg-[#FAF6EE]">
 
                     <!-- Background Decoration -->
                     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -1029,44 +1058,6 @@
             transition-all
             duration-1000
         ">
-
-                            <!-- Ornament -->
-                            <div class="flex items-center gap-4 mb-4">
-
-                                <div class="w-12 h-px bg-gradient-to-r from-transparent to-[#B38E46]/35"></div>
-
-                                <div class="w-1.5 h-1.5 rotate-45 border border-[#B38E46]/60"></div>
-
-                                <div class="w-12 h-px bg-gradient-to-l from-transparent to-[#B38E46]/35"></div>
-
-                            </div>
-
-
-                            <!-- Label -->
-                            <p class="
-                text-[9px]
-                md:text-[10px]
-                font-semibold
-                tracking-[0.45em]
-                text-[#B38E46]
-                uppercase
-                mb-4
-            ">
-                                Info Acara
-                            </p>
-
-
-                            <!-- Title -->
-                            <h2 class="
-                font-mepandes
-                text-3xl
-                md:text-4xl
-                text-[#6B5328]
-                tracking-wide
-                leading-relaxed
-            ">
-                                {{ t("resepsiTitle") }}
-                            </h2>
 
                         </div>
 
@@ -1445,7 +1436,7 @@
         mt-7
     ">
 
-                                
+
 
                             </div>
 
@@ -1567,21 +1558,6 @@
                 "></div>
 
                             </div>
-
-
-                            <!-- Label -->
-                            <p class="
-                text-[9px]
-                md:text-[10px]
-                font-semibold
-                tracking-[0.45em]
-                uppercase
-                mb-4
-                text-[#B38E46]
-            ">
-                                {{ t("rsvpSub") }}
-                            </p>
-
 
                             <!-- Title -->
                             <h2 class="
@@ -1710,19 +1686,6 @@
 
                                     <!-- ATTENDANCE -->
                                     <div>
-
-                                        <p class="
-                            text-[9px]
-                            md:text-[10px]
-                            tracking-[0.35em]
-                            text-[#B38E46]
-                            uppercase
-                            font-semibold
-                            mb-3
-                        ">
-                                            {{ t("confirmAttendance") }}
-                                        </p>
-
 
                                         <div class="flex gap-3">
 
@@ -2416,7 +2379,7 @@ const dict = {
         rsvpDesc: "Langkah ini tidak akan terasa sempurna tanpa kehadiran serta iringan doa dari seluruh kerabat dan sahabat tercinta.",
         fullName: "Nama Lengkap",
         fullNamePlaceholder: "Tulis nama Anda",
-        confirmAttendance: "Sampaikan Kehadiran",
+        confirmAttendance: "Konfirmasi Kehadiran",
         attendYes: "Hadir",
         attendNo: "Tidak Hadir",
         wishes: "Ucapan & Doa",
@@ -2468,12 +2431,25 @@ const googleCalendarLink = computed(() => {
 })
 
 const isOpen = ref(false)
+const quoteSection = ref<HTMLElement | null>(null)
 
 const openInvitation = () => {
     isOpen.value = true
     document.body.classList.remove('overflow-hidden')
     nextTick(() => {
-        setTimeout(initScrollAnimations, 100)
+        setTimeout(() => {
+            initScrollAnimations()
+
+            setTimeout(() => {
+                if (quoteSection.value) {
+                    quoteSection.value.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                }
+            }, 500)
+
+        }, 100)
         if (audioControl && typeof audioControl.setMusicId === 'function') {
             audioControl.setMusicId('-BR872_MnuQ')
         }
